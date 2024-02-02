@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@iorder-next/contracts/api": ["libs/contracts/api/src/index.ts"],
       "@iorder-next/plugins/nx-plugin": ["libs/plugins/nx-plugin/src/index.ts"]
     }
   },
