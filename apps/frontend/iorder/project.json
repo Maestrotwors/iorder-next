@@ -62,6 +62,9 @@
           "buildTarget": "frontend-iorder:build:development"
         }
       },
+      "options": {
+        "proxyConfig": "apps/frontend/iorder/proxy.conf.json"
+      },
       "defaultConfiguration": "development"
     },
     "extract-i18n": {

@@ -22,7 +22,6 @@
                 "onlyDependOnLibsWithTags": [
                   "layer:page",
                   "layer:repository",
-                  "layer:core",
                   "layer:shared"
                 ]
               },
@@ -40,8 +39,7 @@
                 "onlyDependOnLibsWithTags": [
                   "layer:feature",
                   "layer:repository",
-                  "layer:shared",
-                  "layer:core"
+                  "layer:shared"
                 ]
               },
               {
@@ -49,7 +47,6 @@
                 "onlyDependOnLibsWithTags": [
                   "layer:shared",
                   "layer:repository",
-                  "layer:core",
                   "layer:ui"
                 ]
               },
@@ -57,13 +54,12 @@
                 "sourceTag": "layer:shared",
                 "onlyDependOnLibsWithTags": [
                   "layer:repository",
-                  "layer:core",
                   "layer:ui"
                 ]
               },
               {
                 "sourceTag": "layer:repository",
-                "onlyDependOnLibsWithTags": ["layer:core"]
+                "onlyDependOnLibsWithTags": []
               },
               {
                 "sourceTag": "layer:contract",

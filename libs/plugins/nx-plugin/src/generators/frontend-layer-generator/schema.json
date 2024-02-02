@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "Library",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use?"
+    },
+    "projectType": {
+      "type": "string",
+      "description": "project",
+      "x-prompt": {
+        "message": "What project would you like to use?",
+        "type": "list",
+        "items": ["customer", "supplier", "admin", "landing"]
+      }
+    },
+    "layer": {
+      "type": "string",
+      "description": "layer",
+      "x-prompt": {
+        "message": "What layer would you like to use?",
+        "type": "list",
+        "items": [
+          "page",
+          "widget",
+          "feature",
+          "shared",
+          "repository",
+          "core",
+          "ui"
+        ]
+      }
+    },
+    "directory": {
+      "type": "string",
+      "description": "directory",
+      "x-prompt": "What directory would you like to use?",
+      "optional": true
+    }
+  },
+  "required": ["name", "layer", "projectType"]
+}

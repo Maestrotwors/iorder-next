@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "frontend-layer-generator": {
+      "factory": "./src/generators/frontend-layer-generator/generator",
+      "schema": "./src/generators/frontend-layer-generator/schema.json",
+      "description": "frontend-layer-generator generator"
+    }
+  }
+}
