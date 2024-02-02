@@ -18,8 +18,64 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "layer:application",
+                "onlyDependOnLibsWithTags": [
+                  "layer:page",
+                  "layer:repository",
+                  "layer:core",
+                  "layer:shared"
+                ]
+              },
+              {
+                "sourceTag": "layer:page",
+                "onlyDependOnLibsWithTags": [
+                  "layer:widget",
+                  "layer:feature",
+                  "layer:repository",
+                  "layer:shared"
+                ]
+              },
+              {
+                "sourceTag": "layer:widget",
+                "onlyDependOnLibsWithTags": [
+                  "layer:feature",
+                  "layer:repository",
+                  "layer:shared",
+                  "layer:core"
+                ]
+              },
+              {
+                "sourceTag": "layer:feature",
+                "onlyDependOnLibsWithTags": [
+                  "layer:shared",
+                  "layer:repository",
+                  "layer:core",
+                  "layer:ui"
+                ]
+              },
+              {
+                "sourceTag": "layer:shared",
+                "onlyDependOnLibsWithTags": [
+                  "layer:repository",
+                  "layer:core",
+                  "layer:ui"
+                ]
+              },
+              {
+                "sourceTag": "layer:repository",
+                "onlyDependOnLibsWithTags": ["layer:core"]
+              },
+              {
+                "sourceTag": "layer:contract",
+                "onlyDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "layer:ui",
+                "onlyDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "layer:core",
+                "onlyDependOnLibsWithTags": ["layer:ui"]
               }
             ]
           }
