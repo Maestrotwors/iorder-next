@@ -13,7 +13,7 @@ export class UserRepository {
         });
     }
 
-    public async getUserById(uuid: string): Promise<User> {
+    public async getUserById(uuid: string): Promise<User | null> {
         return this.prisma.user.findUnique({
             where: {
                 uuid,
@@ -21,7 +21,7 @@ export class UserRepository {
         });
     }
 
-    public async getUserByEmail(email: string): Promise<User> {
+    public async getUserByEmail(email: string): Promise<User | null> {
         return this.prisma.user.findUnique({
             where: {
                 email,
@@ -29,7 +29,7 @@ export class UserRepository {
         });
     }
 
-    public async getUserByRecoveryToken(recoveryToken: string): Promise<User> {
+    public async getUserByRecoveryToken(recoveryToken: string): Promise<User | null> {
         return this.prisma.user.findUnique({
             where: {
                 recoveryToken,
