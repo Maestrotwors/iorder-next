@@ -1,50 +1,39 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2020", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@iorder-next/contracts/api": ["libs/contracts/api/src/index.ts"],
-      "@iorder-next/frontend/page/customer/catalog": [
-        "libs/frontend/page/customer/catalog/src/index.ts"
-      ],
-      "@iorder-next/frontend/page/customer/contact-us": [
-        "libs/frontend/page/customer/contact-us/src/index.ts"
-      ],
-      "@iorder-next/frontend/page/customer/delivery": [
-        "libs/frontend/page/customer/delivery/src/index.ts"
-      ],
-      "@iorder-next/frontend/page/customer/how-to-use": [
-        "libs/frontend/page/customer/how-to-use/src/index.ts"
-      ],
-      "@iorder-next/frontend/page/customer/profile": [
-        "libs/frontend/page/customer/profile/src/index.ts"
-      ],
-      "@iorder-next/frontend/page/customer/refund": [
-        "libs/frontend/page/customer/refund/src/index.ts"
-      ],
-      "@iorder-next/frontend/page/customer/rules": [
-        "libs/frontend/page/customer/rules/src/index.ts"
-      ],
-      "@iorder-next/frontend/page/customer/supplier-select": [
-        "libs/frontend/page/customer/supplier-select/src/index.ts"
-      ],
-      "@iorder-next/frontend/page/landing/main": [
-        "libs/frontend/page/landing/main/src/index.ts"
-      ],
-      "@iorder-next/plugins/nx-plugin": ["libs/plugins/nx-plugin/src/index.ts"]
-    }
-  },
-  "exclude": ["node_modules", "tmp"]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2020", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@iorder-next/backend/core/db": ["libs/backend/core/db/src/index.ts"],
+            "@iorder-next/backend/modules/admin": ["libs/backend/modules/admin/src/index.ts"],
+            "@iorder-next/backend/modules/auth": ["libs/backend/modules/auth/src/index.ts"],
+            "@iorder-next/backend/modules/customer": ["libs/backend/modules/customer/src/index.ts"],
+            "@iorder-next/backend/modules/supplier": ["libs/backend/modules/supplier/src/index.ts"],
+            "@iorder-next/backend/repository/user": ["libs/backend/repository/user/src/index.ts"],
+            "@iorder-next/backend/shared/user": ["libs/backend/shared/user/src/index.ts"],
+            "@iorder-next/contracts/api": ["libs/contracts/api/src/index.ts"],
+            "@iorder-next/frontend/page/customer/catalog": ["libs/frontend/page/customer/catalog/src/index.ts"],
+            "@iorder-next/frontend/page/customer/contact-us": ["libs/frontend/page/customer/contact-us/src/index.ts"],
+            "@iorder-next/frontend/page/customer/delivery": ["libs/frontend/page/customer/delivery/src/index.ts"],
+            "@iorder-next/frontend/page/customer/how-to-use": ["libs/frontend/page/customer/how-to-use/src/index.ts"],
+            "@iorder-next/frontend/page/customer/profile": ["libs/frontend/page/customer/profile/src/index.ts"],
+            "@iorder-next/frontend/page/customer/refund": ["libs/frontend/page/customer/refund/src/index.ts"],
+            "@iorder-next/frontend/page/customer/rules": ["libs/frontend/page/customer/rules/src/index.ts"],
+            "@iorder-next/frontend/page/customer/supplier-select": ["libs/frontend/page/customer/supplier-select/src/index.ts"],
+            "@iorder-next/frontend/page/landing/main": ["libs/frontend/page/landing/main/src/index.ts"],
+            "@iorder-next/plugins/nx-plugin": ["libs/plugins/nx-plugin/src/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
 }
