@@ -16,6 +16,7 @@
         "baseUrl": ".",
         "paths": {
             "@iorder-next/backend/core/db": ["libs/backend/core/db/src/index.ts"],
+            "@iorder-next/backend/cqrs/user": ["libs/backend/cqrs/user/src/index.ts"],
             "@iorder-next/backend/modules/admin": ["libs/backend/modules/admin/src/index.ts"],
             "@iorder-next/backend/modules/auth": ["libs/backend/modules/auth/src/index.ts"],
             "@iorder-next/backend/modules/customer": ["libs/backend/modules/customer/src/index.ts"],
