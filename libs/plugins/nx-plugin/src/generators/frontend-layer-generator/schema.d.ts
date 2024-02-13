@@ -15,7 +15,7 @@ export type ProjectType =
 
 export interface LibraryGeneratorSchema {
   name: string;
-  layer: Layer;
+  frontend-layer: Layer;
   projectType: ProjectType;
   directory?: string;
 }

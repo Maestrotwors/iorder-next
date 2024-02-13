@@ -10,7 +10,7 @@ export async function libGenerator(
 
   await libraryGenerator(tree, {
     name: options.name,
-    tags: 'layer:' + options.layer + ',project:' + options.projectType,
+    tags: 'frontend-layer:' + options.layer + ',project:' + options.projectType,
     changeDetection: 'OnPush',
     selector:
       'io-' +

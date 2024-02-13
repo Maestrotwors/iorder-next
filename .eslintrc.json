@@ -27,47 +27,47 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "layer:application",
+                "sourceTag": "frontend-layer:application",
                 "onlyDependOnLibsWithTags": [
-                  "layer:page",
-                  "layer:repository",
-                  "layer:shared"
+                  "frontend-layer:page",
+                  "frontend-layer:repository",
+                  "frontend-layer:shared"
                 ]
               },
               {
-                "sourceTag": "layer:page",
+                "sourceTag": "frontend-layer:page",
                 "onlyDependOnLibsWithTags": [
-                  "layer:widget",
-                  "layer:feature",
-                  "layer:repository",
-                  "layer:shared"
+                  "frontend-layer:widget",
+                  "frontend-layer:feature",
+                  "frontend-layer:repository",
+                  "frontend-layer:shared"
                 ]
               },
               {
-                "sourceTag": "layer:widget",
+                "sourceTag": "frontend-layer:widget",
                 "onlyDependOnLibsWithTags": [
-                  "layer:feature",
-                  "layer:repository",
-                  "layer:shared"
+                  "frontend-layer:feature",
+                  "frontend-layer:repository",
+                  "frontend-layer:shared"
                 ]
               },
               {
-                "sourceTag": "layer:feature",
+                "sourceTag": "frontend-layer:feature",
                 "onlyDependOnLibsWithTags": [
-                  "layer:shared",
-                  "layer:repository",
-                  "layer:ui"
+                  "frontend-layer:shared",
+                  "frontend-layer:repository",
+                  "frontend-layer:ui"
                 ]
               },
               {
-                "sourceTag": "layer:shared",
+                "sourceTag": "frontend-layer:shared",
                 "onlyDependOnLibsWithTags": [
-                  "layer:repository",
-                  "layer:ui"
+                  "frontend-layer:repository",
+                  "frontend-layer:ui"
                 ]
               },
               {
-                "sourceTag": "layer:repository",
+                "sourceTag": "frontend-layer:repository",
                 "onlyDependOnLibsWithTags": []
               },
               {
@@ -75,12 +75,12 @@
                 "onlyDependOnLibsWithTags": []
               },
               {
-                "sourceTag": "layer:ui",
+                "sourceTag": "frontend-layer:ui",
                 "onlyDependOnLibsWithTags": []
               },
               {
-                "sourceTag": "layer:core",
-                "onlyDependOnLibsWithTags": ["layer:ui"]
+                "sourceTag": "frontend-layer:core",
+                "onlyDependOnLibsWithTags": ["frontend-layer:ui"]
               }
             ]
           }

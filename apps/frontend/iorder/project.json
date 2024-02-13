@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "io",
   "sourceRoot": "apps/frontend/iorder/src",
-  "tags": ["layer:app"],
+  "tags": ["frontend-layer:app"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
