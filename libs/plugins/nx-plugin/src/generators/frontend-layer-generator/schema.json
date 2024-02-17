@@ -19,7 +19,7 @@
       "x-prompt": {
         "message": "What project would you like to use?",
         "type": "list",
-        "items": ["customer", "supplier", "admin", "landing"]
+        "items": ["customer", "supplier", "admin", "landing", "shared"]
       }
     },
     "layer": {

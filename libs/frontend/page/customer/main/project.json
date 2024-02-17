@@ -1,0 +1,20 @@
+{
+    "name": "frontend-page-customer-main",
+    "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/frontend/page/customer/main/src",
+    "prefix": "iorder-next",
+    "tags": ["frontend-layer:page", "project:customer"],
+    "projectType": "library",
+    "targets": {
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "libs/frontend/page/customer/main/jest.config.ts"
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint"
+        }
+    }
+}
