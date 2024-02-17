@@ -1,7 +1,8 @@
 import { CustomerRoutePath } from '../paths/customer.route-path';
+import { RootRoutePath } from '../paths/root.route-path';
 
 export const customerRoutes = {
-  path: 'member-user',
+  path: RootRoutePath.Customer,
   loadComponent: () => import('@iorder-next/frontend/page/customer/main').then(c => c.FrontendPageCustomerMainComponent),
   children: [
     {
