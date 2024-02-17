@@ -2,6 +2,8 @@ import { ApplicationConfig } from '@angular/core';
 import { provideRouter, withComponentInputBinding, withRouterConfig } from '@angular/router';
 import { appRoutes } from '@iorder-next/frontend/core/shared/routing';
 import { provideClientHydration } from '@angular/platform-browser';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { provideHttpCache, withHttpCacheInterceptor } from '@ngneat/cashew';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -9,6 +11,15 @@ export const appConfig: ApplicationConfig = {
     provideRouter(
       appRoutes,
       withComponentInputBinding(),
-      withRouterConfig({paramsInheritanceStrategy: 'always'}))
+      withRouterConfig(
+        {
+          paramsInheritanceStrategy: 'always'
+        }
+      )
+    ),
+    provideHttpClient(
+      withInterceptors([withHttpCacheInterceptor()])
+    ),
+    provideHttpCache()
   ],
 };
