@@ -4,10 +4,7 @@ import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class RolesGuard implements CanActivate {
-    constructor(
-        private readonly reflector: Reflector,
-        private readonly jwtService: JwtService,
-    ) {}
+    constructor(private readonly reflector: Reflector, private readonly jwtService: JwtService) {}
 
     canActivate(context: ExecutionContext): boolean {
         try {

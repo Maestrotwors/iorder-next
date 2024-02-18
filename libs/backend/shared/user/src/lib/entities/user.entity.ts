@@ -3,9 +3,9 @@ import { UserModel } from '../models/user.model';
 
 export class UserEntity extends UserModel {
     constructor(user: Partial<UserModel>) {
-      super(user);
-      Object.assign(this, user);
-      return this;
+        super(user);
+        Object.assign(this, user);
+        return this;
     }
 
     public async setPassword(password: string): Promise<UserEntity> {

@@ -15,7 +15,5 @@
             }
         }
     },
-    "tags": [
-      "backend:module"
-    ]
+    "tags": ["backend:module"]
 }

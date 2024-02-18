@@ -1,1 +1,7 @@
-<p>frontend-page-customer-catalog works!</p>
+-----
+{{ $isDesktop() }}
+@if ($isDesktop() === true) { @defer (on immediate) {
+<io-customer-widget-catalog-desktop></io-customer-widget-catalog-desktop>
+} } @if ($isDesktop() === false) { @defer (on immediate) {
+<io-customer-widget-catalog-mobile></io-customer-widget-catalog-mobile>
+} }

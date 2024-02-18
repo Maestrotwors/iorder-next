@@ -1,111 +1,90 @@
 {
-  "root": true,
-  "ignorePatterns": ["**/*"],
-  "plugins": [
-    "@nx",
-    "@typescript-eslint/eslint-plugin"
-  ],
-  "overrides": [
-    {
-      "files": "*.json",
-      "parser": "jsonc-eslint-parser",
-      "rules": {}
-    },
-    {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {
-        "@typescript-eslint/interface-name-prefix": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/no-namespace": "off",
-        "no-console": "error",
-        "@nx/enforce-module-boundaries": [
-          "error",
-          {
-            "enforceBuildableLibDependency": true,
-            "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "frontend-layer:application",
-                "onlyDependOnLibsWithTags": [
-                  "frontend-layer:page",
-                  "frontend-layer:repository",
-                  "frontend-layer:shared"
+    "root": true,
+    "ignorePatterns": ["**/*"],
+    "plugins": ["@nx", "@typescript-eslint/eslint-plugin"],
+    "overrides": [
+        {
+            "files": "*.json",
+            "parser": "jsonc-eslint-parser",
+            "rules": {}
+        },
+        {
+            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "rules": {
+                "@typescript-eslint/interface-name-prefix": "off",
+                "@typescript-eslint/explicit-function-return-type": "off",
+                "@typescript-eslint/explicit-module-boundary-types": "off",
+                "@typescript-eslint/no-explicit-any": "off",
+                "@typescript-eslint/no-namespace": "off",
+                "no-console": "error",
+                "@nx/enforce-module-boundaries": [
+                    "error",
+                    {
+                        "enforceBuildableLibDependency": true,
+                        "allow": [],
+                        "depConstraints": [
+                            {
+                                "sourceTag": "frontend-layer:application",
+                                "onlyDependOnLibsWithTags": ["frontend-layer:page", "frontend-layer:repository", "frontend-layer:shared"]
+                            },
+                            {
+                                "sourceTag": "frontend-layer:page",
+                                "onlyDependOnLibsWithTags": [
+                                    "frontend-layer:widget",
+                                    "frontend-layer:feature",
+                                    "frontend-layer:repository",
+                                    "frontend-layer:shared"
+                                ]
+                            },
+                            {
+                                "sourceTag": "frontend-layer:widget",
+                                "onlyDependOnLibsWithTags": ["frontend-layer:feature", "frontend-layer:repository", "frontend-layer:shared"]
+                            },
+                            {
+                                "sourceTag": "frontend-layer:feature",
+                                "onlyDependOnLibsWithTags": ["frontend-layer:shared", "frontend-layer:repository", "frontend-layer:ui"]
+                            },
+                            {
+                                "sourceTag": "frontend-layer:shared",
+                                "onlyDependOnLibsWithTags": ["frontend-layer:repository", "frontend-layer:ui"]
+                            },
+                            {
+                                "sourceTag": "frontend-layer:repository",
+                                "onlyDependOnLibsWithTags": []
+                            },
+                            {
+                                "sourceTag": "layer:contract",
+                                "onlyDependOnLibsWithTags": []
+                            },
+                            {
+                                "sourceTag": "frontend-layer:ui",
+                                "onlyDependOnLibsWithTags": []
+                            },
+                            {
+                                "sourceTag": "frontend-layer:core",
+                                "onlyDependOnLibsWithTags": ["frontend-layer:ui"]
+                            }
+                        ]
+                    }
                 ]
-              },
-              {
-                "sourceTag": "frontend-layer:page",
-                "onlyDependOnLibsWithTags": [
-                  "frontend-layer:widget",
-                  "frontend-layer:feature",
-                  "frontend-layer:repository",
-                  "frontend-layer:shared"
-                ]
-              },
-              {
-                "sourceTag": "frontend-layer:widget",
-                "onlyDependOnLibsWithTags": [
-                  "frontend-layer:feature",
-                  "frontend-layer:repository",
-                  "frontend-layer:shared"
-                ]
-              },
-              {
-                "sourceTag": "frontend-layer:feature",
-                "onlyDependOnLibsWithTags": [
-                  "frontend-layer:shared",
-                  "frontend-layer:repository",
-                  "frontend-layer:ui"
-                ]
-              },
-              {
-                "sourceTag": "frontend-layer:shared",
-                "onlyDependOnLibsWithTags": [
-                  "frontend-layer:repository",
-                  "frontend-layer:ui"
-                ]
-              },
-              {
-                "sourceTag": "frontend-layer:repository",
-                "onlyDependOnLibsWithTags": []
-              },
-              {
-                "sourceTag": "layer:contract",
-                "onlyDependOnLibsWithTags": []
-              },
-              {
-                "sourceTag": "frontend-layer:ui",
-                "onlyDependOnLibsWithTags": []
-              },
-              {
-                "sourceTag": "frontend-layer:core",
-                "onlyDependOnLibsWithTags": ["frontend-layer:ui"]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": [
-        "plugin:@nx/typescript",
-        "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"
-      ],
-      "rules": {}
-    },
-    {
-      "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nx/javascript"],
-      "rules": {}
-    },
-    {
-      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
-      "env": {
-        "jest": true
-      },
-      "rules": {}
-    }
-  ]
+            }
+        },
+        {
+            "files": ["*.ts", "*.tsx"],
+            "extends": ["plugin:@nx/typescript", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+            "rules": {}
+        },
+        {
+            "files": ["*.js", "*.jsx"],
+            "extends": ["plugin:@nx/javascript"],
+            "rules": {}
+        },
+        {
+            "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+            "env": {
+                "jest": true
+            },
+            "rules": {}
+        }
+    ]
 }

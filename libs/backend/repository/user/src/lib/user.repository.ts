@@ -5,7 +5,7 @@ import { PrismaService } from '@iorder-next/backend/core/db';
 
 @Injectable()
 export class UserRepository {
-    constructor(private readonly prisma: PrismaService) { }
+    constructor(private readonly prisma: PrismaService) {}
 
     public async createUser({ email, name, role, passwordHash }: UserEntity): Promise<User> {
         return this.prisma.user.create({

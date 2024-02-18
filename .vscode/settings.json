@@ -1,6 +1,4 @@
 {
-  "eslint.validate": [
-    "json"
-  ],
-  "workbench.colorCustomizations": {}
+    "eslint.validate": ["json"],
+    "workbench.colorCustomizations": {}
 }

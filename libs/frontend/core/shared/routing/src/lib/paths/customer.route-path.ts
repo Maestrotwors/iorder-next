@@ -1,5 +1,5 @@
 export enum CustomerRoutePath {
-  Catalog = 'catalog',
-  Order = 'order',
-  SuppliersSelection = 'suppliers'
+    Catalog = 'catalog',
+    Order = 'order',
+    SuppliersSelection = 'suppliers',
 }

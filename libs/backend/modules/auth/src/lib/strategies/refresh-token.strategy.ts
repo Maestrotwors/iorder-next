@@ -8,10 +8,7 @@ import { IJWTPayload } from '../types/auth.interface';
 
 @Injectable()
 export class RefreshTokenStrategy extends PassportStrategy(Strategy, 'refreshToken') {
-    constructor(
-        private readonly configService: ConfigService,
-        private readonly authService: AuthService,
-    ) {
+    constructor(private readonly configService: ConfigService, private readonly authService: AuthService) {
         super({
             jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
             passReqToCallback: true,

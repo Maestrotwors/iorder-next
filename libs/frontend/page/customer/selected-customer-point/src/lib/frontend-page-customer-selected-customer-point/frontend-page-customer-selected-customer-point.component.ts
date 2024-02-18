@@ -5,10 +5,7 @@ import { RouterOutlet } from '@angular/router';
 @Component({
     selector: 'io-customer-page-selected-customer-point',
     standalone: true,
-    imports: [
-      CommonModule,
-      RouterOutlet
-    ],
+    imports: [CommonModule, RouterOutlet],
     templateUrl: './frontend-page-customer-selected-customer-point.component.html',
     styleUrl: './frontend-page-customer-selected-customer-point.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

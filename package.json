@@ -7,7 +7,11 @@
     "start:api:dev": "nx serve backend-api --watch",
     "migrate:dev": "prisma migrate dev",
     "migrate:generate": "prisma generate",
-    "migrate:deploy": "prisma migrate deploy"
+    "migrate:deploy": "prisma migrate deploy",
+    "clear-cache": "npm cache clean --force ",
+    "format": "nx format",
+    "build-all": "nx run-many -t build",
+    "build:front": "nx build frontend-iorder"
   },
   "private": true,
   "devDependencies": {
@@ -70,6 +74,7 @@
   },
   "dependencies": {
     "@angular/animations": "~17.1.0",
+    "@angular/cdk": "^17.2.0",
     "@angular/common": "~17.1.0",
     "@angular/compiler": "~17.1.0",
     "@angular/core": "~17.1.0",
@@ -93,6 +98,7 @@
     "axios": "^1.0.0",
     "bcryptjs": "^2.4.3",
     "express": "~4.18.2",
+    "ngx-device-detector": "^7.0.0",
     "passport-jwt": "^4.0.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.8.0",

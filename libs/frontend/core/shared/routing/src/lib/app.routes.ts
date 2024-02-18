@@ -4,9 +4,4 @@ import { supplierRoutes } from './routes/supplier.routes';
 import { customerRoutes } from './routes/customer.routes';
 import { landingRoutes } from './routes/landing.routes';
 
-export const appRoutes: Route[] = [
-  customerRoutes,
-  supplierRoutes,
-  adminRoutes,
-  landingRoutes
-];
+export const appRoutes: Route[] = [customerRoutes, supplierRoutes, adminRoutes, landingRoutes];

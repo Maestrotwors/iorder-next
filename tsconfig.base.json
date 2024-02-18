@@ -24,6 +24,8 @@
             "@iorder-next/backend/repository/user": ["libs/backend/repository/user/src/index.ts"],
             "@iorder-next/backend/shared/user": ["libs/backend/shared/user/src/index.ts"],
             "@iorder-next/contracts/api": ["libs/contracts/api/src/index.ts"],
+            "@iorder-next/frontend/core/shared/break-point": ["libs/frontend/core/shared/break-point/src/index.ts"],
+            "@iorder-next/frontend/core/shared/device-info": ["libs/frontend/core/shared/device-info/src/index.ts"],
             "@iorder-next/frontend/core/shared/routing": ["libs/frontend/core/shared/routing/src/index.ts"],
             "@iorder-next/frontend/page/admin/main": ["libs/frontend/page/admin/main/src/index.ts"],
             "@iorder-next/frontend/page/customer/catalog": ["libs/frontend/page/customer/catalog/src/index.ts"],
@@ -41,6 +43,8 @@
             "@iorder-next/frontend/page/customer/supplier-select": ["libs/frontend/page/customer/supplier-select/src/index.ts"],
             "@iorder-next/frontend/page/landing/main": ["libs/frontend/page/landing/main/src/index.ts"],
             "@iorder-next/frontend/page/supplier/main": ["libs/frontend/page/supplier/main/src/index.ts"],
+            "@iorder-next/frontend/widget/customer/catalog/desktop": ["libs/frontend/widget/customer/catalog/desktop/src/index.ts"],
+            "@iorder-next/frontend/widget/customer/catalog/mobile": ["libs/frontend/widget/customer/catalog/mobile/src/index.ts"],
             "@iorder-next/plugins/nx-plugin": ["libs/plugins/nx-plugin/src/index.ts"]
         }
     },

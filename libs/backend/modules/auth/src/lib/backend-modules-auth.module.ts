@@ -6,11 +6,7 @@ import { AuthService } from './services/auth.service';
 
 @Module({
     controllers: [BackendModulesAuthController],
-    providers: [
-      AuthService,
-      PasswordRecoveryService,
-      RegistrationService
-    ],
+    providers: [AuthService, PasswordRecoveryService, RegistrationService],
     exports: [],
 })
 export class BackendModulesAuthModule {}
