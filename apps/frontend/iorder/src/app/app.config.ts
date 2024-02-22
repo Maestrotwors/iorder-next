@@ -1,5 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
-import { provideRouter, withComponentInputBinding, withRouterConfig } from '@angular/router';
+import { provideRouter, withComponentInputBinding, withRouterConfig, withViewTransitions } from '@angular/router';
 import { appRoutes } from '@iorder-next/frontend/core/shared/routing';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
@@ -11,6 +11,7 @@ export const appConfig: ApplicationConfig = {
         provideRouter(
             appRoutes,
             withComponentInputBinding(),
+            withViewTransitions(),
             withRouterConfig({
                 paramsInheritanceStrategy: 'always',
             }),

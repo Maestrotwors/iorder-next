@@ -9,7 +9,7 @@ export class BreakPointBaseService {
     protected isMobileSubject = new BehaviorSubject<boolean | null>(null);
     protected isTabletSubject = new BehaviorSubject<boolean | null>(null);
     protected isTabletAndLessSubject = new BehaviorSubject<boolean | null>(null);
-    protected isDesktopSubject = new BehaviorSubject<boolean | null>(true);
+    protected isDesktopSubject = new BehaviorSubject<boolean | null>(null);
 
     public currentDeviceWidth$ = this.currentDeviceWidthSubject.asObservable().pipe(
         filter(value => value !== null),

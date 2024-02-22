@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { BreakPointService } from '@iorder-next/frontend/core/shared/break-point';
-import { FrontendWidgetCustomerCatalogDesktopComponent } from '@iorder-next/frontend/widget/customer/catalog/desktop';
-import { FrontendWidgetCustomerCatalogMobileComponent } from '@iorder-next/frontend/widget/customer/catalog/mobile';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { AsyncPipe } from '@angular/common';
+import { FrontendPageCustomerCatalogDesktopComponent } from './view/desktop/frontend-page-customer-catalog-desktop.component';
+import { FrontendPageCustomerCatalogMobileComponent } from './view/mobile/frontend-page-customer-catalog-mobile.component';
 
 @Component({
     selector: 'io-customer-page-catalog',
     standalone: true,
-    imports: [FrontendWidgetCustomerCatalogDesktopComponent, FrontendWidgetCustomerCatalogMobileComponent, AsyncPipe],
+    imports: [FrontendPageCustomerCatalogDesktopComponent, FrontendPageCustomerCatalogMobileComponent, AsyncPipe],
     templateUrl: './frontend-page-customer-catalog.component.html',
     styleUrl: './frontend-page-customer-catalog.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

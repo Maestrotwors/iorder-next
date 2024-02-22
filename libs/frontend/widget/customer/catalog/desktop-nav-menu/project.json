@@ -1,0 +1,17 @@
+{
+    "name": "frontend-widget-customer-catalog-desktop-nav-menu",
+    "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "libs/frontend/widget/customer/catalog/desktop-nav-menu/src",
+    "prefix": "iorder-next",
+    "tags": ["frontend-layer:widget", "project:customer"],
+    "projectType": "library",
+    "targets": {
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "libs/frontend/widget/customer/catalog/desktop-nav-menu/jest.config.ts"
+            }
+        }
+    }
+}

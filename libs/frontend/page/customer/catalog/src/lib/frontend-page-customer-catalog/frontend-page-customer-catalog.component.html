@@ -1,7 +1,5 @@
------
-{{ $isDesktop() }}
 @if ($isDesktop() === true) { @defer (on immediate) {
-<io-customer-widget-catalog-desktop></io-customer-widget-catalog-desktop>
+<io-customer-page-catalog-desktop></io-customer-page-catalog-desktop>
 } } @if ($isDesktop() === false) { @defer (on immediate) {
-<io-customer-widget-catalog-mobile></io-customer-widget-catalog-mobile>
+<io-customer-page-catalog-mobile></io-customer-page-catalog-mobile>
 } }

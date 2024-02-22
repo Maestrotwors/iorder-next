@@ -21,6 +21,23 @@ export const customerRoutes = {
                     path: CustomerRoutePath.Catalog,
                     loadComponent: () =>
                         import('@iorder-next/frontend/page/customer/catalog').then(c => c.FrontendPageCustomerCatalogComponent),
+                    children: [
+                        {
+                            path: '',
+                            loadComponent: () =>
+                                import('@iorder-next/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
+                        },
+                        {
+                            path: ':id',
+                            loadComponent: () =>
+                                import('@iorder-next/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
+                        },
+                        {
+                          path: 'product/:productId',
+                          loadComponent: () =>
+                              import('@iorder-next/frontend/page/customer/product').then(c => c.FrontendPageCustomerProductComponent),
+                        },
+                    ]
                 },
                 {
                     path: CustomerRoutePath.Order,
