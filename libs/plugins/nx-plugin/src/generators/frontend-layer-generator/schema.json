@@ -28,7 +28,7 @@
             "x-prompt": {
                 "message": "What layer would you like to use?",
                 "type": "list",
-                "items": ["page", "widget", "feature", "shared", "repository", "core", "ui"]
+                "items": ["page", "widget", "feature", "shared", "repository", "core", "api", "ui"]
             }
         },
         "directory": {

@@ -10,4 +10,9 @@ export class AppController {
     getData() {
         return this.appService.getData();
     }
+
+    @Get('products')
+    getProducts() {
+        return [{ id: 1, name: 'Product 1' }, { id: 2, name: 'Product 2' }];
+    }
 }

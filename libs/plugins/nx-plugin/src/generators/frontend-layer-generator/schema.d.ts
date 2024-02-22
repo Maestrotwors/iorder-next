@@ -1,4 +1,4 @@
-export type Layer = 'page' | 'widget' | 'feature' | 'shared' | 'repository' | 'core' | 'ui';
+export type Layer = 'page' | 'widget' | 'feature' | 'shared' | 'repository' | 'core' | 'api' | 'ui';
 
 export type ProjectType = 'customer' | 'supplier' | 'admin' | 'landing' | 'shared';
 

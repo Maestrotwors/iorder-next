@@ -72,6 +72,9 @@
             "@iorder-next/frontend/page/customer/supplier-select": ["libs/frontend/page/customer/supplier-select/src/index.ts"],
             "@iorder-next/frontend/page/landing/main": ["libs/frontend/page/landing/main/src/index.ts"],
             "@iorder-next/frontend/page/supplier/main": ["libs/frontend/page/supplier/main/src/index.ts"],
+            "@iorder-next/frontend/repository/customer/catalog/products": [
+                "libs/frontend/repository/customer/catalog/products/src/index.ts"
+            ],
             "@iorder-next/frontend/shared/customer/footer": ["libs/frontend/shared/customer/footer/src/index.ts"],
             "@iorder-next/frontend/shared/customer/header": ["libs/frontend/shared/customer/header/src/index.ts"],
             "@iorder-next/frontend/shared/customer/supplier-icon": ["libs/frontend/shared/customer/supplier-icon/src/index.ts"],

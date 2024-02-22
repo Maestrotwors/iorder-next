@@ -93,6 +93,8 @@
     "@nestjs/platform-express": "^10.0.2",
     "@ngneat/cashew": "^4.1.0",
     "@ngneat/elf": "^2.5.1",
+    "@ngneat/elf-entities": "^5.0.1",
+    "@ngneat/elf-requests": "^1.9.2",
     "@nx/devkit": "18.0.4",
     "@prisma/client": "^5.9.1",
     "axios": "^1.0.0",
