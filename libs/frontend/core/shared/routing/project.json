@@ -1,20 +1,20 @@
 {
-    "name": "frontend-core-shared-routing",
-    "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/frontend/core/shared/routing/src",
-    "prefix": "iorder-next",
-    "tags": ["frontend-layer:core", "project:shared"],
-    "projectType": "library",
-    "targets": {
-        "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-            "options": {
-                "jestConfig": "libs/frontend/core/shared/routing/jest.config.ts"
-            }
-        },
-        "lint": {
-            "executor": "@nx/eslint:lint"
-        }
+  "name": "frontend-core-shared-routing",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/core/shared/routing/src",
+  "prefix": "iorder-next",
+  "tags": ["frontend-layer:core", "project:shared"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/frontend/core/shared/routing/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
     }
+  }
 }

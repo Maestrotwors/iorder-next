@@ -1,5 +1,10 @@
-@if ($isDesktop() === true) { @defer (on immediate) {
-<io-customer-page-catalog-desktop></io-customer-page-catalog-desktop>
-} } @if ($isDesktop() === false) { @defer (on immediate) {
-<io-customer-page-catalog-mobile></io-customer-page-catalog-mobile>
-} }
+<ng-container *ifDesktop>
+  @defer (on immediate) {
+    <io-customer-page-catalog-desktop></io-customer-page-catalog-desktop>
+  }
+</ng-container>
+<ng-container *ifNotDesktop>
+  @defer (on immediate) {
+    <io-customer-page-catalog-mobile></io-customer-page-catalog-mobile>
+  }
+</ng-container>

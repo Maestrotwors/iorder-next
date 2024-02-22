@@ -5,19 +5,19 @@ import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class RegistrationService {
-    constructor(
-        private readonly queryBus: QueryBus,
-        private readonly commandBus: CommandBus,
-        private readonly jwtService: JwtService,
-        private readonly configService: ConfigService,
-    ) {}
+  constructor(
+    private readonly queryBus: QueryBus,
+    private readonly commandBus: CommandBus,
+    private readonly jwtService: JwtService,
+    private readonly configService: ConfigService,
+  ) {}
 
-    private accessTokenSecret = this.configService.get<string>('ACCESS_TOKEN_JWT_SECRET');
-    private accessTokenExpiration = this.configService.get<string>('ACCESS_TOKEN_EXPIRATION');
-    private refreshTokenSecret = this.configService.get<string>('REFRESH_TOKEN_JWT_SECRET');
-    private refreshTokenExpiration = this.configService.get<string>('REFRESH_TOKEN_EXPIRATION');
+  private accessTokenSecret = this.configService.get<string>('ACCESS_TOKEN_JWT_SECRET');
+  private accessTokenExpiration = this.configService.get<string>('ACCESS_TOKEN_EXPIRATION');
+  private refreshTokenSecret = this.configService.get<string>('REFRESH_TOKEN_JWT_SECRET');
+  private refreshTokenExpiration = this.configService.get<string>('REFRESH_TOKEN_EXPIRATION');
 
-    /*
+  /*
   async register(dto: RegisterDto): Promise<RegisterResponseDto> {
     const { email, name, password } = dto;
 

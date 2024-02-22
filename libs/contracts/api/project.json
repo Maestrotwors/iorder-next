@@ -1,22 +1,22 @@
 {
-    "name": "contracts-api",
-    "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/contracts/api/src",
-    "projectType": "library",
-    "targets": {
-        "build": {
-            "executor": "@nx/js:swc",
-            "outputs": ["{options.outputPath}"],
-            "options": {
-                "outputPath": "dist/libs/contracts/api",
-                "main": "libs/contracts/api/src/index.ts",
-                "tsConfig": "libs/contracts/api/tsconfig.lib.json",
-                "assets": ["libs/contracts/api/*.md"]
-            }
-        },
-        "lint": {
-            "executor": "@nx/eslint:lint"
-        }
+  "name": "contracts-api",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/contracts/api/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/contracts/api",
+        "main": "libs/contracts/api/src/index.ts",
+        "tsConfig": "libs/contracts/api/tsconfig.lib.json",
+        "assets": ["libs/contracts/api/*.md"]
+      }
     },
-    "tags": ["frontend-layer:contract"]
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  },
+  "tags": ["frontend-layer:contract"]
 }

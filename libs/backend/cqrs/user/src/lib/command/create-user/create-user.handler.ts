@@ -7,26 +7,26 @@ import { UserEntity } from '../../entities/user.entity';
 
 @CommandHandler(CreateUserCommand)
 export class CreateUserHandler implements ICommandHandler<CreateUserCommand> {
-    public readonly logger = new Logger(CreateUserHandler.name);
+  public readonly logger = new Logger(CreateUserHandler.name);
 
-    constructor(private readonly userRepository: UserRepository) {}
+  constructor(private readonly userRepository: UserRepository) {}
 
-    async execute(command: CreateUserCommand): Promise<User> {
-        const { email, name, role, password } = command;
-        try {
-            const existingUser = await this.userRepository.getUserByEmail(email);
-            if (existingUser) {
-                throw new Error('Пользователь с таким email уже существует');
-            }
+  async execute(command: CreateUserCommand): Promise<User> {
+    const { email, name, role, password } = command;
+    try {
+      const existingUser = await this.userRepository.getUserByEmail(email);
+      if (existingUser) {
+        throw new Error('Пользователь с таким email уже существует');
+      }
 
-            const user = new UserEntity({ email, name, role });
-            await user.setPassword(password);
-            user.toLowerCase();
+      const user = new UserEntity({ email, name, role });
+      await user.setPassword(password);
+      user.toLowerCase();
 
-            return await this.userRepository.createUser(user);
-        } catch (error) {
-            this.logger.error(`Error: ${JSON.stringify(error)}`);
-            return null;
-        }
+      return await this.userRepository.createUser(user);
+    } catch (error) {
+      this.logger.error(`Error: ${JSON.stringify(error)}`);
+      return null;
     }
+  }
 }

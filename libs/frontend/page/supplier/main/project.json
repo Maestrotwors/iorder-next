@@ -1,20 +1,20 @@
 {
-    "name": "frontend-page-supplier-main",
-    "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/frontend/page/supplier/main/src",
-    "prefix": "iorder-next",
-    "tags": ["frontend-layer:page", "project:supplier"],
-    "projectType": "library",
-    "targets": {
-        "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-            "options": {
-                "jestConfig": "libs/frontend/page/supplier/main/jest.config.ts"
-            }
-        },
-        "lint": {
-            "executor": "@nx/eslint:lint"
-        }
+  "name": "frontend-page-supplier-main",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/page/supplier/main/src",
+  "prefix": "iorder-next",
+  "tags": ["frontend-layer:page", "project:supplier"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/frontend/page/supplier/main/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
     }
+  }
 }

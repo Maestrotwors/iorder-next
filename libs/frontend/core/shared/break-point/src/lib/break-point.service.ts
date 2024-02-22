@@ -1,68 +1,74 @@
 import { Injectable, inject } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { distinctUntilChanged, tap } from 'rxjs';
-import { DeviceWidthEnum } from './device-width.interface';
-import { BreakPointBaseService } from './break-point-base.service';
+import { BehaviorSubject, distinctUntilChanged, filter, map, tap } from 'rxjs';
+import { DeviceWidth, DeviceWidthEnum } from './device-width.interface';
+import { breakPointConfig } from './break-point.config';
 
 @Injectable({ providedIn: 'root' })
-export class BreakPointService extends BreakPointBaseService {
-    private breakpointObserver = inject(BreakpointObserver);
+export class BreakPointService {
+  #breakpointObserver = inject(BreakpointObserver);
 
-    public readonly breakpoint$ = this.breakpointObserver
-        .observe([this.desktopBreakPoint, this.tabletBreakPoint, this.bigMobileBreakPoint, this.smallMobileBreakPoint])
-        .pipe(
-            distinctUntilChanged(),
-            tap(() => this.breakpointChanged()),
-        );
-    private breakpointChanged(): void {
-        if (this.breakpointObserver.isMatched(this.desktopBreakPoint)) {
-            this.handleDesktopWidth();
-        } else if (this.breakpointObserver.isMatched(this.tabletBreakPoint)) {
-            this.handleTabletWidth();
-        } else if (this.breakpointObserver.isMatched(this.bigMobileBreakPoint)) {
-            this.handleBigMobileWidth();
-        } else if (this.breakpointObserver.isMatched(this.smallMobileBreakPoint)) {
-            this.handleSmallMobileWidth();
-        }
-    }
+  #smallMobileBreakPoint = `(max-width: ${breakPointConfig.maxSmallMobile}px)`;
+  #bigMobileBreakPoint = `(min-width: ${breakPointConfig.maxSmallMobile + 0.02}px) and (max-width: ${
+    breakPointConfig.maxBigMobile
+  }px)`;
+  #tabletBreakPoint = `(min-width: ${breakPointConfig.maxBigMobile + 0.02}px) and (max-width: ${
+    breakPointConfig.maxTabletAndLess
+  }px)`;
+  #desktopBreakPoint = `(min-width: ${breakPointConfig.maxTabletAndLess + 0.02}px)`;
 
-    private handleDesktopWidth(): void {
-        this.isSmallMobileSubject.next(false);
-        this.isBigMobileSubject.next(false);
-        this.isMobileSubject.next(false);
-        this.isTabletSubject.next(false);
-        this.isTabletAndLessSubject.next(false);
-        this.isDesktopSubject.next(true);
-        this.currentDeviceWidthSubject.next(DeviceWidthEnum.Desktop);
-    }
+  #currentDeviceWidthSubject = new BehaviorSubject<DeviceWidth | null>(null);
 
-    private handleTabletWidth(): void {
-        this.isSmallMobileSubject.next(false);
-        this.isBigMobileSubject.next(false);
-        this.isMobileSubject.next(false);
-        this.isTabletSubject.next(true);
-        this.isTabletAndLessSubject.next(true);
-        this.isDesktopSubject.next(false);
-        this.currentDeviceWidthSubject.next(DeviceWidthEnum.Tablet);
+  public readonly breakpoint$ = this.#breakpointObserver
+    .observe([this.#desktopBreakPoint, this.#tabletBreakPoint, this.#bigMobileBreakPoint, this.#smallMobileBreakPoint])
+    .pipe(
+      distinctUntilChanged(),
+      tap(() => this.breakpointChanged()),
+    );
+  private breakpointChanged(): void {
+    if (this.#breakpointObserver.isMatched(this.#desktopBreakPoint)) {
+      this.#currentDeviceWidthSubject.next(DeviceWidthEnum.Desktop);
+    } else if (this.#breakpointObserver.isMatched(this.#tabletBreakPoint)) {
+      this.#currentDeviceWidthSubject.next(DeviceWidthEnum.Tablet);
+    } else if (this.#breakpointObserver.isMatched(this.#bigMobileBreakPoint)) {
+      this.#currentDeviceWidthSubject.next(DeviceWidthEnum.BigMobile);
+    } else if (this.#breakpointObserver.isMatched(this.#smallMobileBreakPoint)) {
+      this.#currentDeviceWidthSubject.next(DeviceWidthEnum.SmallMobile);
     }
+  }
 
-    private handleBigMobileWidth(): void {
-        this.isSmallMobileSubject.next(false);
-        this.isBigMobileSubject.next(true);
-        this.isMobileSubject.next(true);
-        this.isTabletSubject.next(false);
-        this.isTabletAndLessSubject.next(true);
-        this.isDesktopSubject.next(false);
-        this.currentDeviceWidthSubject.next(DeviceWidthEnum.BigMobile);
-    }
+  public currentDeviceWidth$ = this.#currentDeviceWidthSubject.pipe(
+    map(value => value !== null),
+    distinctUntilChanged(),
+  );
 
-    private handleSmallMobileWidth(): void {
-        this.isSmallMobileSubject.next(true);
-        this.isBigMobileSubject.next(false);
-        this.isMobileSubject.next(true);
-        this.isTabletSubject.next(false);
-        this.isTabletAndLessSubject.next(true);
-        this.isDesktopSubject.next(false);
-        this.currentDeviceWidthSubject.next(DeviceWidthEnum.SmallMobile);
-    }
+  public isSmallMobile$ = this.#currentDeviceWidthSubject.pipe(
+    map(value => value !== null && value === DeviceWidthEnum.SmallMobile),
+    distinctUntilChanged(),
+  );
+
+  public isBigMobile$ = this.#currentDeviceWidthSubject.pipe(
+    map(value => value !== null && value === DeviceWidthEnum.BigMobile),
+    distinctUntilChanged(),
+  );
+
+  public isMobile$ = this.#currentDeviceWidthSubject.pipe(
+    map(value => value !== null && (value === DeviceWidthEnum.BigMobile || value === DeviceWidthEnum.SmallMobile)),
+    distinctUntilChanged(),
+  );
+
+  public isTablet$ = this.#currentDeviceWidthSubject.pipe(
+    map(value => value !== null && value === DeviceWidthEnum.Tablet),
+    distinctUntilChanged(),
+  );
+
+  public isTabletAndLess$ = this.#currentDeviceWidthSubject.pipe(
+    map(value => value !== null && (value === DeviceWidthEnum.Tablet || value === DeviceWidthEnum.SmallMobile || value === DeviceWidthEnum.BigMobile)),
+    distinctUntilChanged(),
+  );
+
+  public isDesktop$ = this.#currentDeviceWidthSubject.pipe(
+    map(value => value !== null && value === DeviceWidthEnum.Desktop),
+    distinctUntilChanged(),
+  );
 }

@@ -1,20 +1,20 @@
 {
-    "name": "frontend-page-admin-main",
-    "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/frontend/page/admin/main/src",
-    "prefix": "iorder-next",
-    "tags": ["frontend-layer:page", "project:admin"],
-    "projectType": "library",
-    "targets": {
-        "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-            "options": {
-                "jestConfig": "libs/frontend/page/admin/main/jest.config.ts"
-            }
-        },
-        "lint": {
-            "executor": "@nx/eslint:lint"
-        }
+  "name": "frontend-page-admin-main",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/page/admin/main/src",
+  "prefix": "iorder-next",
+  "tags": ["frontend-layer:page", "project:admin"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/frontend/page/admin/main/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
     }
+  }
 }

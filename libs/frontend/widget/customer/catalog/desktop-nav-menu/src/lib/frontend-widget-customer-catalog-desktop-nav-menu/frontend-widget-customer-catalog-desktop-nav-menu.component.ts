@@ -6,17 +6,17 @@ import { FrontendFeatureCustomerCatalogSupplierListComponent } from '@iorder-nex
 import { FrontendSharedCustomerSupplierBigIconComponent } from '@iorder-next/frontend/shared/customer/supplier-icon';
 
 @Component({
-    selector: 'io-customer-widget-catalog-desktop-nav-menu',
-    standalone: true,
-    imports: [
-      FrontendSharedCustomerSupplierBigIconComponent,
-      FrontendFeatureCustomerCatalogSupplierListComponent,
-      FrontendFeatureCustomerCatalogCategoriesListComponent,
-      FrontendFeatureCustomerCatalogRecommendedListComponent,
-      FrontendFeatureCustomerCatalogSubSupplierSelectionComponent
-    ],
-    templateUrl: './frontend-widget-customer-catalog-desktop-nav-menu.component.html',
-    styleUrl: './frontend-widget-customer-catalog-desktop-nav-menu.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'io-customer-widget-catalog-desktop-nav-menu',
+  standalone: true,
+  imports: [
+    FrontendSharedCustomerSupplierBigIconComponent,
+    FrontendFeatureCustomerCatalogSupplierListComponent,
+    FrontendFeatureCustomerCatalogCategoriesListComponent,
+    FrontendFeatureCustomerCatalogRecommendedListComponent,
+    FrontendFeatureCustomerCatalogSubSupplierSelectionComponent,
+  ],
+  templateUrl: './frontend-widget-customer-catalog-desktop-nav-menu.component.html',
+  styleUrl: './frontend-widget-customer-catalog-desktop-nav-menu.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FrontendWidgetCustomerCatalogDesktopNavMenuComponent {}

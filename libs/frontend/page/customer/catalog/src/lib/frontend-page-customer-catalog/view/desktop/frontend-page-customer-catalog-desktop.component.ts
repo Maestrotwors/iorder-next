@@ -4,15 +4,11 @@ import { FrontendSharedCustomerFooterDesktopComponent } from '@iorder-next/front
 import { FrontendWidgetCustomerCatalogDesktopNavMenuComponent } from '@iorder-next/frontend/widget/customer/catalog/desktop-nav-menu';
 
 @Component({
-    selector: 'io-customer-page-catalog-desktop',
-    standalone: true,
-    imports: [
-      FrontendSharedCustomerFooterDesktopComponent,
-      FrontendWidgetCustomerCatalogDesktopNavMenuComponent,
-      RouterOutlet
-    ],
-    templateUrl: './frontend-page-customer-catalog-desktop.component.html',
-    styleUrl: './frontend-page-customer-catalog-desktop.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'io-customer-page-catalog-desktop',
+  standalone: true,
+  imports: [FrontendSharedCustomerFooterDesktopComponent, FrontendWidgetCustomerCatalogDesktopNavMenuComponent, RouterOutlet],
+  templateUrl: './frontend-page-customer-catalog-desktop.component.html',
+  styleUrl: './frontend-page-customer-catalog-desktop.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FrontendPageCustomerCatalogDesktopComponent {}

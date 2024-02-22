@@ -1,19 +1,19 @@
 {
-    "name": "backend-shared-user",
-    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/backend/shared/user/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nx/eslint:lint"
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-            "options": {
-                "jestConfig": "libs/backend/shared/user/jest.config.ts"
-            }
-        }
+  "name": "backend-shared-user",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend/shared/user/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
     },
-    "tags": ["backend:shared"]
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/backend/shared/user/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["backend:shared"]
 }

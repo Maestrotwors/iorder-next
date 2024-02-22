@@ -1,17 +1,17 @@
 {
-    "name": "frontend-page-customer-product",
-    "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/frontend/page/customer/product/src",
-    "prefix": "iorder-next",
-    "tags": ["frontend-layer:page", "project:customer"],
-    "projectType": "library",
-    "targets": {
-        "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-            "options": {
-                "jestConfig": "libs/frontend/page/customer/product/jest.config.ts"
-            }
-        }
+  "name": "frontend-page-customer-product",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/page/customer/product/src",
+  "prefix": "iorder-next",
+  "tags": ["frontend-layer:page", "project:customer"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/frontend/page/customer/product/jest.config.ts"
+      }
     }
+  }
 }

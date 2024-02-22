@@ -5,9 +5,9 @@ import { RemoveRecoveryTokenHandler } from './command/remove-recovery-token';
 import { GenerateRecoveryTokenHandler } from './command/generate-recovery-token';
 
 export const COMMANDS = [
-    CreateUserHandler,
-    SetNewPasswordHandler,
-    AddRecoveryTokenHandler,
-    RemoveRecoveryTokenHandler,
-    GenerateRecoveryTokenHandler,
+  CreateUserHandler,
+  SetNewPasswordHandler,
+  AddRecoveryTokenHandler,
+  RemoveRecoveryTokenHandler,
+  GenerateRecoveryTokenHandler,
 ];

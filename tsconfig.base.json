@@ -1,94 +1,89 @@
 {
-    "compileOnSave": false,
-    "compilerOptions": {
-        "rootDir": ".",
-        "sourceMap": true,
-        "declaration": false,
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "importHelpers": true,
-        "target": "es2015",
-        "module": "esnext",
-        "lib": ["es2020", "dom"],
-        "skipLibCheck": true,
-        "skipDefaultLibCheck": true,
-        "baseUrl": ".",
-        "paths": {
-            "@iorder-next/backend/core/db": ["libs/backend/core/db/src/index.ts"],
-            "@iorder-next/backend/cqrs/user": ["libs/backend/cqrs/user/src/index.ts"],
-            "@iorder-next/backend/modules/admin": ["libs/backend/modules/admin/src/index.ts"],
-            "@iorder-next/backend/modules/auth": ["libs/backend/modules/auth/src/index.ts"],
-            "@iorder-next/backend/modules/customer": ["libs/backend/modules/customer/src/index.ts"],
-            "@iorder-next/backend/modules/supplier": ["libs/backend/modules/supplier/src/index.ts"],
-            "@iorder-next/backend/repository/user": ["libs/backend/repository/user/src/index.ts"],
-            "@iorder-next/backend/shared/user": ["libs/backend/shared/user/src/index.ts"],
-            "@iorder-next/contracts/api": ["libs/contracts/api/src/index.ts"],
-            "@iorder-next/frontend/core/shared/break-point": ["libs/frontend/core/shared/break-point/src/index.ts"],
-            "@iorder-next/frontend/core/shared/device-info": ["libs/frontend/core/shared/device-info/src/index.ts"],
-            "@iorder-next/frontend/core/shared/routing": ["libs/frontend/core/shared/routing/src/index.ts"],
-            "@iorder-next/frontend/feature/customer/catalog/categories-list": [
-                "libs/frontend/feature/customer/catalog/categories-list/src/index.ts"
-            ],
-            "@iorder-next/frontend/feature/customer/catalog/products/category-info": [
-                "libs/frontend/feature/customer/catalog/products/category-info/src/index.ts"
-            ],
-            "@iorder-next/frontend/feature/customer/catalog/products/filters": [
-                "libs/frontend/feature/customer/catalog/products/filters/src/index.ts"
-            ],
-            "@iorder-next/frontend/feature/customer/catalog/products/order-units-select": [
-                "libs/frontend/feature/customer/catalog/products/order-units-select/src/index.ts"
-            ],
-            "@iorder-next/frontend/feature/customer/catalog/products/products-list": [
-                "libs/frontend/feature/customer/catalog/products/products-list/src/index.ts"
-            ],
-            "@iorder-next/frontend/feature/customer/catalog/products/view-select": [
-                "libs/frontend/feature/customer/catalog/products/view-select/src/index.ts"
-            ],
-            "@iorder-next/frontend/feature/customer/catalog/recommended-list": [
-                "libs/frontend/feature/customer/catalog/recommended-list/src/index.ts"
-            ],
-            "@iorder-next/frontend/feature/customer/catalog/sub-supplier-selection": [
-                "libs/frontend/feature/customer/catalog/sub-supplier-selection/src/index.ts"
-            ],
-            "@iorder-next/frontend/feature/customer/catalog/supplier-list": [
-                "libs/frontend/feature/customer/catalog/supplier-list/src/index.ts"
-            ],
-            "@iorder-next/frontend/page/admin/main": ["libs/frontend/page/admin/main/src/index.ts"],
-            "@iorder-next/frontend/page/customer/catalog": ["libs/frontend/page/customer/catalog/src/index.ts"],
-            "@iorder-next/frontend/page/customer/contact-us": ["libs/frontend/page/customer/contact-us/src/index.ts"],
-            "@iorder-next/frontend/page/customer/delivery": ["libs/frontend/page/customer/delivery/src/index.ts"],
-            "@iorder-next/frontend/page/customer/how-to-use": ["libs/frontend/page/customer/how-to-use/src/index.ts"],
-            "@iorder-next/frontend/page/customer/main": ["libs/frontend/page/customer/main/src/index.ts"],
-            "@iorder-next/frontend/page/customer/order": ["libs/frontend/page/customer/order/src/index.ts"],
-            "@iorder-next/frontend/page/customer/product": ["libs/frontend/page/customer/product/src/index.ts"],
-            "@iorder-next/frontend/page/customer/products": ["libs/frontend/page/customer/products/src/index.ts"],
-            "@iorder-next/frontend/page/customer/profile": ["libs/frontend/page/customer/profile/src/index.ts"],
-            "@iorder-next/frontend/page/customer/refund": ["libs/frontend/page/customer/refund/src/index.ts"],
-            "@iorder-next/frontend/page/customer/rules": ["libs/frontend/page/customer/rules/src/index.ts"],
-            "@iorder-next/frontend/page/customer/selected-customer-point": [
-                "libs/frontend/page/customer/selected-customer-point/src/index.ts"
-            ],
-            "@iorder-next/frontend/page/customer/supplier-select": ["libs/frontend/page/customer/supplier-select/src/index.ts"],
-            "@iorder-next/frontend/page/landing/main": ["libs/frontend/page/landing/main/src/index.ts"],
-            "@iorder-next/frontend/page/supplier/main": ["libs/frontend/page/supplier/main/src/index.ts"],
-            "@iorder-next/frontend/repository/customer/catalog/products": [
-                "libs/frontend/repository/customer/catalog/products/src/index.ts"
-            ],
-            "@iorder-next/frontend/shared/customer/footer": ["libs/frontend/shared/customer/footer/src/index.ts"],
-            "@iorder-next/frontend/shared/customer/header": ["libs/frontend/shared/customer/header/src/index.ts"],
-            "@iorder-next/frontend/shared/customer/supplier-icon": ["libs/frontend/shared/customer/supplier-icon/src/index.ts"],
-            "@iorder-next/frontend/widget/customer/catalog/desktop-nav-menu": [
-                "libs/frontend/widget/customer/catalog/desktop-nav-menu/src/index.ts"
-            ],
-            "@iorder-next/frontend/widget/customer/catalog/products-header": [
-                "libs/frontend/widget/customer/catalog/products-header/src/index.ts"
-            ],
-            "@iorder-next/frontend/widget/customer/catalog/products-list": [
-                "libs/frontend/widget/customer/catalog/products-list/src/index.ts"
-            ],
-            "@iorder-next/plugins/nx-plugin": ["libs/plugins/nx-plugin/src/index.ts"]
-        }
-    },
-    "exclude": ["node_modules", "tmp"]
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@iorder-next/backend/core/db": ["libs/backend/core/db/src/index.ts"],
+      "@iorder-next/backend/cqrs/user": ["libs/backend/cqrs/user/src/index.ts"],
+      "@iorder-next/backend/modules/admin": ["libs/backend/modules/admin/src/index.ts"],
+      "@iorder-next/backend/modules/auth": ["libs/backend/modules/auth/src/index.ts"],
+      "@iorder-next/backend/modules/customer": ["libs/backend/modules/customer/src/index.ts"],
+      "@iorder-next/backend/modules/supplier": ["libs/backend/modules/supplier/src/index.ts"],
+      "@iorder-next/backend/repository/user": ["libs/backend/repository/user/src/index.ts"],
+      "@iorder-next/backend/shared/user": ["libs/backend/shared/user/src/index.ts"],
+      "@iorder-next/contracts/api": ["libs/contracts/api/src/index.ts"],
+      "@iorder-next/frontend/core/shared/break-point": ["libs/frontend/core/shared/break-point/src/index.ts"],
+      "@iorder-next/frontend/core/shared/device-info": ["libs/frontend/core/shared/device-info/src/index.ts"],
+      "@iorder-next/frontend/core/shared/routing": ["libs/frontend/core/shared/routing/src/index.ts"],
+      "@iorder-next/frontend/feature/customer/catalog/categories-list": [
+        "libs/frontend/feature/customer/catalog/categories-list/src/index.ts"
+      ],
+      "@iorder-next/frontend/feature/customer/catalog/products/category-info": [
+        "libs/frontend/feature/customer/catalog/products/category-info/src/index.ts"
+      ],
+      "@iorder-next/frontend/feature/customer/catalog/products/filters": [
+        "libs/frontend/feature/customer/catalog/products/filters/src/index.ts"
+      ],
+      "@iorder-next/frontend/feature/customer/catalog/products/order-units-select": [
+        "libs/frontend/feature/customer/catalog/products/order-units-select/src/index.ts"
+      ],
+      "@iorder-next/frontend/feature/customer/catalog/products/products-list": [
+        "libs/frontend/feature/customer/catalog/products/products-list/src/index.ts"
+      ],
+      "@iorder-next/frontend/feature/customer/catalog/products/view-select": [
+        "libs/frontend/feature/customer/catalog/products/view-select/src/index.ts"
+      ],
+      "@iorder-next/frontend/feature/customer/catalog/recommended-list": [
+        "libs/frontend/feature/customer/catalog/recommended-list/src/index.ts"
+      ],
+      "@iorder-next/frontend/feature/customer/catalog/sub-supplier-selection": [
+        "libs/frontend/feature/customer/catalog/sub-supplier-selection/src/index.ts"
+      ],
+      "@iorder-next/frontend/feature/customer/catalog/supplier-list": ["libs/frontend/feature/customer/catalog/supplier-list/src/index.ts"],
+      "@iorder-next/frontend/page/admin/main": ["libs/frontend/page/admin/main/src/index.ts"],
+      "@iorder-next/frontend/page/customer/catalog": ["libs/frontend/page/customer/catalog/src/index.ts"],
+      "@iorder-next/frontend/page/customer/contact-us": ["libs/frontend/page/customer/contact-us/src/index.ts"],
+      "@iorder-next/frontend/page/customer/delivery": ["libs/frontend/page/customer/delivery/src/index.ts"],
+      "@iorder-next/frontend/page/customer/how-to-use": ["libs/frontend/page/customer/how-to-use/src/index.ts"],
+      "@iorder-next/frontend/page/customer/main": ["libs/frontend/page/customer/main/src/index.ts"],
+      "@iorder-next/frontend/page/customer/order": ["libs/frontend/page/customer/order/src/index.ts"],
+      "@iorder-next/frontend/page/customer/product": ["libs/frontend/page/customer/product/src/index.ts"],
+      "@iorder-next/frontend/page/customer/products": ["libs/frontend/page/customer/products/src/index.ts"],
+      "@iorder-next/frontend/page/customer/profile": ["libs/frontend/page/customer/profile/src/index.ts"],
+      "@iorder-next/frontend/page/customer/refund": ["libs/frontend/page/customer/refund/src/index.ts"],
+      "@iorder-next/frontend/page/customer/rules": ["libs/frontend/page/customer/rules/src/index.ts"],
+      "@iorder-next/frontend/page/customer/selected-customer-point": ["libs/frontend/page/customer/selected-customer-point/src/index.ts"],
+      "@iorder-next/frontend/page/customer/supplier-select": ["libs/frontend/page/customer/supplier-select/src/index.ts"],
+      "@iorder-next/frontend/page/landing/main": ["libs/frontend/page/landing/main/src/index.ts"],
+      "@iorder-next/frontend/page/supplier/main": ["libs/frontend/page/supplier/main/src/index.ts"],
+      "@iorder-next/frontend/repository/customer/catalog/products": ["libs/frontend/repository/customer/catalog/products/src/index.ts"],
+      "@iorder-next/frontend/shared/customer/footer": ["libs/frontend/shared/customer/footer/src/index.ts"],
+      "@iorder-next/frontend/shared/customer/header": ["libs/frontend/shared/customer/header/src/index.ts"],
+      "@iorder-next/frontend/shared/customer/supplier-icon": ["libs/frontend/shared/customer/supplier-icon/src/index.ts"],
+      "@iorder-next/frontend/shared/shared/directives/break-point-directives": [
+        "libs/frontend/shared/shared/directives/break-point-directives/src/index.ts"
+      ],
+      "@iorder-next/frontend/widget/customer/catalog/desktop-nav-menu": [
+        "libs/frontend/widget/customer/catalog/desktop-nav-menu/src/index.ts"
+      ],
+      "@iorder-next/frontend/widget/customer/catalog/products-header": [
+        "libs/frontend/widget/customer/catalog/products-header/src/index.ts"
+      ],
+      "@iorder-next/frontend/widget/customer/catalog/products-list": ["libs/frontend/widget/customer/catalog/products-list/src/index.ts"],
+      "@iorder-next/plugins/nx-plugin": ["libs/plugins/nx-plugin/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
 }

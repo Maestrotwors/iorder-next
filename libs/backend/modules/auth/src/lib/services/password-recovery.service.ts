@@ -5,14 +5,14 @@ import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class PasswordRecoveryService {
-    constructor(
-        private readonly queryBus: QueryBus,
-        private readonly commandBus: CommandBus,
-        private readonly jwtService: JwtService,
-        private readonly configService: ConfigService,
-    ) {}
+  constructor(
+    private readonly queryBus: QueryBus,
+    private readonly commandBus: CommandBus,
+    private readonly jwtService: JwtService,
+    private readonly configService: ConfigService,
+  ) {}
 
-    /*
+  /*
   async passwordRecovery(dto: PasswordRecoveryDto): Promise<PasswordRecoveryResponseDto> {
       const existUser = await this.queryBus.execute<GetUserByEmailQuery, UserEntity>(new GetUserByEmailQuery(dto.email));
       if (!existUser) {

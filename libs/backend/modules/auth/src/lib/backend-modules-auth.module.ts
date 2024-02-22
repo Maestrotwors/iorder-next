@@ -5,8 +5,8 @@ import { PasswordRecoveryService } from './services/password-recovery.service';
 import { AuthService } from './services/auth.service';
 
 @Module({
-    controllers: [BackendModulesAuthController],
-    providers: [AuthService, PasswordRecoveryService, RegistrationService],
-    exports: [],
+  controllers: [BackendModulesAuthController],
+  providers: [AuthService, PasswordRecoveryService, RegistrationService],
+  exports: [],
 })
 export class BackendModulesAuthModule {}

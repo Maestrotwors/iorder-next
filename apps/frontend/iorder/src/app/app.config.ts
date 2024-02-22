@@ -6,17 +6,17 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideHttpCache, withHttpCacheInterceptor } from '@ngneat/cashew';
 
 export const appConfig: ApplicationConfig = {
-    providers: [
-        provideClientHydration(),
-        provideRouter(
-            appRoutes,
-            withComponentInputBinding(),
-            withViewTransitions(),
-            withRouterConfig({
-                paramsInheritanceStrategy: 'always',
-            }),
-        ),
-        provideHttpClient(withInterceptors([withHttpCacheInterceptor()])),
-        provideHttpCache(),
-    ],
+  providers: [
+    provideClientHydration(),
+    provideRouter(
+      appRoutes,
+      withComponentInputBinding(),
+      withViewTransitions(),
+      withRouterConfig({
+        paramsInheritanceStrategy: 'always',
+      }),
+    ),
+    provideHttpClient(withInterceptors([withHttpCacheInterceptor()])),
+    provideHttpCache(),
+  ],
 };

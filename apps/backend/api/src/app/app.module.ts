@@ -5,8 +5,8 @@ import { AppService } from './app.service';
 //import { BackendModulesAuthModule } from '@iorder-next/backend/modules/auth';
 
 @Module({
-    //imports: [BackendModulesAuthModule],
-    controllers: [AppController],
-    providers: [AppService],
+  //imports: [BackendModulesAuthModule],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}

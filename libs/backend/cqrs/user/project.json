@@ -1,19 +1,19 @@
 {
-    "name": "backend-cqrs-user",
-    "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-    "sourceRoot": "libs/backend/cqrs/user/src",
-    "projectType": "library",
-    "targets": {
-        "lint": {
-            "executor": "@nx/eslint:lint"
-        },
-        "test": {
-            "executor": "@nx/jest:jest",
-            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
-            "options": {
-                "jestConfig": "libs/backend/cqrs/user/jest.config.ts"
-            }
-        }
+  "name": "backend-cqrs-user",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend/cqrs/user/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
     },
-    "tags": ["backend:cqrs"]
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/backend/cqrs/user/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["backend:cqrs"]
 }

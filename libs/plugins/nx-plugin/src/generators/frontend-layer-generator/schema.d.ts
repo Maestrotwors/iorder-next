@@ -3,8 +3,8 @@ export type Layer = 'page' | 'widget' | 'feature' | 'shared' | 'repository' | 'c
 export type ProjectType = 'customer' | 'supplier' | 'admin' | 'landing' | 'shared';
 
 export interface LibraryGeneratorSchema {
-    name: string;
-    layer: Layer;
-    projectType: ProjectType;
-    directory?: string;
+  name: string;
+  layer: Layer;
+  projectType: ProjectType;
+  directory?: string;
 }
