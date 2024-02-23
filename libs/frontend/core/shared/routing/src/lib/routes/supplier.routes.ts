@@ -1,6 +1,15 @@
-import { RootRoutePath } from '../paths/root.route-path';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-export const supplierRoutes = {
-  path: RootRoutePath.Supplier,
-  loadComponent: () => import('@iorder-next/frontend/page/supplier/main').then(c => c.FrontendPageSupplierMainComponent),
-};
+const routes: Routes = [
+  {
+    path: "",
+    loadComponent: () => import('@iorder-next/frontend/page/supplier/main').then(c => c.FrontendPageSupplierMainComponent),
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class SupplierRoutingModule {}

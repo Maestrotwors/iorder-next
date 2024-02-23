@@ -13,6 +13,6 @@ import { DeviceInfoService } from '@iorder-next/frontend/core/shared/device-info
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  private breakPointService = inject(BreakPointService).breakpoint$.subscribe(() => {});
-  private deviceInfoService = inject(DeviceInfoService);
+  #breakPointService = inject(BreakPointService).breakpoint$.subscribe(() => {});
+  #deviceInfoService = inject(DeviceInfoService);
 }

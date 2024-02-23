@@ -14,8 +14,8 @@ export class AppController {
   @Get('products')
   getProducts() {
     return [
-      { id: 1, name: 'Product 1' },
-      { id: 2, name: 'Product 2' },
+      { id: 1, name: 'Product 1', image: "https://picsum.photos/200/300" },
+      { id: 2, name: 'Product 2', image: "https://picsum.photos/200/300" },
     ];
   }
 }

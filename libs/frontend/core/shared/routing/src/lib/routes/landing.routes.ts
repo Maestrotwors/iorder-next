@@ -1,6 +1,15 @@
-import { RootRoutePath } from '../paths/root.route-path';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-export const landingRoutes = {
-  path: RootRoutePath.Landing,
-  loadComponent: () => import('@iorder-next/frontend/page/landing/main').then(c => c.FrontendPageLandingMainComponent),
-};
+const routes: Routes = [
+  {
+    path: "",
+    loadComponent: () => import('@iorder-next/frontend/page/landing/main').then(c => c.FrontendPageLandingMainComponent),
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class LandingRoutingModule {}

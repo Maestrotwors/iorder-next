@@ -4,7 +4,8 @@ import { libraryGenerator } from '@nx/angular/generators';
 
 export async function libGenerator(tree: Tree, options: LibraryGeneratorSchema) {
   const directory = options?.directory ? `/${options.directory}` : '';
-  const selector = `io-${options.projectType}-${options.layer}${options?.directory ? `-${options.directory}` : ''}-${options.name}`;
+  const directoryParsed = directory.replace(/\//g, '-');
+  const selector = `io-${options.projectType}-${options.layer}${options?.directory ? `-${directoryParsed}` : ''}-${options.name}`;
 
   await libraryGenerator(tree, {
     name: options.name,
