@@ -8,6 +8,8 @@ import { PassportModule } from '@nestjs/passport';
 import { CqrsModule } from '@nestjs/cqrs';
 import { getJWTConfig } from '@iorder-next/backend/common';
 import { TokenService } from './services/token.service';
+import { RefreshTokenStrategy } from './strategies/refresh-token.strategy';
+import { AccessTokenStrategy } from './strategies/access-token.strategy';
 
 @Module({
   imports: [
@@ -20,7 +22,10 @@ import { TokenService } from './services/token.service';
     AuthService,
     RegistrationService,
     PasswordRecoveryService,
-    TokenService],
+    TokenService,
+    RefreshTokenStrategy,
+    AccessTokenStrategy
+  ],
   exports: [PassportModule, AuthService],
 })
 export class BackendModulesAuthModule {}
