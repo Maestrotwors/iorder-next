@@ -7,20 +7,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model UserRoles {
-  id            Int      @id @default(autoincrement())
-  role          String   @unique
-  users         User[]
-
-  @@map("userRole")
-}
-
 model User {
   uuid          String    @id @default(uuid()) @db.Uuid
   email         String    @unique
   name          String
   role          Int
-  roleUuid      UserRoles @relation(fields: [role], references: [id])
   passwordHash  String    @map("password_hash")
   recoveryToken String?   @unique
   createdAt     DateTime  @default(now()) @map("created_at")

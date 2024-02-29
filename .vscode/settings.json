@@ -1,4 +1,5 @@
 {
   "eslint.validate": ["json"],
-  "workbench.colorCustomizations": {}
+  "workbench.colorCustomizations": {},
+  "vsicons.presets.angular": true
 }

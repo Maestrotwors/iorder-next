@@ -1,3 +1,2 @@
-export function contractsApi(): string {
-  return 'contracts-api';
-}
+export * from './auth/index';
+//export * from './customer/index';

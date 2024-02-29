@@ -5,10 +5,10 @@ import { Observable, tap } from "rxjs";
 
 @Injectable({ providedIn: 'root' })
 export class CustomerProductsService {
-  #apiService = inject(ProductsApiService);
+  #api = inject(ProductsApiService);
 
   getProducts(): Observable<HttpResponse<any>> {
-    return this.#apiService.getProducts().pipe(
+    return this.#api.getProducts().pipe(
       tap(response => {
         console.log(response);
       })

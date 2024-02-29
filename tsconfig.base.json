@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@iorder-next/backend/common": ["libs/backend/common/src/index.ts"],
       "@iorder-next/backend/core/db": ["libs/backend/core/db/src/index.ts"],
       "@iorder-next/backend/cqrs/user": ["libs/backend/cqrs/user/src/index.ts"],
       "@iorder-next/backend/modules/admin": ["libs/backend/modules/admin/src/index.ts"],

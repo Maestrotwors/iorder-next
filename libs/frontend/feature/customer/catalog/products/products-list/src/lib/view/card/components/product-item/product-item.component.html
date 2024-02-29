@@ -1,0 +1,27 @@
+<div class="card">
+  <ng-container *ngTemplateOutlet="partImage"></ng-container>
+  <ng-container *ngTemplateOutlet="partPrice"></ng-container>
+  <ng-container *ngTemplateOutlet="partInfo"></ng-container>
+  <ng-container *ngTemplateOutlet="partOrder"></ng-container>
+  <ng-container *ngTemplateOutlet="partAdditional"></ng-container>
+</div>
+
+<ng-template #partImage>
+  <div class="image-container">
+    <img [ngSrc]="product().image" alt="product image" fill priority  imageLoader [preloaderSrc]="'path/to/your/preloader.gif'" [errorSrc]="'path/to/your/error-image.png'" [loaderParams]="{roundedCorners: true}"/>
+  </div>
+</ng-template>
+
+<ng-template #partPrice>
+  <div>{{product().price}} грн.</div>
+</ng-template>
+
+<ng-template #partInfo>
+  <div>{{product().name}}</div>
+</ng-template>
+
+<ng-template #partOrder>
+  <div>partOrder</div>
+</ng-template>
+
+<ng-template #partAdditional></ng-template>

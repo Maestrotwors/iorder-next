@@ -1,5 +1,7 @@
-export * from './lib/if-mobile.directive';
-export * from './lib/if-desktop.directive';
-export * from './lib/if-not-mobile.directive';
-export * from './lib/if-not-desktop.directive';
-export * from './lib/if-tablet.directive';
+export * from './lib/layout/if-mobile.directive';
+export * from './lib/layout/if-desktop.directive';
+export * from './lib/layout/if-not-mobile.directive';
+export * from './lib/layout/if-not-desktop.directive';
+export * from './lib/layout/if-tablet.directive';
+
+export * from './lib/image/image-loader.directive';
