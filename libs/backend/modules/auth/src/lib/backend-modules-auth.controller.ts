@@ -45,7 +45,6 @@ export class BackendModulesAuthController {
   @Get('refresh-token')
   @UseGuards(RefreshTokenGuard)
   async refreshToken(@Req() req: Request): Promise<RefreshTokenResponseDto> {
-    console.log(req);
     const dto: RefreshTokenDto | null = req?.user as RefreshTokenDto || null;
     if (!dto) {
         throw new BadRequestException('Токен не валиден');

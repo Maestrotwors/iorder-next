@@ -2,12 +2,12 @@ version: "3.9"
 services:
   postgres:
     image: postgres:latest
-    container_name: 'iorder-api-postgres'
+    container_name: 'iorder-postgres'
     restart: always
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=iorder-db
+      - POSTGRES_DB=iorder
     ports:
       - "5432:5432"
     volumes:

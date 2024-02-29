@@ -84,18 +84,20 @@ export class AuthService {
   }
 
   async changePassword(userId: string, newPassword: string): Promise<ChangePasswordResponseDto> {
-      const setNewPassword = await this.commandBus.execute<SetNewPasswordCommand, boolean>(
-          new SetNewPasswordCommand(userId, newPassword),
-      );
+    console.log(userId);
+    console.log(newPassword);
+    const setNewPassword = await this.commandBus.execute<SetNewPasswordCommand, boolean>(
+        new SetNewPasswordCommand(userId, newPassword),
+    );
 
-      if (!setNewPassword)
-          throw new InternalServerErrorException({
-              status: ChangePasswordResponseEnum.Error,
-          });
+    if (!setNewPassword)
+      throw new InternalServerErrorException({
+          status: ChangePasswordResponseEnum.Error,
+      });
 
-      return {
-          status: ChangePasswordResponseEnum.Success,
-      };
+    return {
+        status: ChangePasswordResponseEnum.Success,
+    };
   }
 
   async setNewPassword(dto: SetNewPasswordDto): Promise<SetNewPasswordResponseDto> {
