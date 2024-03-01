@@ -11,7 +11,8 @@
     "clear-cache": "npm cache clean --force ",
     "format": "nx format",
     "build-all": "nx run-many -t build",
-    "build:front": "nx build frontend-iorder"
+    "build:front": "nx build frontend-iorder",
+    "update": "nx migrate latest"
   },
   "private": true,
   "devDependencies": {
@@ -26,18 +27,18 @@
     "@angular/language-service": "~17.1.0",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
-    "@nx/angular": "18.0.4",
-    "@nx/eslint": "18.0.4",
-    "@nx/eslint-plugin": "18.0.4",
-    "@nx/jest": "18.0.4",
-    "@nx/js": "18.0.4",
-    "@nx/nest": "18.0.4",
-    "@nx/node": "18.0.4",
-    "@nx/playwright": "18.0.4",
-    "@nx/plugin": "18.0.4",
-    "@nx/web": "18.0.4",
-    "@nx/webpack": "18.0.4",
-    "@nx/workspace": "18.0.4",
+    "@nx/angular": "18.0.6",
+    "@nx/eslint": "18.0.6",
+    "@nx/eslint-plugin": "18.0.6",
+    "@nx/jest": "18.0.6",
+    "@nx/js": "18.0.6",
+    "@nx/nest": "18.0.6",
+    "@nx/node": "18.0.6",
+    "@nx/playwright": "18.0.6",
+    "@nx/plugin": "18.0.6",
+    "@nx/web": "18.0.6",
+    "@nx/webpack": "18.0.6",
+    "@nx/workspace": "18.0.6",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@schematics/angular": "~17.1.0",
     "@svgr/webpack": "^8.0.1",
@@ -62,7 +63,7 @@
     "jest-environment-node": "^29.4.1",
     "jest-preset-angular": "~13.1.4",
     "jsonc-eslint-parser": "^2.1.0",
-    "nx": "18.0.4",
+    "nx": "18.0.6",
     "postcss": "^8.4.5",
     "prettier": "^3.2.5",
     "prisma": "^5.9.1",
@@ -97,7 +98,7 @@
     "@ngneat/elf-entities": "^5.0.1",
     "@ngneat/elf-requests": "^1.9.2",
     "@ngrx/signals": "^17.1.1",
-    "@nx/devkit": "18.0.4",
+    "@nx/devkit": "18.0.6",
     "@prisma/client": "^5.9.1",
     "axios": "^1.0.0",
     "bcryptjs": "^2.4.3",
@@ -112,3 +113,4 @@
     "zone.js": "~0.14.3"
   }
 }
+

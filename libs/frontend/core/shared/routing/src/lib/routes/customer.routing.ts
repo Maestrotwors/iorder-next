@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
 import { CustomerRoutePath } from '../paths/customer.route-path';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: "",
     loadComponent: () => import('@iorder-next/frontend/page/customer/main').then(c => c.FrontendPageCustomerMainComponent),
@@ -48,9 +47,3 @@ const routes: Routes = [
     ],
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class CustomerRoutingModule { }

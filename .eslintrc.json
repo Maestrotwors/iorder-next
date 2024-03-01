@@ -63,6 +63,27 @@
               {
                 "sourceTag": "frontend-layer:core",
                 "onlyDependOnLibsWithTags": ["frontend-layer:ui"]
+              },
+
+              {
+                "sourceTag": "backend-layer:business",
+                "onlyDependOnLibsWithTags": ["layer:contract", "backend-layer:common", "backend-layer:entity"]
+              },
+              {
+                "sourceTag": "backend-layer:commands",
+                "onlyDependOnLibsWithTags": ["backend-layer:repository", "layer:contract", "backend-layer:common", "backend-layer:entity"]
+              },
+              {
+                "sourceTag": "backend-layer:entity",
+                "onlyDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "layer:contract",
+                "onlyDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "backend-layer:repository",
+                "onlyDependOnLibsWithTags": ["backend-layer:common", "backend-layer:entity"]
               }
             ]
           }

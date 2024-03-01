@@ -18,5 +18,5 @@
       "executor": "@nx/eslint:lint"
     }
   },
-  "tags": ["frontend-layer:contract"]
+  "tags": ["layer:contract"]
 }

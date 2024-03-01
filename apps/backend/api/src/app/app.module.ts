@@ -1,11 +1,9 @@
+import { AuthModule } from '@iorder-next/backend/business';
+import { getJWTConfig, validateConfig } from '@iorder-next/backend/common';
 import { Module } from '@nestjs/common';
-
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { BackendModulesAuthModule } from '@iorder-next/backend/modules/auth';
 import { ConfigModule } from '@nestjs/config';
-import { validateConfig } from '@iorder-next/backend/common';
-import { UserModule } from '@iorder-next/backend/cqrs/user';
+import { JwtModule } from '@nestjs/jwt';
+import { PassportModule } from '@nestjs/passport';
 
 @Module({
   imports: [
@@ -13,10 +11,13 @@ import { UserModule } from '@iorder-next/backend/cqrs/user';
       isGlobal: true,
       validate: config => validateConfig(config),
     }),
-    BackendModulesAuthModule,
-    UserModule
+    PassportModule.register({ defaultStrategy: 'jwt' }),
+    JwtModule.registerAsync(getJWTConfig()),
+    AuthModule
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [
+
+  ],
 })
 export class AppModule {}

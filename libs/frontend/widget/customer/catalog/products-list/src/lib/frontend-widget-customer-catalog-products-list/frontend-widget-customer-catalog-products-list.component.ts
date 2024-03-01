@@ -7,7 +7,10 @@ import {
 @Component({
   selector: 'io-customer-widget-catalog-products-list',
   standalone: true,
-  imports: [FrontendFeatureCustomerCatalogProductsListListViewComponent, FrontendFeatureCustomerCatalogProductsListCardViewComponent],
+  imports: [
+    FrontendFeatureCustomerCatalogProductsListListViewComponent,
+    FrontendFeatureCustomerCatalogProductsListCardViewComponent
+  ],
   templateUrl: './frontend-widget-customer-catalog-products-list.component.html',
   styleUrl: './frontend-widget-customer-catalog-products-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
