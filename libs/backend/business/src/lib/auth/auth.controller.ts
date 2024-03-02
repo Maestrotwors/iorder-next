@@ -15,9 +15,9 @@ export class AuthController {
     private readonly authService: AuthService,
     private readonly registrationService: RegistrationService
   ) {}
-  @Get('ping')
+  @Get('health-check')
   async ping(@Req() req: Request): Promise<any> {
-    return 'test';
+    return 'ping';
   }
 
   @Post('login')
@@ -25,6 +25,7 @@ export class AuthController {
     return this.authService.login(dto);
   }
 
+  @HttpCode(201)
   @Post('change-password')
   @HasRoles([RoleEnum.CUSTOMER, RoleEnum.SUPPLIER, RoleEnum.ADMIN])
   async changePassword(@User() user: UserContext, @Body() dto: ChangePasswordDto) {
