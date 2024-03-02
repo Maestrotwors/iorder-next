@@ -8,7 +8,7 @@
 
 <ng-template #partImage>
   <div class="image-container">
-    <img [ngSrc]="product().image" alt="product image" fill placeholder />
+    <img imgLoader [ngSrc]="product().image" alt="product image" fill priority />
   </div>
 </ng-template>
 

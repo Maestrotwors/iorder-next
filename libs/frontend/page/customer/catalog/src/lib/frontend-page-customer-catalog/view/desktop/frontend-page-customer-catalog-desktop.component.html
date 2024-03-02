@@ -1,11 +1,20 @@
+
 <div class="container">
-  <div>
-    @defer (on immediate) {
-      <io-customer-widget-catalog-desktop-nav-menu></io-customer-widget-catalog-desktop-nav-menu>
-    }
-  </div>
-  <div>
-    <router-outlet></router-outlet>
+  <div>header</div>
+  <div class="content">
+    <div>
+      @defer (on idle) {
+        <div class="content">
+          <io-customer-widget-catalog-desktop-nav-menu></io-customer-widget-catalog-desktop-nav-menu>
+        </div>
+      }
+      @placeholder {
+        <div class="content skeleton"></div>
+      }
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
 @defer (on immediate) {

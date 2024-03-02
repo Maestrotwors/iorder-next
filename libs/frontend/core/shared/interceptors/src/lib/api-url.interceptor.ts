@@ -7,7 +7,7 @@ export const ApiUrlInterceptor: HttpInterceptorFn = (
 ): Observable<HttpEvent<unknown>> => {
   // TODO environment
   const cloned = req.clone({
-    url: 'http://localhost:4000/api/' + req.url
+    url: 'http://localhost/api/v1/' + req.url
   });
   return next(cloned);
 }

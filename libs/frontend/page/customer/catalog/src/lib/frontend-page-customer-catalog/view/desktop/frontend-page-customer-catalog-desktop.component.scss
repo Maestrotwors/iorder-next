@@ -1,4 +1,16 @@
 .container {
+  height: 100dvh;
+}
+.content {
   display: grid;
+  grid-gap: 0.5rem;
   grid-template-columns: 18rem 1fr;
+  height: 100%;
+  border-radius: 0;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

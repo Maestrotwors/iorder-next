@@ -1,2 +1,12 @@
-<io-customer-widget-catalog-products-header></io-customer-widget-catalog-products-header>
-<io-customer-widget-catalog-products-list></io-customer-widget-catalog-products-list>
+<div class="container">
+  @defer (on idle) {
+    <div class="content">
+      <io-customer-widget-catalog-products-header></io-customer-widget-catalog-products-header>
+      <io-customer-widget-catalog-products-list></io-customer-widget-catalog-products-list>
+    </div>
+  }
+  @placeholder {
+    <div class="content skeleton"></div>
+  }
+</div>
+
