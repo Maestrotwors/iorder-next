@@ -9,7 +9,6 @@ async function bootstrap() {
   const config = app.get(ConfigService);
   const globalPrefix = config.get<string>('API_PREFIX') || '';
   app.setGlobalPrefix(globalPrefix);
-  //app.enableCors();
   app.useGlobalPipes(new ZodValidationPipe());
   app.enableShutdownHooks();
   const port = Number(config.get<string>('APP_PORT')) || 4000;

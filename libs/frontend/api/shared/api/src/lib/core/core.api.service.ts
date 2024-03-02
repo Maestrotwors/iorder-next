@@ -7,6 +7,6 @@ export class CoreApiService {
   #http = inject(HttpClient);
 
   get<T>(url: string): Observable<HttpResponse<T>> {
-    return this.#http.get<T>('products', { observe: 'response' });
+    return this.#http.get<T>(url, { observe: 'response' });
   }
 }

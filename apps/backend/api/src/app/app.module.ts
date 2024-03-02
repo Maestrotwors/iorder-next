@@ -1,4 +1,4 @@
-import { AuthModule } from '@iorder-next/backend/business';
+import { AuthModule, CatalogModule } from '@iorder-next/backend/business';
 import { validateConfig } from '@iorder-next/backend/common';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
@@ -9,7 +9,8 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true,
       validate: config => validateConfig(config),
     }),
-    AuthModule
+    AuthModule,
+    CatalogModule
   ],
   controllers: [],
   providers: [],
