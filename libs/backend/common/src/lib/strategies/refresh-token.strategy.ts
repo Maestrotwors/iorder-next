@@ -6,7 +6,7 @@ import { Request } from 'express';
 import { IJWTPayload } from '@iorder-next/backend/entities';
 
 @Injectable()
-export class RefreshTokenStrategy extends PassportStrategy(Strategy, 'refreshToken') {
+export class RefreshTokenStrategy extends PassportStrategy(Strategy, 'refreshTokenStrategy') {
   constructor(
     private readonly configService: ConfigService
   ) {

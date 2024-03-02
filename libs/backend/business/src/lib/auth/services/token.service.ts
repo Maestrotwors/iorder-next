@@ -35,16 +35,13 @@ export class TokenService {
     if (!user) {
       return null;
     }
-    /*
-    const isCorrectPassword = await user.validatePassword(password);
 
+    const isCorrectPassword = await user.validatePassword(password);
     if (!isCorrectPassword) {
       return null;
     }
 
-    return { role: user.role, id: user.uuid };*/
-    return null;
-
+    return { role: user.role, id: user.uuid };
   }
 
   async getTokens(payload: IJWTPayload): Promise<TokenResponseDto> {

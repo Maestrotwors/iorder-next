@@ -7,8 +7,7 @@ const UserRegisterRequestSchema = z.object({
 });
 
 const UserRegisterResponseSchema = z.object({
-    accessToken: z.string(),
-    refreshToken: z.string(),
+    created: z.boolean(),
 });
 
 export namespace UserRegisterCommand {

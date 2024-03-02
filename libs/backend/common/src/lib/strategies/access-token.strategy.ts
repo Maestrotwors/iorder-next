@@ -5,7 +5,7 @@ import { PassportStrategy } from '@nestjs/passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 
 @Injectable()
-export class AccessTokenStrategy extends PassportStrategy(Strategy, 'accessToken') {
+export class AccessTokenStrategy extends PassportStrategy(Strategy, 'accessTokenStrategy') {
   constructor(
     private readonly configService: ConfigService
   ) {
@@ -15,11 +15,11 @@ export class AccessTokenStrategy extends PassportStrategy(Strategy, 'accessToken
       secretOrKey: configService.getOrThrow('ACCESS_TOKEN_JWT_SECRET'),
       signOptions: {
         expiresIn: configService.getOrThrow('ACCESS_TOKEN_EXPIRATION'),
-      },
+      }
     });
   }
 
-  validate(data: { payload: IJWTPayload }): UserContext {
+  async validate(data: { payload: IJWTPayload }): Promise<UserContext> {
     return {
       userId: data.payload.id,
       userRole: data.payload.role,

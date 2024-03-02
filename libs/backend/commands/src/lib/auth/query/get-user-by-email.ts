@@ -1,24 +1,8 @@
 import { UserEntity } from "@iorder-next/backend/entities";
-import { UserRepository } from "@iorder-next/backend/repository";
-import { ActionBase } from "../../core/action.base";
+import { GetUserSharedQuery } from "./shared/get-user.shared";
 
-export class GetUserByEmailQuery extends ActionBase {
-  private readonly userRepository: UserRepository = new UserRepository(this.prismaService);
-
-  async execute(params: {email: string}): Promise<UserEntity | null>{
-    try {
-      const user = await this.userRepository.getUserByEmail(params.email.toLowerCase());
-      if (!user) {
-        return null;
-      }
-
-      const userEntity = new UserEntity(user);
-      userEntity.emailToLowerCase();
-
-      return userEntity;
-    } catch (error) {
-      this.logger.error(error);
-      return null;
-    }
+export class GetUserByEmailQuery extends GetUserSharedQuery {
+  async execute(params: {email: string}): Promise<UserEntity | null> {
+    return await this.executeMiddleware(this.userRepository.getUserByEmail(params.email.toLowerCase()));
   }
 }

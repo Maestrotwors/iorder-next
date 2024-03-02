@@ -22,11 +22,6 @@ export class UserEntity implements User {
         return this;
     }
 
-    public emailToLowerCase(): UserEntity {
-        this.email = this.email.toLowerCase();
-        return this;
-    }
-
     public async validatePassword(password: string): Promise<boolean> {
         return await compare(password, this.passwordHash);
     }
