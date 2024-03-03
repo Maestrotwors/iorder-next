@@ -1,3 +1,4 @@
+import { APP_FILTER } from '@nestjs/core';
 import { AuthModule, CatalogModule } from '@iorder-next/backend/business';
 import { validateConfig } from '@iorder-next/backend/common';
 import { Module } from '@nestjs/common';

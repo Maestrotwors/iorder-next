@@ -1,17 +1,32 @@
-import { Body, Controller, Get, Req } from '@nestjs/common';
+import { Controller, Get, Query, Req } from '@nestjs/common';
 import { Request } from 'express';
+import { CatalogProductsService } from './services/products.service';
+import { GetCatalogProductsResponseDto } from './dto/get-products.dto';
+import { CatalogProductService } from './services/product.service';
+import { GetCatalogProductQueryDto, GetCatalogProductResponseDto } from './dto/get-product-details.dto';
 
 @Controller('catalog')
 export class CatalogController {
-  constructor() {}
+  constructor(
+    private readonly catalogProductsService: CatalogProductsService,
+    private readonly catalogProductService: CatalogProductService
+  ) {}
   @Get('health-check')
   async ping(@Req() req: Request): Promise<any> {
     return 'ping';
   }
 
   @Get('products')
-  async login(@Body() dto: any): Promise<any> {
-    return  true;
+  async getProducts(): Promise<GetCatalogProductsResponseDto> {
+    return this.catalogProductsService.getProducts({});
+  }
+
+  @Get('product-details')
+  async getProductDetails(@Query() query: GetCatalogProductQueryDto): Promise<GetCatalogProductResponseDto> {
+    console.log(query);
+    return this.catalogProductService.getProduct({
+      productId: query.productId
+    });
   }
 
 }

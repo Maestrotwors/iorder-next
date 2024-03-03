@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardProductItemComponent } from './components/product-item/product-item.component';
+import { CatalogProductsStore } from '@iorder-next/frontend/repository/customer/catalog/products';
 
 @Component({
   selector: 'io-customer-feature-catalog-products-list-card-view',
@@ -12,8 +13,11 @@ import { CardProductItemComponent } from './components/product-item/product-item
   templateUrl: './card-view.component.html',
   styleUrl: './card-view.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [CatalogProductsStore],
 })
 export class FrontendFeatureCustomerCatalogProductsListCardViewComponent {
+  readonly productsStore = inject(CatalogProductsStore);
+
   products = [
     { id: 1, name: 'iPhone XR', price: '850', image: 'https://prodasnovastacc.blob.core.windows.net/product-small-images1/3/5413149314092.jpg?' },
     { id: 2, name: 'iPhone 11', price: '999', image: 'https://prodasnovastacc.blob.core.windows.net/product-small-images/3/8006540535240.jpg?' },
