@@ -9,8 +9,6 @@ export class CatalogProductService {
   ) {}
 
   async getProduct(dto: GetCatalogProductQueryDto): Promise<any> {
-    const product = await this.catalogActionService.getCatalogProduct(dto);
-
-    return product ?? new NotFoundException('Product not found');
+    return await this.catalogActionService.getCatalogProduct(dto) ?? new NotFoundException('Product not found');
   }
 }

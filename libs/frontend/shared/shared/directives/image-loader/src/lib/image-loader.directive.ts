@@ -6,7 +6,7 @@ import { imageNotFoundDefault } from './constants';
   standalone: true
 })
 export class ImgLoaderDirective {
-  @Input() ngSrc: string = '';
+  @Input() ngSrc: string | null = null;
   @Input() errorSrc: string = imageNotFoundDefault;
 
   constructor(private el: ElementRef, private renderer: Renderer2) { }
@@ -23,6 +23,11 @@ export class ImgLoaderDirective {
   }
 
   ngOnInit() {
+    if (!this.ngSrc) {
+      this.renderer.setAttribute(this.el.nativeElement, 'class', '');
+      this.renderer.setAttribute(this.el.nativeElement, 'src', this.errorSrc);
+      return;
+    }
     this.renderer.setAttribute(this.el.nativeElement, 'class', 'skeleton');
   }
 }

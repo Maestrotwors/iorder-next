@@ -4,7 +4,7 @@ const GetCatalogProductDetailsQueryRequestSchema = z.object({
   productId: z
     .string()
     .refine((value) => /^\d+$/.test(value), { message: "The input must be a numeric string" })
-    .transform((value) => parseInt(value, 10))
+    .transform((value) => parseInt(value, 10)),
 });
 
 const GetCatalogProductDetailsResponseSchema = z.object({

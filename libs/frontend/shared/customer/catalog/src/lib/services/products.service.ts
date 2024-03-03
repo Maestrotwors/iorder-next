@@ -11,6 +11,9 @@ export class CustomerProductsService {
     return this.#api.getProducts().pipe(
       tap(response => {
         console.log(response);
+        if (response.status === 200) {
+          //console.log('Products received');
+        }
       })
     );
   }
