@@ -3,7 +3,7 @@
   "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/shared/shared/directives/break-point-directives/src",
   "prefix": "iorder-next",
-  "tags": ["frontend-layer:shared", "project:shared"],
+  "tags": ["frontend-layer:shared", "scope:shared"],
   "projectType": "library",
   "targets": {
     "test": {

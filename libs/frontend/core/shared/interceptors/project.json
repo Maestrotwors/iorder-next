@@ -3,7 +3,7 @@
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/core/shared/interceptors/src",
   "prefix": "iorder-next",
-  "tags": ["frontend-layer:core", "project:shared"],
+  "tags": ["frontend-layer:core", "scope:shared"],
   "projectType": "library",
   "targets": {
     "test": {

@@ -1,4 +1,5 @@
-<div>----{{productsStore.isLoading()}}----</div>
+<div>----loading {{productsStore.isLoading()}}----</div>
+<div>----{{productsStore.productsCount()}}----</div>
 <div class="table">
   @for (product of productsStore.products(); track product.id) {
     <io-card-product-item [product]="product"></io-card-product-item>

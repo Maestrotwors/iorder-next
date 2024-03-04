@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { CatalogController } from './catalog.controller';
 import { CatalogProductsService } from './services/products.service';
-import { CatalogActionService } from '@iorder-next/backend/commands';
+import { CUSTOMER_COMMANDS, CatalogActionService } from '@iorder-next/backend/commands';
 import { CatalogProductService } from './services/product.service';
 
 @Module({
@@ -10,7 +10,8 @@ import { CatalogProductService } from './services/product.service';
   providers: [
     CatalogProductsService,
     CatalogProductService,
-    CatalogActionService
+    CatalogActionService,
+    ...CUSTOMER_COMMANDS
   ],
   exports: [],
 })

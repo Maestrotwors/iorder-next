@@ -3,7 +3,7 @@
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/api/shared/api/src",
   "prefix": "iorder-next",
-  "tags": ["frontend-layer:api", "project:shared"],
+  "tags": ["frontend-layer:api", "scope:shared"],
   "projectType": "library",
   "targets": {
     "test": {

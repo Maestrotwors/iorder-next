@@ -4,6 +4,11 @@ import { GetCatalogProductQuery } from "./query/get-catalog-product";
 
 @Injectable()
 export class CatalogActionService {
-  getCatalogProducts = async () => await new GetCatalogProductsQuery().execute({});
-  getCatalogProduct = async (params: {productId: number}) => await new GetCatalogProductQuery().execute({...params});
+  constructor(
+    private getCatalogProductsQuery: GetCatalogProductsQuery,
+    private getCatalogProductQuery: GetCatalogProductQuery,
+    ) {}
+
+  getCatalogProducts = async () => await this.getCatalogProductsQuery.execute({});
+  getCatalogProduct = async (params: {productId: number}) => await this.getCatalogProductQuery.execute({...params});
 }

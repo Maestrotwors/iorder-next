@@ -19,11 +19,7 @@
         "assets": ["apps/frontend/iorder/src/favicon.ico", "apps/frontend/iorder/src/assets"],
         "styles": ["apps/frontend/iorder/src/styles.scss"],
         "scripts": [],
-        "server": "apps/frontend/iorder/src/main.server.ts",
-        "prerender": true,
-        "ssr": {
-          "entry": "apps/frontend/iorder/server.ts"
-        }
+        "ssr": false
       },
       "configurations": {
         "production": {

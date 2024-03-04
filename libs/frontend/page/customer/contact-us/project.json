@@ -3,7 +3,7 @@
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/page/customer/contact-us/src",
   "prefix": "io",
-  "tags": ["frontend-layer:page", "project:customer"],
+  "tags": ["frontend-layer:page", "scope:customer"],
   "projectType": "library",
   "targets": {
     "test": {

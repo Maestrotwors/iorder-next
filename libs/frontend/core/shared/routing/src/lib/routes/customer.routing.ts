@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { CustomerRoutePath } from '../paths/customer.route-path';
+import { checkCustomerPositionGuard } from '../guards/customer/check-customer-position.guard';
+import { checkCatalogPageGuard } from '../guards/customer/check-catalog-page.guard';
 
 export const routes: Routes = [
   {
@@ -17,10 +19,12 @@ export const routes: Routes = [
           import('@iorder-next/frontend/page/customer/selected-customer-point').then(
             c => c.FrontendPageCustomerSelectedCustomerPointComponent,
           ),
+          canActivate: [checkCustomerPositionGuard],
         children: [
           {
             path: CustomerRoutePath.Catalog,
             loadComponent: () => import('@iorder-next/frontend/page/customer/catalog').then(c => c.FrontendPageCustomerCatalogComponent),
+            canActivate: [],
             children: [
               {
                 path: '',

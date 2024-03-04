@@ -7,7 +7,7 @@ export async function libGenerator(tree: Tree, options: LibraryGeneratorSchema) 
 
   await libraryGenerator(tree, {
     name: options.name,
-    tags: 'backend-layer:' + options.layer + ',project:' + options.projectType,
+    tags: 'backend-layer:' + options.layer + ',scope:' + options.projectType,
     directory: 'backend/' + options.layer + '/' + options.projectType + directory,
   });
   await formatFiles(tree);

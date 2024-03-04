@@ -3,7 +3,7 @@
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/shared/customer/supplier-icon/src",
   "prefix": "iorder-next",
-  "tags": ["frontend-layer:shared", "project:customer"],
+  "tags": ["frontend-layer:shared", "scope:customer"],
   "projectType": "library",
   "targets": {
     "test": {
