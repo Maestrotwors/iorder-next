@@ -25,32 +25,32 @@
             "depConstraints": [
               {
                 "sourceTag": "frontend-layer:application",
-                "onlyDependOnLibsWithTags": ["frontend-layer:page", "frontend-layer:widget", "frontend-layer:feature", "frontend-layer:repository", "frontend-layer:shared", "frontend-layer:core"]
+                "onlyDependOnLibsWithTags": [
+                  "frontend-layer:page",
+                  "frontend-layer:widget",
+                  "frontend-layer:feature",
+                  "frontend-layer:core"
+                ]
               },
               {
                 "sourceTag": "frontend-layer:page",
                 "onlyDependOnLibsWithTags": [
                   "frontend-layer:widget",
                   "frontend-layer:feature",
-                  "frontend-layer:repository",
-                  "frontend-layer:shared"
+                  "frontend-layer:core"
                 ]
               },
               {
                 "sourceTag": "frontend-layer:widget",
-                "onlyDependOnLibsWithTags": ["frontend-layer:feature", "frontend-layer:repository", "frontend-layer:shared"]
+                "onlyDependOnLibsWithTags": ["frontend-layer:feature", "frontend-layer:core"]
               },
               {
                 "sourceTag": "frontend-layer:feature",
-                "onlyDependOnLibsWithTags": ["frontend-layer:shared", "frontend-layer:repository", "frontend-layer:ui"]
+                "onlyDependOnLibsWithTags": ["frontend-layer:core", "frontend-layer:ui"]
               },
               {
-                "sourceTag": "frontend-layer:shared",
-                "onlyDependOnLibsWithTags": ["frontend-layer:repository", "frontend-layer:ui"]
-              },
-              {
-                "sourceTag": "frontend-layer:repository",
-                "onlyDependOnLibsWithTags": ["layer:contract"]
+                "sourceTag": "frontend-layer:core",
+                "onlyDependOnLibsWithTags": ["frontend-layer:core"]
               },
               {
                 "sourceTag": "layer:contract",
@@ -59,10 +59,6 @@
               {
                 "sourceTag": "frontend-layer:ui",
                 "onlyDependOnLibsWithTags": []
-              },
-              {
-                "sourceTag": "frontend-layer:core",
-                "onlyDependOnLibsWithTags": ["frontend-layer:ui", "frontend-layer:core"]
               },
 
               {

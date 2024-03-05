@@ -3,7 +3,7 @@
   "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/widget/customer/catalog/products-header/src",
   "prefix": "iorder-next",
-  "tags": ["frontend-layer:widget", "scope:customer"],
+  "tags": ["frontend-layer:widget", "scope:app-customer"],
   "projectType": "library",
   "targets": {
     "test": {

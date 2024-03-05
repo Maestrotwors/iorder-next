@@ -1,7 +1,0 @@
-# frontend-core-shared-device-info
-
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test frontend-core-shared-device-info` to execute the unit tests.

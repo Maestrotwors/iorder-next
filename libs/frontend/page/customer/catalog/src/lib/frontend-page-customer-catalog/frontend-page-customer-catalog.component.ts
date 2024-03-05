@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/cor
 import { AsyncPipe } from '@angular/common';
 import { FrontendPageCustomerCatalogDesktopComponent } from './view/desktop/frontend-page-customer-catalog-desktop.component';
 import { FrontendPageCustomerCatalogMobileComponent } from './view/mobile/frontend-page-customer-catalog-mobile.component';
-import { IfDesktopDirective, IfNotDesktopDirective } from '@iorder-next/frontend/shared/shared/directives/break-point-directives';
-import { CatalogProductsStore } from '@iorder-next/frontend/repository/customer/catalog/products';
+import { CatalogProductsStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
+import { IfDesktopDirective, IfNotDesktopDirective } from '@iorder-next/frontend/core/shared/directives/break-point';
 
 @Component({
   selector: 'io-customer-page-catalog',
@@ -13,21 +13,21 @@ import { CatalogProductsStore } from '@iorder-next/frontend/repository/customer/
     FrontendPageCustomerCatalogMobileComponent,
     AsyncPipe,
     IfNotDesktopDirective,
-    IfDesktopDirective
+    IfDesktopDirective,
   ],
   templateUrl: './frontend-page-customer-catalog.component.html',
   styleUrl: './frontend-page-customer-catalog.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [ CatalogProductsStore ],
+  providers: [CatalogProductsStore],
 })
-export class FrontendPageCustomerCatalogComponent implements  OnInit {
-  readonly catalogProductsStore = inject(CatalogProductsStore);
+export class FrontendPageCustomerCatalogComponent implements OnInit {
+  readonly #catalogProductsStore = inject(CatalogProductsStore);
 
   ngOnInit(): void {
     this.loadProducts();
   }
 
   loadProducts() {
-    this.catalogProductsStore.loadProducts();
+    this.#catalogProductsStore.loadProducts();
   }
 }

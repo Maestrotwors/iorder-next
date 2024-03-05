@@ -1,14 +1,12 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgOptimizedImage } from '@angular/common'
-import { ImgLoaderDirective } from '@iorder-next/frontend/shared/shared/directives/image-loader';
+import { ImgLoaderDirective } from '@iorder-next/frontend/core/shared/directives/image-loader';
 
 @Component({
   selector: 'io-card-product-item',
   standalone: true,
   imports: [
     CommonModule,
-    NgOptimizedImage,
     ImgLoaderDirective
   ],
   templateUrl: './product-item.component.html',

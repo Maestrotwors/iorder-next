@@ -3,7 +3,7 @@ import { FrontendFeatureCustomerCatalogCategoriesListComponent } from '@iorder-n
 import { FrontendFeatureCustomerCatalogRecommendedListComponent } from '@iorder-next/frontend/feature/customer/catalog/recommended-list';
 import { FrontendFeatureCustomerCatalogSubSupplierSelectionComponent } from '@iorder-next/frontend/feature/customer/catalog/sub-supplier-selection';
 import { FrontendFeatureCustomerCatalogSupplierListComponent } from '@iorder-next/frontend/feature/customer/catalog/supplier-list';
-import { FrontendSharedCustomerSupplierBigIconComponent } from '@iorder-next/frontend/shared/customer/supplier-icon';
+import { FrontendSharedCustomerSupplierBigIconComponent } from '@iorder-next/frontend/core/customer/components/shared-customer/supplier-icon';
 
 @Component({
   selector: 'io-customer-widget-catalog-desktop-nav-menu',

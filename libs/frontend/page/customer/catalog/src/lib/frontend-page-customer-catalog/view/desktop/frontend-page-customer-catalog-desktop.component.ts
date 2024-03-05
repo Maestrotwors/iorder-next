@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FrontendSharedCustomerFooterDesktopComponent } from '@iorder-next/frontend/shared/customer/footer';
+import { FrontendSharedCustomerFooterDesktopComponent } from '@iorder-next/frontend/core/customer/components/shared-customer/footer';
 import { FrontendWidgetCustomerCatalogDesktopNavMenuComponent } from '@iorder-next/frontend/widget/customer/catalog/desktop-nav-menu';
 
 @Component({
