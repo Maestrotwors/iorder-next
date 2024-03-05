@@ -6,18 +6,11 @@ export const checkCatalogPageGuard: CanActivateFn = (
   state: RouterStateSnapshot,
 ) => {
   const page = route.queryParams['page'];
-
   if (page) {
     return true;
   }
-  const activatedRoute = inject(ActivatedRoute);
-  return inject(Router).createUrlTree([state.url.split('?')[0]], { queryParams: { page: '1' }, queryParamsHandling: 'merge'});
-  /*
-  const activatedRoute = inject(ActivatedRoute);
-  console.log(state);
-  console.log(route);
-  console.log(activatedRoute);
 
-
-  */
+  return inject(Router).createUrlTree(['/member-user/catalog'],
+    { queryParams: { ...route.queryParams, page: '1' }, queryParamsHandling: 'merge' }
+  );
 };

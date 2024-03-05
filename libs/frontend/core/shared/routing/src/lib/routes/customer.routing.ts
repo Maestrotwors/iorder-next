@@ -24,7 +24,7 @@ export const routes: Routes = [
           {
             path: CustomerRoutePath.Catalog,
             loadComponent: () => import('@iorder-next/frontend/page/customer/catalog').then(c => c.FrontendPageCustomerCatalogComponent),
-            canActivate: [],
+            canActivate: [checkCatalogPageGuard],
             children: [
               {
                 path: '',
