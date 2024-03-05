@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'frontend-shared-customer-catalog',
+  displayName: 'frontend-core-shared-loader',
   preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../../../coverage/libs/frontend/shared/customer/catalog',
+  coverageDirectory: '../../../../../coverage/libs/frontend/core/shared/loader',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

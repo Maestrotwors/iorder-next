@@ -3,16 +3,17 @@ import { RouterModule } from '@angular/router';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BreakPointService } from '@iorder-next/frontend/core/shared/break-point';
 import { DeviceInfoService } from '@iorder-next/frontend/core/shared/device-info';
+import { HeaderLoaderComponent } from '@iorder-next/frontend/core/shared/loader';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, LayoutModule],
+  imports: [RouterModule, LayoutModule, HeaderLoaderComponent],
   selector: 'io-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  #breakPointService = inject(BreakPointService).breakpoint$.subscribe(() => {});
-  #deviceInfoService = inject(DeviceInfoService);
+  readonly #breakPointService = inject(BreakPointService).breakpoint$.subscribe(() => {});
+  readonly #deviceInfoService = inject(DeviceInfoService);
 }

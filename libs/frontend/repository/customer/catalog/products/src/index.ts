@@ -1,1 +1,1 @@
-export * from './lib/repository/products.store';
+export * from './lib/products.store';

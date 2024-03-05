@@ -16,9 +16,9 @@ const GetCatalogProductDetailsResponseSchema = z.object({
 
 
 export namespace GetCatalogProductDetailsCommand {
-    export const RequestQuerySchema = GetCatalogProductDetailsQueryRequestSchema;
-    export type RequestQuery = z.infer<typeof RequestQuerySchema>;
+  export const RequestQuerySchema = GetCatalogProductDetailsQueryRequestSchema;
+  export type RequestQuery = z.infer<typeof RequestQuerySchema>;
 
-    export const ResponseSchema = GetCatalogProductDetailsResponseSchema;
-    export type Response = z.infer<typeof ResponseSchema>;
+  export const ResponseSchema = GetCatalogProductDetailsResponseSchema;
+  export type Response = z.infer<typeof ResponseSchema>;
 }

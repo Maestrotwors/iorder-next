@@ -25,7 +25,7 @@
             "depConstraints": [
               {
                 "sourceTag": "frontend-layer:application",
-                "onlyDependOnLibsWithTags": ["frontend-layer:page", "frontend-layer:repository", "frontend-layer:shared"]
+                "onlyDependOnLibsWithTags": ["frontend-layer:page", "frontend-layer:widget", "frontend-layer:feature", "frontend-layer:repository", "frontend-layer:shared", "frontend-layer:core"]
               },
               {
                 "sourceTag": "frontend-layer:page",
@@ -50,7 +50,7 @@
               },
               {
                 "sourceTag": "frontend-layer:repository",
-                "onlyDependOnLibsWithTags": []
+                "onlyDependOnLibsWithTags": ["layer:contract"]
               },
               {
                 "sourceTag": "layer:contract",
@@ -62,7 +62,7 @@
               },
               {
                 "sourceTag": "frontend-layer:core",
-                "onlyDependOnLibsWithTags": ["frontend-layer:ui"]
+                "onlyDependOnLibsWithTags": ["frontend-layer:ui", "frontend-layer:core"]
               },
 
               {
