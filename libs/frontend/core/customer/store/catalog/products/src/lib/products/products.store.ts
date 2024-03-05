@@ -12,14 +12,14 @@ type CatalogProductsState = {
   error: boolean;
 };
 
-const initialState: CatalogProductsState = {
+const initialCatalogProductsState: CatalogProductsState = {
   products: [],
   isLoading: false,
   error: false,
 };
 
 export const CatalogProductsStore = signalStore(
-  withState(initialState),
+  withState(initialCatalogProductsState),
   withComputed(store => {
     return {
       productsCount: computed(() => store.products().length),
@@ -48,6 +48,6 @@ export const CatalogProductsStore = signalStore(
         }),
         takeUntilDestroyed(destryRef),
       ),
-    ),
+    )
   })),
 );

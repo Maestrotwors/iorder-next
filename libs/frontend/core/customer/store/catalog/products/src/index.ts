@@ -1,1 +1,2 @@
-export * from './lib/products.store';
+export * from './lib/products/products.store';
+export * from './lib/view/view.store';

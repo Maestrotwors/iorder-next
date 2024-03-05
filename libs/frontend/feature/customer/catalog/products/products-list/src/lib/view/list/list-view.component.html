@@ -1,17 +1,23 @@
-<table>
-  <tr>
-    <td>.</td>
-    <td>Найменування</td>
-    <td>Ціна з ПДВ, грн.</td>
-    <td>.</td>
-  </tr>
-
-  @for (product of products; track product.id) {
-    <tr>
-      <td>.</td>
-      <td>{{product.name}}</td>
-      <td>{{product.price}}</td>
-      <td>.</td>
-    </tr>
+@if (!productsStore.isLoading()) {
+  @if (productsStore.products(); as products) {
+    <table>
+      <tr>
+        <td>.</td>
+        <td>Найменування</td>
+        <td>Ціна з ПДВ, грн.</td>
+        <td>.</td>
+      </tr>
+      @for (product of products; track product.id) {
+        <tr>
+          <td>.</td>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td>.</td>
+        </tr>
+      }
+    </table>
   }
-</table>
+}
+@else {
+  <div>loading....</div>
+}

@@ -1,1 +1,1 @@
-<span>view select</span>
+<p-selectButton [options]="stateOptions" [(ngModel)]="selectedSize" optionLabel="label" optionValue="value" size="small" (onOptionClick)="selectView($event.option.value)"></p-selectButton>

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { CatalogProductsViewStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
 import {
   FrontendFeatureCustomerCatalogProductsListCardViewComponent,
   FrontendFeatureCustomerCatalogProductsListListViewComponent,
@@ -16,4 +17,6 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: []
 })
-export class FrontendWidgetCustomerCatalogProductsListComponent {}
+export class FrontendWidgetCustomerCatalogProductsListComponent {
+  catalogProductsViewStore = inject(CatalogProductsViewStore);
+}

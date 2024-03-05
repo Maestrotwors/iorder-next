@@ -1,0 +1,17 @@
+{
+  "name": "frontend-core-shared-services-repository-core",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/core/shared/services/repository-core/src",
+  "prefix": "iorder-next",
+  "tags": ["frontend-layer:core", "scope:app-shared"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/frontend/core/shared/services/repository-core/jest.config.ts"
+      }
+    }
+  }
+}

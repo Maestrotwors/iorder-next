@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/cor
 import { AsyncPipe } from '@angular/common';
 import { FrontendPageCustomerCatalogDesktopComponent } from './view/desktop/frontend-page-customer-catalog-desktop.component';
 import { FrontendPageCustomerCatalogMobileComponent } from './view/mobile/frontend-page-customer-catalog-mobile.component';
-import { CatalogProductsStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
+import { CatalogProductsStore, CatalogProductsViewStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
 import { IfDesktopDirective, IfNotDesktopDirective } from '@iorder-next/frontend/core/shared/directives/break-point';
 import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/store/catalog/categories';
 
@@ -27,6 +27,7 @@ import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/stor
 export class FrontendPageCustomerCatalogComponent implements OnInit {
   readonly #catalogProductsStore = inject(CatalogProductsStore);
   readonly #catalogCategoriesStore = inject(CatalogCategoriesStore);
+  readonly #catalogProductsViewStore = inject(CatalogProductsViewStore);
 
   ngOnInit(): void {
     this.loadData();
@@ -35,5 +36,6 @@ export class FrontendPageCustomerCatalogComponent implements OnInit {
   loadData() {
     this.#catalogProductsStore.loadProducts();
     this.#catalogCategoriesStore.loadCategories();
+    this.#catalogProductsViewStore.loadCatalogProductsViewType();
   }
 }

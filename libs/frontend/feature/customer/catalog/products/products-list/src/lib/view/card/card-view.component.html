@@ -1,11 +1,16 @@
-<div>----loading {{productsStore.isLoading()}}----</div>
-<div>----{{productsStore.productsCount()}}----</div>
 <div class="table">
-  @for (product of productsStore.products(); track product.id) {
-    <io-card-product-item [product]="product"></io-card-product-item>
+  @if (!productsStore.isLoading()) {
+    @if (productsStore.products(); as products) {
+      @for (product of products; track product.id) {
+        <io-card-product-item [product]="product"></io-card-product-item>
+      }
+      @empty {
+        Empty list of products
+      }
+    }
   }
-  @empty {
-    Empty list of products
+  @else {
+    <div>loading....</div>
   }
 </div>
 

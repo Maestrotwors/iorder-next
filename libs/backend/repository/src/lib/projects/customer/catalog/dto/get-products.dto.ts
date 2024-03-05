@@ -1,4 +1,4 @@
-export interface GetProductsDto {
+export interface GetProductsRepositoryDto {
   deliveryPoint?: number;
   supplierId?: number;
   skip?: number;

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { CatalogProductsStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
 
 @Component({
   selector: 'io-customer-feature-catalog-products-list-list-view',
@@ -9,9 +10,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FrontendFeatureCustomerCatalogProductsListListViewComponent {
-  products = [
-    { id: 1, name: 'iPhone XR', price: '850', image: 'https://prodasnovastacc.blob.core.windows.net/product-small-images1/3/5413149314092.jpg?' },
-    { id: 2, name: 'iPhone 11', price: '999', image: 'https://prodasnovastacc.blob.core.windows.net/product-small-images/3/8006540535240.jpg?' },
-    { id: 3, name: 'Samsung S20', price: '1349', image: 'https://prodasnovastacc.blob.core.windows.net/product-small-images/3/8006540512180.jpg' }
-  ];
+  readonly productsStore = inject(CatalogProductsStore);
 }
