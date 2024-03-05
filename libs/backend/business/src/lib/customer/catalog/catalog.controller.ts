@@ -5,6 +5,7 @@ import { GetCatalogProductsResponseDto } from './dto/get-products.dto';
 import { CatalogProductService } from './services/product.service';
 import { GetCatalogProductQueryDto, GetCatalogProductResponseDto } from './dto/get-product-details.dto';
 import { CatalogCategoriesService } from './services/categories.service';
+import { GetCatalogCategoriesQueryDto, GetCatalogCategoriesResponseDto } from './dto/get-categories.dto';
 
 @Controller('catalog')
 export class CatalogController {
@@ -14,8 +15,8 @@ export class CatalogController {
     private readonly catalogCategoriesService: CatalogCategoriesService
   ) {}
   @Get('health-check')
-  async ping(@Req() req: Request): Promise<any> {
-    return 'ping';
+  async ping(): Promise<true> {
+    return true;
   }
 
   @Get('products')
@@ -24,13 +25,12 @@ export class CatalogController {
   }
 
   @Get('categories')
-  async getCategories(): Promise<any> {
-    return this.catalogCategoriesService.getCategories({});
+  async getCategories(@Query() query: GetCatalogCategoriesQueryDto): Promise<GetCatalogCategoriesResponseDto> {
+    return this.catalogCategoriesService.getCategories(query);
   }
 
   @Get('product-details')
   async getProductDetails(@Query() query: GetCatalogProductQueryDto): Promise<GetCatalogProductResponseDto> {
-    console.log(query);
     return this.catalogProductService.getProduct({
       productId: query.productId
     });

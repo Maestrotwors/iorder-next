@@ -4,6 +4,7 @@ import { FrontendPageCustomerCatalogDesktopComponent } from './view/desktop/fron
 import { FrontendPageCustomerCatalogMobileComponent } from './view/mobile/frontend-page-customer-catalog-mobile.component';
 import { CatalogProductsStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
 import { IfDesktopDirective, IfNotDesktopDirective } from '@iorder-next/frontend/core/shared/directives/break-point';
+import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/store/catalog/categories';
 
 @Component({
   selector: 'io-customer-page-catalog',
@@ -18,16 +19,21 @@ import { IfDesktopDirective, IfNotDesktopDirective } from '@iorder-next/frontend
   templateUrl: './frontend-page-customer-catalog.component.html',
   styleUrl: './frontend-page-customer-catalog.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [CatalogProductsStore],
+  providers: [
+    CatalogProductsStore,
+    CatalogCategoriesStore,
+  ],
 })
 export class FrontendPageCustomerCatalogComponent implements OnInit {
   readonly #catalogProductsStore = inject(CatalogProductsStore);
+  readonly #catalogCategoriesStore = inject(CatalogCategoriesStore);
 
   ngOnInit(): void {
-    this.loadProducts();
+    this.loadData();
   }
 
-  loadProducts() {
+  loadData() {
     this.#catalogProductsStore.loadProducts();
+    this.#catalogCategoriesStore.loadCategories();
   }
 }

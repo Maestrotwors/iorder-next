@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/store/catalog/categories';
 
 @Component({
   selector: 'io-customer-feature-catalog-categories-list',
@@ -8,4 +9,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './frontend-feature-customer-catalog-categories-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FrontendFeatureCustomerCatalogCategoriesListComponent {}
+export class FrontendFeatureCustomerCatalogCategoriesListComponent {
+  readonly categoriesStore = inject(CatalogCategoriesStore);
+}

@@ -9,7 +9,7 @@ export const checkCustomerPositionGuard: CanActivateFn = (
   const dp = route.queryParams['dp'];
   const le = route.queryParams['le'];
 
-  if (sId && dp && le) {
+  if (+sId > 0 && +dp > 0 && +le > 0) {
     return true;
   }
   return inject(Router).createUrlTree(['/member-user/suppliers'], {queryParamsHandling: 'merge'});
