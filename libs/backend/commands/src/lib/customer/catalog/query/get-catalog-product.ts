@@ -5,7 +5,7 @@ import { Injectable } from "@nestjs/common";
 
 @Injectable()
 export class GetCatalogProductQuery extends ActionBase {
-  protected readonly catalogProductRepository: CatalogProductRepository = new CatalogProductRepository(this.prismaService);
+  constructor(private catalogProductRepository: CatalogProductRepository) { super(); }
   async execute(params: {productId: number}): Promise<Product | null> {
     try {
       return await this.catalogProductRepository.getProduct({ ...params});

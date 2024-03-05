@@ -30,6 +30,7 @@
       "@iorder-next/frontend/core/customer/components/shared-customer/supplier-icon": [
         "libs/frontend/core/customer/components/shared-customer/supplier-icon/src/index.ts"
       ],
+      "@iorder-next/frontend/core/customer/store/catalog/categories": ["libs/frontend/core/customer/store/catalog/categories/src/index.ts"],
       "@iorder-next/frontend/core/customer/store/catalog/products": ["libs/frontend/core/customer/store/catalog/products/src/index.ts"],
       "@iorder-next/frontend/core/shared/components/loader": ["libs/frontend/core/shared/components/loader/src/index.ts"],
       "@iorder-next/frontend/core/shared/directives/break-point": ["libs/frontend/core/shared/directives/break-point/src/index.ts"],

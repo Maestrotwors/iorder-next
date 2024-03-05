@@ -1,15 +1,15 @@
 import { Injectable } from "@nestjs/common";
 import { GetCatalogProductsDto, GetCatalogProductsResponseDto } from "../dto/get-products.dto";
-import { CatalogActionService } from "@iorder-next/backend/commands";
+import { GetCatalogProductsQuery } from "@iorder-next/backend/commands";
 
 @Injectable()
 export class CatalogProductsService {
   constructor(
-    private readonly catalogActionService: CatalogActionService
+    private getCatalogProductsQuery: GetCatalogProductsQuery
   ) {}
 
   async getProducts(dto: GetCatalogProductsDto): Promise<GetCatalogProductsResponseDto> {
-    const products = await this.catalogActionService.getCatalogProducts();
+    const products = await this.getCatalogProductsQuery.execute(dto);
 
     return {
       products: {

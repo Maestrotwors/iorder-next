@@ -5,7 +5,7 @@ import { Product } from "@prisma/client";
 
 @Injectable()
 export class GetCatalogProductsQuery extends ActionBase {
-  protected readonly catalogProductsRepository: CatalogProductsRepository = new CatalogProductsRepository(this.prismaService);
+  constructor(private catalogProductsRepository: CatalogProductsRepository) { super(); }
   async execute(params: {}): Promise<Product[]> {
     try {
       return await this.catalogProductsRepository.getProducts({});
