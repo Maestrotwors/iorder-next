@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { FrontendPageCustomerCatalogDesktopComponent } from './view/desktop/frontend-page-customer-catalog-desktop.component';
 import { FrontendPageCustomerCatalogMobileComponent } from './view/mobile/frontend-page-customer-catalog-mobile.component';
 import { CatalogProductsStore, CatalogProductsViewStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
@@ -16,27 +16,30 @@ import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/stor
     AsyncPipe,
     IfNotDesktopDirective,
     IfDesktopDirective,
+    CommonModule
   ],
   templateUrl: './frontend-page-customer-catalog.component.html',
   styleUrl: './frontend-page-customer-catalog.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-    CatalogProductsStore,
+    //CatalogProductsStore,
     CatalogCategoriesStore,
+    //CatalogProductsViewStore
   ],
 })
 export class FrontendPageCustomerCatalogComponent implements OnInit {
-  readonly #catalogProductsStore = inject(CatalogProductsStore);
+  //readonly #catalogProductsStore = inject(CatalogProductsStore);
   readonly #catalogCategoriesStore = inject(CatalogCategoriesStore);
   readonly #catalogProductsViewStore = inject(CatalogProductsViewStore);
 
   ngOnInit(): void {
+    alert('comp catalog');
     this.loadData();
   }
 
   loadData() {
-    this.#catalogProductsStore.loadProducts();
+    //this.#catalogProductsStore.loadProducts();
     this.#catalogCategoriesStore.loadCategories();
-    this.#catalogProductsViewStore.loadCatalogProductsViewType();
+    //this.#catalogProductsViewStore.loadCatalogProductsViewType();
   }
 }

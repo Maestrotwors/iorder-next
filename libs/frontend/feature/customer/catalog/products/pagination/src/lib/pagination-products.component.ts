@@ -4,7 +4,7 @@ import { CatalogProductsStore } from '@iorder-next/frontend/core/customer/store/
 import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 
 @Component({
-  selector: 'io-customer-page-catalog',
+  selector: 'io-customer-feature-catalog-products-catalog-pagination',
   standalone: true,
   imports: [ CommonModule, PaginatorModule ],
   templateUrl: './pagination-products.component.html',

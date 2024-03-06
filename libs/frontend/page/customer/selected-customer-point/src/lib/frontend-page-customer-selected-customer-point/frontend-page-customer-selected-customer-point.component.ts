@@ -10,4 +10,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './frontend-page-customer-selected-customer-point.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FrontendPageCustomerSelectedCustomerPointComponent {}
+export class FrontendPageCustomerSelectedCustomerPointComponent {
+  constructor() {
+    alert('comp SelectedCustomerPoint');
+  }
+}

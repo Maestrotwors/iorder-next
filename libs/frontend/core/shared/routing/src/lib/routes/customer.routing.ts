@@ -19,7 +19,7 @@ export const routes: Routes = [
           import('@iorder-next/frontend/page/customer/selected-customer-point').then(
             c => c.FrontendPageCustomerSelectedCustomerPointComponent,
           ),
-          canActivate: [checkCustomerPositionGuard],
+          //canActivate: [checkCustomerPositionGuard],
         children: [
           {
             path: CustomerRoutePath.Catalog,
@@ -29,13 +29,13 @@ export const routes: Routes = [
                 path: '',
                 loadComponent: () =>
                   import('@iorder-next/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
-                canActivate: [checkCatalogPageGuard]
+                canActivate: []
               },
               {
                 path: ':categoryId',
                 loadComponent: () =>
                   import('@iorder-next/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
-                canActivate: [checkCatalogPageGuard]
+                //canActivate: [checkCatalogPageGuard]
               },
               {
                 path: 'product/:productId',
