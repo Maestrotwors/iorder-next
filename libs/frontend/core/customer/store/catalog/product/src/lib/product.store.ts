@@ -4,7 +4,7 @@ import { DestroyRef, inject } from '@angular/core';
 import { pipe, switchMap, tap } from 'rxjs';
 import { tapResponse } from '@ngrx/operators';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerProductService } from './product.service';
 
 interface Product {
@@ -26,14 +26,16 @@ const initialCatalogProductState: CatalogProductState = {
 };
 
 export const CatalogProductStore = signalStore(
+  { providedIn: 'root' },
   withState(initialCatalogProductState),
-  withMethods((store, catalogProductService = inject(CustomerProductService), queryParams = inject(ActivatedRoute).snapshot.queryParams, destryRef = inject(DestroyRef)) => ({
-    loadProduct: (productId: number) => rxMethod<void>(
+  withMethods((store, catalogProductService = inject(CustomerProductService), queryParams = inject(ActivatedRoute).snapshot.queryParams, router = inject(Router), destryRef = inject(DestroyRef)) => ({
+    loadProduct: rxMethod<number>(
       pipe(
-        tap(() => patchState(store, { isLoading: true, product: null })),
-        switchMap((obj) => {
-          console.log(obj);
-          return catalogProductService.getProduct({ supplierId: queryParams['sId'], deliveryPointId: queryParams['dp'], legalEntityId: queryParams?.['le'], productId: 1 }).pipe(
+        tap((productId) => {
+          patchState(store, { isLoading: true, product: null })
+        }),
+        switchMap((productId) => {
+          return catalogProductService.getProduct({ supplierId: queryParams['sId'], deliveryPointId: queryParams['dp'], legalEntityId: queryParams?.['le'], productId }).pipe(
             tapResponse({
               next: productsResponse => {
                 if (productsResponse.body) {
@@ -51,6 +53,10 @@ export const CatalogProductStore = signalStore(
         }),
         takeUntilDestroyed(destryRef),
       ),
-    )
+    ),
+    navigateToCatalog(){
+      console.log('navigateToCatalog');
+      router.navigate(['member-user', 'catalog'], { queryParams: { sId: 1, dp: 1, le: 1, page: 1}});
+    }
   })),
 );

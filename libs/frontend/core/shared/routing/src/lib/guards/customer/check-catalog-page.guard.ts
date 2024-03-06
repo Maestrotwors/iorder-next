@@ -4,7 +4,6 @@ import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot } fr
 export const checkCatalogPageGuard: CanActivateFn = (
   route: ActivatedRouteSnapshot
 ) => {
-
   if (+route.queryParams['page'] > 0) {
     return true;
   } else {

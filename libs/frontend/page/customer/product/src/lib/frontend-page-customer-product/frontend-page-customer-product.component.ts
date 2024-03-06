@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, inject, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/catalog/product';
 
@@ -12,14 +12,18 @@ import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/c
 })
 export class FrontendPageCustomerProductComponent implements OnInit {
   #catalogProductStore = inject(CatalogProductStore);
-  #productId = input('productId');
+  @Input()
+  productId: string = '0';
 
   ngOnInit(): void {
     this.loadData();
   }
 
-  loadData() {
-    const productId = +this.#productId();
-    this.#catalogProductStore.loadProduct(productId);
+  private loadData(): void {
+    this.#catalogProductStore.loadProduct(+this.productId);
+  }
+
+  navigateToCatalog() {
+    this.#catalogProductStore.navigateToCatalog();
   }
 }

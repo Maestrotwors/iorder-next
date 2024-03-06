@@ -26,7 +26,7 @@ export const CatalogProductsStore = signalStore(
   withComputed(store => {
     return {};
   }),
-  withMethods((store, catalogProductsService = inject(CustomerProductsService), queryParams = inject(ActivatedRoute).snapshot.queryParams, router = inject(Router), destryRef = inject(DestroyRef)) => ({
+  withMethods((store, catalogProductsService = inject(CustomerProductsService), route = inject(ActivatedRoute),  queryParams = inject(ActivatedRoute).snapshot.queryParams, router = inject(Router), destryRef = inject(DestroyRef)) => ({
     loadProducts: rxMethod<void>(
       pipe(
         tap(() => patchState(store, { isLoading: true, products: [] })),
@@ -52,7 +52,7 @@ export const CatalogProductsStore = signalStore(
     ),
     selectProduct(productId: number) {
       console.log(productId);
-      router.navigate(['product', productId]);
+      router.navigate(['product', productId], { relativeTo: route, queryParams: { sId: 1, dp: 1, le: 1 } });
     }
   })),
 );
