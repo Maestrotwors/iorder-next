@@ -2,7 +2,7 @@
   @if (!productsStore.isLoading()) {
     @if (productsStore.products(); as products) {
       @for (product of products; track product.id) {
-        <io-card-product-item [product]="product" (click)="selectProduct(product)"></io-card-product-item>
+        <io-card-product-item [product]="product" (click)="selectProduct(product)" [style.view-transition-name]="'product-' + product.id"></io-card-product-item>
       }
       @empty {
         Empty list of products

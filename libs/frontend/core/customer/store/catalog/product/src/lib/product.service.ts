@@ -14,7 +14,7 @@ export class CustomerProductService {
     const TASK_NAME = 'getProduct';
     return this.#api.get<GetCatalogProductDetailsCommand.Response>('catalog/product-details', { params: query}).pipe(
       tap(() => this.#loaderStore.addTask(TASK_NAME)),
-      delay(500),
+      //delay(500),
       finalize(() => this.#loaderStore.removeTask(TASK_NAME))
     );
   }

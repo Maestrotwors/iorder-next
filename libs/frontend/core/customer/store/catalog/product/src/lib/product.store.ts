@@ -55,7 +55,6 @@ export const CatalogProductStore = signalStore(
       ),
     ),
     navigateToCatalog(){
-      console.log('navigateToCatalog');
       router.navigate(['member-user', 'catalog'], { queryParams: { sId: 1, dp: 1, le: 1, page: 1}});
     }
   })),
