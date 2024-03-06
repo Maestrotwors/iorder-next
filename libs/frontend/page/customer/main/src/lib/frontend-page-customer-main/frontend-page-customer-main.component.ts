@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { CatalogProductsViewStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
 @Component({
   selector: 'io-customer-page-main',
   standalone: true,
@@ -9,8 +8,10 @@ import { CatalogProductsViewStore } from '@iorder-next/frontend/core/customer/st
   templateUrl: './frontend-page-customer-main.component.html',
   styleUrl: './frontend-page-customer-main.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    CatalogProductsViewStore
-  ]
+  providers: []
 })
-export class FrontendPageCustomerMainComponent {}
+export class FrontendPageCustomerMainComponent {
+  constructor() {
+    alert('2222');
+  }
+}

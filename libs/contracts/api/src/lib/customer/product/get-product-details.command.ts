@@ -16,7 +16,7 @@ const GetCatalogProductDetailsQueryRequestSchema = z.object({
 });
 
 const GetCatalogProductDetailsResponseSchema = z.object({
-  id: z.number().positive(),
+  id: z.number(),
   name: z.string(),
   price: z.number().multipleOf(0.01),
   mainImageUrl: z.string().nullable()

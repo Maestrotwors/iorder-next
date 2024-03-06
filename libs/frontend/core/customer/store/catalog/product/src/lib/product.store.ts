@@ -8,10 +8,10 @@ import { ActivatedRoute } from '@angular/router';
 import { CustomerProductService } from './product.service';
 
 interface Product {
-  id: number;
-  name: string;
-  price: number;
-  mainImageUrl: string | null;
+  id?: number;
+  name?: string;
+  price?: number;
+  mainImageUrl?: string | null;
 }
 type CatalogProductState = {
   product: Product | null;

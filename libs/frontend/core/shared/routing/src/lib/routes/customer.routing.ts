@@ -5,7 +5,7 @@ import { checkCatalogPageGuard } from '../guards/customer/check-catalog-page.gua
 
 export const routes: Routes = [
   {
-    path: "",
+    path: '',
     loadComponent: () => import('@iorder-next/frontend/page/customer/main').then(c => c.FrontendPageCustomerMainComponent),
     children: [
       {
