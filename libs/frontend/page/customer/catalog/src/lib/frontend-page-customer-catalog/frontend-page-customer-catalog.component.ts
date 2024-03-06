@@ -22,24 +22,23 @@ import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/stor
   styleUrl: './frontend-page-customer-catalog.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-    //CatalogProductsStore,
+    CatalogProductsStore,
     CatalogCategoriesStore,
-    //CatalogProductsViewStore
+    CatalogProductsViewStore
   ],
 })
 export class FrontendPageCustomerCatalogComponent implements OnInit {
-  //readonly #catalogProductsStore = inject(CatalogProductsStore);
+  readonly #catalogProductsStore = inject(CatalogProductsStore);
   readonly #catalogCategoriesStore = inject(CatalogCategoriesStore);
   readonly #catalogProductsViewStore = inject(CatalogProductsViewStore);
 
   ngOnInit(): void {
-    alert('comp catalog');
     this.loadData();
   }
 
   loadData() {
-    //this.#catalogProductsStore.loadProducts();
+    this.#catalogProductsStore.loadProducts();
     this.#catalogCategoriesStore.loadCategories();
-    //this.#catalogProductsViewStore.loadCatalogProductsViewType();
+    this.#catalogProductsViewStore.loadCatalogProductsViewType();
   }
 }

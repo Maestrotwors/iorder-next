@@ -5,8 +5,7 @@ import { pipe, switchMap, tap } from 'rxjs';
 import { tapResponse } from '@ngrx/operators';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CustomerProductsService } from './products.service';
-import { ActivatedRoute } from '@angular/router';
-import { Router } from 'express';
+import { ActivatedRoute, Router } from '@angular/router';
 
 type CatalogProductsState = {
   products: any[];
@@ -25,9 +24,7 @@ const initialCatalogProductsState: CatalogProductsState = {
 export const CatalogProductsStore = signalStore(
   withState(initialCatalogProductsState),
   withComputed(store => {
-    return {
-      productsCount: computed(() => store.products().length),
-    };
+    return {};
   }),
   withMethods((store, catalogProductsService = inject(CustomerProductsService), queryParams = inject(ActivatedRoute).snapshot.queryParams, router = inject(Router), destryRef = inject(DestroyRef)) => ({
     loadProducts: rxMethod<void>(

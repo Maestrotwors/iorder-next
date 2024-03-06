@@ -10,8 +10,4 @@ import { RouterOutlet } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: []
 })
-export class FrontendPageCustomerMainComponent {
-  constructor() {
-    alert('io-customer-page-main');
-  }
-}
+export class FrontendPageCustomerMainComponent {}
