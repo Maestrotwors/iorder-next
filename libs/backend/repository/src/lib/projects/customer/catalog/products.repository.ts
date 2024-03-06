@@ -8,6 +8,9 @@ export class CatalogProductsRepository {
   constructor(private readonly prisma: PrismaService) {}
 
   public async getProducts(params: GetProductsRepositoryDto): Promise<Product[]> {
-    return this.prisma.product.findMany({});
+    return this.prisma.product.findMany({
+      skip: (params.page - 1) * params.limit,
+      take: params.limit,
+    });
   }
 }

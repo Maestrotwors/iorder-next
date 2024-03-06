@@ -6,7 +6,7 @@ import { Observable } from "rxjs";
 export class CoreApiService {
   #http = inject(HttpClient);
 
-  get<T>(url: string, options?: object): Observable<HttpResponse<T>> {
+  get<T>(url: string, options: object): Observable<HttpResponse<T>> {
     return this.#http.get<T>(url, { ...options, observe: 'response' });
   }
 

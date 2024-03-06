@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/catalog/product';
 
 @Component({
   selector: 'io-customer-page-product',
@@ -9,4 +10,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './frontend-page-customer-product.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FrontendPageCustomerProductComponent {}
+export class FrontendPageCustomerProductComponent implements OnInit {
+  #catalogProductStore = inject(CatalogProductStore);
+  #productId = input('productId');
+
+  ngOnInit(): void {
+    this.loadData();
+  }
+
+  loadData() {
+    const productId = +this.#productId();
+    this.#catalogProductStore.loadProduct(productId);
+  }
+}

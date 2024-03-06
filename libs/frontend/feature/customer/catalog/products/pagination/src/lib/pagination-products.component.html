@@ -1,0 +1,25 @@
+<!--<div
+  class="pagination-container"
+  *ngIf="$totalProductsCount() as totalProductsCount"
+>
+  <div class="pagination" *ngIf="$products()?.isLoading === false">
+    <nz-pagination
+      [nzPageIndex]="$page()"
+      [nzTotal]="totalProductsCount"
+      (nzPageIndexChange)="pageIndexChange($event)"
+      [nzPageSize]="$pageSize()"
+    ></nz-pagination>
+  </div>
+</div>-->
+<div class="pagination-container">
+  <div class="pagination">
+    <p-paginator
+      (onPageChange)="onPageChange($event)"
+      [first]="first"
+      [rows]="rows"
+      [totalRecords]="catalogProductsStore.totalCountProducts()"
+      [rowsPerPageOptions]="[40, 100]">
+    </p-paginator>
+  </div>
+</div>
+

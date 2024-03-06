@@ -1,7 +1,6 @@
-import { Controller, Get, Query, Req } from '@nestjs/common';
-import { Request } from 'express';
+import { Controller, Get, NotFoundException, Query } from '@nestjs/common';
 import { CatalogProductsService } from './services/products.service';
-import { GetCatalogProductsResponseDto } from './dto/get-products.dto';
+import { GetCatalogProductsQueryDto, GetCatalogProductsResponseDto } from './dto/get-products.dto';
 import { CatalogProductService } from './services/product.service';
 import { GetCatalogProductQueryDto, GetCatalogProductResponseDto } from './dto/get-product-details.dto';
 import { CatalogCategoriesService } from './services/categories.service';
@@ -20,8 +19,8 @@ export class CatalogController {
   }
 
   @Get('products')
-  async getProducts(): Promise<GetCatalogProductsResponseDto> {
-    return this.catalogProductsService.getProducts({});
+  async getProducts(@Query() query: GetCatalogProductsQueryDto): Promise<GetCatalogProductsResponseDto> {
+    return this.catalogProductsService.getProducts(query);
   }
 
   @Get('categories')
@@ -31,9 +30,9 @@ export class CatalogController {
 
   @Get('product-details')
   async getProductDetails(@Query() query: GetCatalogProductQueryDto): Promise<GetCatalogProductResponseDto> {
-    return this.catalogProductService.getProduct({
-      productId: query.productId
-    });
+    const product = await this.catalogProductService.getProduct(query);
+    if (!product) throw new NotFoundException('Product not found');
+    return  product;
   }
 
 }

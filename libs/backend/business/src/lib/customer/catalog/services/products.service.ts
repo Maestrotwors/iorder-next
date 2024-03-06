@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { GetCatalogProductsDto, GetCatalogProductsResponseDto } from "../dto/get-products.dto";
+import { GetCatalogProductsQueryDto, GetCatalogProductsResponseDto } from "../dto/get-products.dto";
 import { GetCatalogProductsQuery } from "@iorder-next/backend/commands";
 
 @Injectable()
@@ -8,7 +8,7 @@ export class CatalogProductsService {
     private getCatalogProductsQuery: GetCatalogProductsQuery
   ) {}
 
-  async getProducts(dto: GetCatalogProductsDto): Promise<GetCatalogProductsResponseDto> {
+  async getProducts(dto: GetCatalogProductsQueryDto): Promise<GetCatalogProductsResponseDto> {
     const products = await this.getCatalogProductsQuery.execute(dto);
 
     return {

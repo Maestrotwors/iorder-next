@@ -1,6 +1,16 @@
 import { z } from 'zod';
 
-const GetCatalogProductsRequestSchema = z.object({});
+const GetCatalogProductsQueryRequestSchema = z.object({
+  page: z.string()
+    .refine((value) => /^\d+$/.test(value), { message: "The input must be a numeric string" })
+    .transform((value) => parseInt(value, 10)),
+  limit: z.string()
+    .refine((value) => /^\d+$/.test(value), { message: "The input must be a numeric string" })
+    .transform((value) => parseInt(value, 10)),
+  supplierId: z.string()
+    .refine((value) => /^\d+$/.test(value), { message: "The input must be a numeric string" })
+    .transform((value) => parseInt(value, 10))
+});
 
 const ProductItemSchema = z.object({
     id: z.number(),
@@ -20,8 +30,8 @@ const CatalogDataSchema = z.object({
 
 
 export namespace GetCatalogProductsCommand {
-    export const RequestSchema = GetCatalogProductsRequestSchema;
-    export type Request = z.infer<typeof RequestSchema>;
+    export const RequestQuerySchema = GetCatalogProductsQueryRequestSchema;
+    export type RequestQuery = z.infer<typeof RequestQuerySchema>;
 
     export const ResponseSchema = CatalogDataSchema;
     export type Response = z.infer<typeof ResponseSchema>;

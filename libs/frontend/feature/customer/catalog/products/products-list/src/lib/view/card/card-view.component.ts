@@ -14,4 +14,9 @@ import { CatalogProductsStore } from '@iorder-next/frontend/core/customer/store/
 })
 export class FrontendFeatureCustomerCatalogProductsListCardViewComponent {
   readonly productsStore = inject(CatalogProductsStore);
+
+  selectProduct(product: any) {
+    console.log(product);
+    this.productsStore.selectProduct(product.id);
+  }
 }

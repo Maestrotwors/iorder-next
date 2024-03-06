@@ -5,6 +5,9 @@ import { Injectable } from "@nestjs/common";
 
 interface Dto {
   productId: number;
+  supplierId: number;
+  legalEntityId: number;
+  deliveryPointId: number;
 }
 @Injectable()
 export class GetCatalogProductQuery extends ActionBase {

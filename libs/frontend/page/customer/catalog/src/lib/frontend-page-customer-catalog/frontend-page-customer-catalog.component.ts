@@ -5,6 +5,7 @@ import { FrontendPageCustomerCatalogMobileComponent } from './view/mobile/fronte
 import { CatalogProductsStore, CatalogProductsViewStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
 import { IfDesktopDirective, IfNotDesktopDirective } from '@iorder-next/frontend/core/shared/directives/break-point';
 import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/store/catalog/categories';
+import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/catalog/product';
 
 @Component({
   selector: 'io-customer-page-catalog',
@@ -21,6 +22,7 @@ import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/stor
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     CatalogProductsStore,
+    CatalogProductStore,
     CatalogCategoriesStore,
   ],
 })

@@ -12,7 +12,8 @@
     "format": "nx format",
     "build-all": "nx run-many -t build",
     "build:front": "nx build frontend-iorder",
-    "update": "nx migrate latest"
+    "update": "nx migrate latest",
+    "seed:mock-products": "ts-node prisma/scripts/mock/generate-products.ts"
   },
   "private": true,
   "devDependencies": {

@@ -24,17 +24,18 @@ export const routes: Routes = [
           {
             path: CustomerRoutePath.Catalog,
             loadComponent: () => import('@iorder-next/frontend/page/customer/catalog').then(c => c.FrontendPageCustomerCatalogComponent),
-            canActivate: [checkCatalogPageGuard],
             children: [
               {
                 path: '',
                 loadComponent: () =>
                   import('@iorder-next/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
+                canActivate: [checkCatalogPageGuard]
               },
               {
-                path: ':id',
+                path: ':categoryId',
                 loadComponent: () =>
                   import('@iorder-next/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
+                canActivate: [checkCatalogPageGuard]
               },
               {
                 path: 'product/:productId',
