@@ -1,0 +1,17 @@
+<div class="header-container">
+  <div class="iorder-logo">
+    <a [routerLink]="['/member-user/catalog']" [queryParams]="{}">
+      <img src="/assets/images/iorder/iorder-white.png" class="logo-icon" />
+    </a>
+  </div>
+  <div>
+    3<ng-content select="[leftContent]"></ng-content>
+  </div>
+  <div class="empty"></div>
+  <div>
+    2<ng-content select="[rightContent]"></ng-content>
+  </div>
+  <div>
+    1<ng-content select="[menu]"></ng-content>
+  </div>
+</div>

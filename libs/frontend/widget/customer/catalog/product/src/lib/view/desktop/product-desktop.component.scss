@@ -1,0 +1,14 @@
+.part-product-information {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+
+  .header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1rem;
+  }
+}
+
+.part-product-additional-information {
+  background-color: whitesmoke;
+}

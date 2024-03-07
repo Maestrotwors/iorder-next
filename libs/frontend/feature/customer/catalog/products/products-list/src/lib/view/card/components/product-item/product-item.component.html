@@ -1,27 +1,16 @@
-<div class="shadow-xl card bg-base-100">
-  <ng-container *ngTemplateOutlet="partImage"></ng-container>
-  <ng-container *ngTemplateOutlet="partPrice"></ng-container>
-  <ng-container *ngTemplateOutlet="partInfo"></ng-container>
-  <ng-container *ngTemplateOutlet="partOrder"></ng-container>
-  <ng-container *ngTemplateOutlet="partAdditional"></ng-container>
-</div>
+@if (product(); as product) {
+  <div class="shadow-xl card bg-base-100">
+    <div class="image-container">
+      <img imgLoader [loadSrc]="product.mainImageUrl" alt="product image" fill priority [style.view-transition-name]="'product-' + product.id + '-image'" />
+    </div>
+    <div [style.view-transition-name]="'product-' + product.id + '-price'">
+      {{product.price}} грн.
+    </div>
+    <div class="line-clamp-2" [style.view-transition-name]="'product-' + product.id + '-name'">
+      {{product.name}}
+    </div>
+    <div class="available" [style.view-transition-name]="'product-' + product.id + '-available'">Доступно: 1000</div>
+    <div>partOrder</div>
 
-<ng-template #partImage>
-  <div class="image-container">
-    <img imgLoader [loadSrc]="product().mainImageUrl" alt="product image" fill priority />
   </div>
-</ng-template>
-
-<ng-template #partPrice>
-  <div>{{product().price}} грн.</div>
-</ng-template>
-
-<ng-template #partInfo>
-  <div>{{product().name}}</div>
-</ng-template>
-
-<ng-template #partOrder>
-  <div>partOrder</div>
-</ng-template>
-
-<ng-template #partAdditional></ng-template>
+}

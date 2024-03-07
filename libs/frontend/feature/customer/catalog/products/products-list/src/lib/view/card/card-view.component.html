@@ -1,8 +1,11 @@
 <div class="table">
   @if (!productsStore.isLoading()) {
     @if (productsStore.products(); as products) {
-      @for (product of products; track product.id) {
-        <io-card-product-item [product]="product" (click)="selectProduct(product)" [style.view-transition-name]="'product-' + product.id"></io-card-product-item>
+      @for (product of products; let index = $index; track product.id) {
+        <io-card-product-item
+          [product]="product" (click)="selectProduct(product)"
+          [@fadeIn]="{value: '', params: { time:330, delay:  index < 20 ? index * 40 : 0}}">
+        </io-card-product-item>
       }
       @empty {
         Empty list of products
@@ -14,3 +17,15 @@
   }
 </div>
 
+
+<!--
+<cdk-virtual-scroll-viewport itemSize="50" class="virtual-scroll-viewport">
+  <div *cdkVirtualFor="let product of products; let index = index">
+    <io-card-product-item
+      [product]="product" (click)="selectProduct(product)"
+      [@fadeIn]="{value: '', params: { time:330, delay:  index < 20 ? index * 40 : 0}}">
+    </io-card-product-item>
+  </div>
+</cdk-virtual-scroll-viewport>
+
+-->

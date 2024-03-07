@@ -7,11 +7,11 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerProductService } from './product.service';
 
-interface Product {
-  id?: number;
-  name?: string;
-  price?: number;
-  mainImageUrl?: string | null;
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  mainImageUrl: string | null;
 }
 type CatalogProductState = {
   product: Product | null;
@@ -32,7 +32,7 @@ export const CatalogProductStore = signalStore(
     loadProduct: rxMethod<number>(
       pipe(
         tap((productId) => {
-          patchState(store, { isLoading: true, product: null })
+          patchState(store, { isLoading: true })
         }),
         switchMap((productId) => {
           return catalogProductService.getProduct({ supplierId: queryParams['sId'], deliveryPointId: queryParams['dp'], legalEntityId: queryParams?.['le'], productId }).pipe(
@@ -54,8 +54,11 @@ export const CatalogProductStore = signalStore(
         takeUntilDestroyed(destryRef),
       ),
     ),
-    navigateToCatalog(){
-      router.navigate(['member-user', 'catalog'], { queryParams: { sId: 1, dp: 1, le: 1, page: 1}});
+    setProduct(product: Product): void {
+      patchState(store, { product });
+    },
+    navigateToCatalog(): void {
+      router.navigate(['member-user', 'catalog'], { queryParams: { sId: queryParams['sId'], dp: queryParams['dp'], le: queryParams?.['le'], page: 1}});
     }
   })),
 );

@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImgLoaderDirective } from '@iorder-next/frontend/core/shared/directives/image-loader';
+import { Product } from '@iorder-next/frontend/core/customer/store/catalog/product';
 
 @Component({
   selector: 'io-card-product-item',
@@ -14,5 +15,5 @@ import { ImgLoaderDirective } from '@iorder-next/frontend/core/shared/directives
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardProductItemComponent {
-  product = input.required<any>();
+  product = input.required<Product>();
 }

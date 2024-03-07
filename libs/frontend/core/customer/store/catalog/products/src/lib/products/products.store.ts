@@ -50,8 +50,7 @@ export const CatalogProductsStore = signalStore(
         takeUntilDestroyed(destryRef),
       ),
     ),
-    selectProduct(productId: number) {
-      console.log(productId);
+    navigateToProduct(productId: number) {
       router.navigate(['product', productId], { relativeTo: route, queryParams: { sId: 1, dp: 1, le: 1 } });
     }
   })),

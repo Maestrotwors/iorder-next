@@ -1,0 +1,25 @@
+.header-container {
+  background-color: #0079cf;
+  height: 3rem;
+  display: grid;
+  grid-template-columns: 277px auto 1fr auto auto;
+  width: 100%;
+  padding: 0.1rem 1.2rem;
+
+  div {
+    margin: auto 0;
+  }
+}
+
+.iorder-logo {
+  color: white;
+  font-family: "PT Sans",sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: auto 0;
+  cursor: pointer;
+
+  .logo-icon {
+    max-height: 1.3rem;
+  }
+}

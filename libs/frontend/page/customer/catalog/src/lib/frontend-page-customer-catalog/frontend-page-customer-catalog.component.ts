@@ -5,6 +5,7 @@ import { FrontendPageCustomerCatalogMobileComponent } from './view/mobile/fronte
 import { CatalogProductsStore, CatalogProductsViewStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
 import { IfDesktopDirective, IfNotDesktopDirective } from '@iorder-next/frontend/core/shared/directives/break-point';
 import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/store/catalog/categories';
+import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/catalog/product';
 
 
 @Component({
@@ -24,11 +25,13 @@ import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/stor
   providers: [
     CatalogProductsStore,
     CatalogCategoriesStore,
-    CatalogProductsViewStore
+    CatalogProductsViewStore,
+    CatalogProductStore
   ],
 })
 export class FrontendPageCustomerCatalogComponent implements OnInit {
   readonly #catalogProductsStore = inject(CatalogProductsStore);
+  readonly #catalogProductStore = inject(CatalogProductStore);
   readonly #catalogCategoriesStore = inject(CatalogCategoriesStore);
   readonly #catalogProductsViewStore = inject(CatalogProductsViewStore);
 

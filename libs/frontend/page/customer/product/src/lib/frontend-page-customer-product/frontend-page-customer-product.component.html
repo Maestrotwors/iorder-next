@@ -1,3 +1,10 @@
-<p>frontend-page-customer-product works!</p>
-<img src="https://prodasnovastacc.blob.core.windows.net/product-images/3/4084500644762.jpg" [style.view-transition-name]="'product-' + productId" style="max-width: 250px; max-height: 300px;" />
-<button (click)="navigateToCatalog()">to catalog</button>
+<ng-container *ifNotMobile>
+  @defer (on immediate) {
+    <io-customer-widget-catalog-product-desktop></io-customer-widget-catalog-product-desktop>
+  }
+</ng-container>
+<ng-container *ifMobile>
+  @defer (on immediate) {
+    <io-customer-widget-catalog-product-mobile></io-customer-widget-catalog-product-mobile>
+  }
+</ng-container>
