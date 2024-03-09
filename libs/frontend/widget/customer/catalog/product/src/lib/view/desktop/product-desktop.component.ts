@@ -20,7 +20,7 @@ import {
     FrontendFeatureCustomerCatalogProductBackToProductsComponent,
     FrontendFeatureCustomerCatalogProductTitleComponent,
   ],
-  selector: 'io-customer-widget-catalog-product-desktop',
+  selector: 'iorder-next-customer-widget-catalog-product-desktop',
   templateUrl: './product-desktop.component.html',
   styleUrl: './product-desktop.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

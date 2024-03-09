@@ -26,10 +26,8 @@ const GetCatalogProductDetailsResponseSchema = z.object({
   mainImageUrl: z.string().nullable(),
 });
 
-export namespace GetCatalogProductDetailsCommand {
-  export const RequestQuerySchema = GetCatalogProductDetailsQueryRequestSchema;
-  export type RequestQuery = z.infer<typeof RequestQuerySchema>;
+export const GetCatalogProductDetailsCommandRequestQuerySchema = GetCatalogProductDetailsQueryRequestSchema;
+export type GetCatalogProductDetailsCommandRequestQuery = z.infer<typeof GetCatalogProductDetailsCommandRequestQuerySchema>;
 
-  export const ResponseSchema = GetCatalogProductDetailsResponseSchema;
-  export type Response = z.infer<typeof ResponseSchema>;
-}
+export const GetCatalogProductDetailsCommandResponseSchema = GetCatalogProductDetailsResponseSchema;
+export type GetCatalogProductDetailsCommandResponse = z.infer<typeof GetCatalogProductDetailsCommandResponseSchema>;

@@ -30,6 +30,7 @@
                   "frontend-layer:widget",
                   "frontend-layer:feature",
                   "frontend-layer:core",
+                  "frontend-layer:ui",
                   "frontend-routing-core"
                 ]
               },
@@ -64,7 +65,7 @@
 
               {
                 "sourceTag": "backend-layer:business",
-                "onlyDependOnLibsWithTags": ["layer:contract", "backend-layer:common", "backend-layer:entity"]
+                "onlyDependOnLibsWithTags": ["layer:contract", "backend-layer:common", "backend-layer:entity", "backend-layer:commands"]
               },
               {
                 "sourceTag": "backend-layer:commands",

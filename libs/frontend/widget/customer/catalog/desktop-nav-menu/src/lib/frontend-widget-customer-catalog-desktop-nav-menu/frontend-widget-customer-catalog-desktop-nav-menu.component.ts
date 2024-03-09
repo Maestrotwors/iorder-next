@@ -6,7 +6,7 @@ import { FrontendFeatureCustomerCatalogSupplierListComponent } from '@iorder-nex
 import { FrontendSharedCustomerSupplierBigIconComponent } from '@iorder-next/frontend/core/customer/components/shared-customer/supplier-icon';
 
 @Component({
-  selector: 'io-customer-widget-catalog-desktop-nav-menu',
+  selector: 'iorder-next-customer-widget-catalog-desktop-nav-menu',
   standalone: true,
   imports: [
     FrontendSharedCustomerSupplierBigIconComponent,

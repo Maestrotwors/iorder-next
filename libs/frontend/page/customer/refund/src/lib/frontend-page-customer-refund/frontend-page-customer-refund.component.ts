@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'io-customer-page-refund',
+  selector: 'iorder-next-customer-page-refund',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './frontend-page-customer-refund.component.html',

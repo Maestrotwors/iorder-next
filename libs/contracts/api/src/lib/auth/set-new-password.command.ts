@@ -9,11 +9,8 @@ const SetNewPasswordRequestSchema = z.object({
 const SetNewPasswordResponseSchema = z.object({
   status: z.nativeEnum(SetNewPasswordResponseEnum),
 });
+export const SetNewPasswordCommandRequestSchema = SetNewPasswordRequestSchema;
+export type SetNewPasswordCommandRequest = z.infer<typeof SetNewPasswordCommandRequestSchema>;
 
-export namespace SetNewPasswordCommand {
-  export const RequestSchema = SetNewPasswordRequestSchema;
-  export type Request = z.infer<typeof RequestSchema>;
-
-  export const ResponseSchema = SetNewPasswordResponseSchema;
-  export type Response = z.infer<typeof ResponseSchema>;
-}
+export const SetNewPasswordCommandResponseSchema = SetNewPasswordResponseSchema;
+export type SetNewPasswordCommandResponse = z.infer<typeof SetNewPasswordCommandResponseSchema>;

@@ -10,10 +10,8 @@ const UserRegisterResponseSchema = z.object({
   created: z.boolean(),
 });
 
-export namespace UserRegisterCommand {
-  export const RequestSchema = UserRegisterRequestSchema;
-  export type Request = z.infer<typeof RequestSchema>;
+export const UserRegisterCommandRequestSchema = UserRegisterRequestSchema;
+export type UserRegisterCommandRequest = z.infer<typeof UserRegisterCommandRequestSchema>;
 
-  export const ResponseSchema = UserRegisterResponseSchema;
-  export type Response = z.infer<typeof ResponseSchema>;
-}
+export const UserRegisterCommandResponseSchema = UserRegisterResponseSchema;
+export type UserRegisterCommandResponse = z.infer<typeof UserRegisterCommandResponseSchema>;

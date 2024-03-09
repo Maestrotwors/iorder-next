@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "iorder-next",
   "sourceRoot": "apps/frontend/ui-test/src",
-  "tags": ["frontend-layer:ui"],
+  "tags": ["frontend-layer:app"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",

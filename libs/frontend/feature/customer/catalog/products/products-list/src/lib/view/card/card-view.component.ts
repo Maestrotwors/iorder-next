@@ -7,7 +7,7 @@ import { CatalogProductStore, Product } from '@iorder-next/frontend/core/custome
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @Component({
-  selector: 'io-customer-feature-catalog-products-list-card-view',
+  selector: 'iorder-next-customer-feature-catalog-products-list-card-view',
   standalone: true,
   imports: [CommonModule, CardProductItemComponent, ScrollingModule],
   templateUrl: './card-view.component.html',

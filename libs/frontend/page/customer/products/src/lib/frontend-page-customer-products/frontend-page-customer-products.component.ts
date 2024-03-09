@@ -3,7 +3,7 @@ import { FrontendWidgetCustomerCatalogProductsHeaderComponent } from '@iorder-ne
 import { FrontendWidgetCustomerCatalogProductsListComponent } from '@iorder-next/frontend/widget/customer/catalog/products-list';
 
 @Component({
-  selector: 'io-customer-page-products',
+  selector: 'iorder-next-customer-page-products',
   standalone: true,
   imports: [FrontendWidgetCustomerCatalogProductsHeaderComponent, FrontendWidgetCustomerCatalogProductsListComponent],
   templateUrl: './frontend-page-customer-products.component.html',

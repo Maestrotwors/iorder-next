@@ -4,7 +4,7 @@ import { ProductFeatureShared } from '../../shared/product-feature.shared';
 @Component({
   standalone: true,
   imports: [],
-  selector: 'io-customer-feature-catalog-product-title',
+  selector: 'iorder-next-customer-feature-catalog-product-title',
   template: `
     @if (currentProduct(); as product) {
       <div class="title" [style.view-transition-name]="'product-' + product.id + '-name'">{{ product.name }}</div>

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FrontendUiComponent } from './frontend-ui.component';
+import { CheckboxComponent } from './checkbox.component';
 
-describe('FrontendUiComponent', () => {
-  let component: FrontendUiComponent;
-  let fixture: ComponentFixture<FrontendUiComponent>;
+describe('CheckboxComponent', () => {
+  let component: CheckboxComponent;
+  let fixture: ComponentFixture<CheckboxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FrontendUiComponent],
+      imports: [CheckboxComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(FrontendUiComponent);
+    fixture = TestBed.createComponent(CheckboxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

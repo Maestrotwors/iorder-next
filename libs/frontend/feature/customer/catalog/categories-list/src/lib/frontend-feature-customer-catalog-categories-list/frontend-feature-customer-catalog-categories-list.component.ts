@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/store/catalog/categories';
 
 @Component({
-  selector: 'io-customer-feature-catalog-categories-list',
+  selector: 'iorder-next-customer-feature-catalog-categories-list',
   standalone: true,
   imports: [],
   templateUrl: './frontend-feature-customer-catalog-categories-list.component.html',

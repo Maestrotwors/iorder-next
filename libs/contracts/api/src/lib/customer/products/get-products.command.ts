@@ -31,10 +31,8 @@ const CatalogDataSchema = z.object({
   products: ProductsSchema,
 });
 
-export namespace GetCatalogProductsCommand {
-  export const RequestQuerySchema = GetCatalogProductsQueryRequestSchema;
-  export type RequestQuery = z.infer<typeof RequestQuerySchema>;
+export const GetCatalogProductsCommandRequestQuerySchema = GetCatalogProductsQueryRequestSchema;
+export type GetCatalogProductsCommandRequestQuery = z.infer<typeof GetCatalogProductsCommandRequestQuerySchema>;
 
-  export const ResponseSchema = CatalogDataSchema;
-  export type Response = z.infer<typeof ResponseSchema>;
-}
+export const GetCatalogProductsCommandResponseSchema = CatalogDataSchema;
+export type GetCatalogProductsCommandResponse = z.infer<typeof GetCatalogProductsCommandResponseSchema>;

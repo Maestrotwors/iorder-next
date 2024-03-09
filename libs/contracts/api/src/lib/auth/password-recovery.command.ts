@@ -8,10 +8,8 @@ const PasswordRecoveryResponseSchema = z.object({
   status: z.string(),
 });
 
-export namespace PasswordRecoveryCommand {
-  export const RequestSchema = PasswordRecoveryRequestSchema;
-  export type Request = z.infer<typeof RequestSchema>;
+export const PasswordRecoveryCommandRequestSchema = PasswordRecoveryRequestSchema;
+export type PasswordRecoveryCommandRequest = z.infer<typeof PasswordRecoveryCommandRequestSchema>;
 
-  export const ResponseSchema = PasswordRecoveryResponseSchema;
-  export type Response = z.infer<typeof ResponseSchema>;
-}
+export const PasswordRecoveryCommandResponseSchema = PasswordRecoveryResponseSchema;
+export type PasswordRecoveryCommandResponse = z.infer<typeof PasswordRecoveryCommandResponseSchema>;

@@ -30,12 +30,12 @@ export class MenuService {
       url: 'input',
     },
     {
-      title: 'Nav-Menu',
+      title: 'Nav Menu',
       url: 'nav-menu',
     },
     {
       title: 'Pagination',
-      url: 'pagination',
+      url: 'paginator',
     },
     {
       title: 'Popover',
@@ -46,7 +46,7 @@ export class MenuService {
       url: 'progress',
     },
     {
-      title: 'Redio',
+      title: 'Radio',
       url: 'radio',
     },
     {

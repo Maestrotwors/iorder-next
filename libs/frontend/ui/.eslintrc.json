@@ -20,6 +20,11 @@
             "type": "element",
             "prefix": "iorder-next",
             "style": "kebab-case"
+          },
+          {
+            "type": "element",
+            "prefix": "ui",
+            "style": "kebab-case"
           }
         ]
       }

@@ -5,7 +5,7 @@ import { FrontendCustomerHeaderComponent } from '@iorder-next/frontend/core/cust
 import { FrontendWidgetCustomerCatalogDesktopNavMenuComponent } from '@iorder-next/frontend/widget/customer/catalog/desktop-nav-menu';
 
 @Component({
-  selector: 'io-customer-page-catalog-desktop',
+  selector: 'iorder-next-customer-page-catalog-desktop',
   standalone: true,
   imports: [
     FrontendSharedCustomerFooterDesktopComponent,

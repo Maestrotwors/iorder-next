@@ -19,7 +19,7 @@ import { RouterOutlet } from '@angular/router';
   styles: `
     .container {
       display: grid;
-      grid-template-columns: 15rem 1fr;
+      grid-template-columns: 11rem 1fr;
       min-height: 100vh;
     }
 

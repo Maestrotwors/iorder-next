@@ -1,5 +1,5 @@
-import { GetCatalogCategoriesCommand } from '@iorder-next/contracts/api';
+import { GetCatalogCategoriesCommandRequestQuerySchema, GetCatalogCategoriesCommandResponseSchema } from '@iorder-next/contracts/api';
 import { createZodDto } from 'nestjs-zod';
 
-export class GetCatalogCategoriesQueryDto extends createZodDto(GetCatalogCategoriesCommand.RequestQuerySchema) {}
-export class GetCatalogCategoriesResponseDto extends createZodDto(GetCatalogCategoriesCommand.ResponseSchema) {}
+export class GetCatalogCategoriesQueryDto extends createZodDto(GetCatalogCategoriesCommandRequestQuerySchema) {}
+export class GetCatalogCategoriesResponseDto extends createZodDto(GetCatalogCategoriesCommandResponseSchema) {}

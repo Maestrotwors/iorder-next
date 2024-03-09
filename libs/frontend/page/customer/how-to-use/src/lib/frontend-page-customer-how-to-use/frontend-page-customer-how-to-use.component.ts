@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'io-customer-page-howToUse',
+  selector: 'iorder-next-customer-page-howToUse',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './frontend-page-customer-how-to-use.component.html',

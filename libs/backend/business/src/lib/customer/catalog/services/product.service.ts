@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { GetCatalogProductQuery } from '@iorder-next/backend/commands';
 import { GetCatalogProductQueryDto, GetCatalogProductResponseDto } from '../dto/get-product-details.dto';
 

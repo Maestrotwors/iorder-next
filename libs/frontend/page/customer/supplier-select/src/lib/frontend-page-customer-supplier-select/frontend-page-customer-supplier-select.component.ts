@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FrontendCustomerHeaderComponent } from '@iorder-next/frontend/core/customer/components/shared-customer/header';
 
 @Component({
-  selector: 'io-customer-page-supplier-select',
+  selector: 'iorder-next-customer-page-supplier-select',
   standalone: true,
   imports: [CommonModule, FrontendCustomerHeaderComponent],
   templateUrl: './frontend-page-customer-supplier-select.component.html',

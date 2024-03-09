@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'io-customer-shared-supplier-icon-small',
+  selector: 'iorder-next-customer-shared-supplier-icon-small',
   standalone: true,
   imports: [],
   templateUrl: './frontend-shared-customer-supplier-icon-small.component.html',

@@ -1,0 +1,7 @@
+:host {
+  @apply inline-block;
+}
+
+:host(:focus-visible) {
+  @apply bg-[red] ;
+}

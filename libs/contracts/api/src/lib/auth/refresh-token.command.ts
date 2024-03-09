@@ -9,10 +9,8 @@ const UserRefreshTokenResponseSchema = z.object({
   refreshToken: z.string(),
 });
 
-export namespace UserRefreshTokenCommand {
-  export const RequestSchema = UserRefreshTokenRequestSchema;
-  export type Request = z.infer<typeof RequestSchema>;
+export const UserRefreshTokenCommandRequestSchema = UserRefreshTokenRequestSchema;
+export type UserRefreshTokenCommandRequest = z.infer<typeof UserRefreshTokenCommandRequestSchema>;
 
-  export const ResponseSchema = UserRefreshTokenResponseSchema;
-  export type Response = z.infer<typeof ResponseSchema>;
-}
+export const UserRefreshTokenCommandResponseSchema = UserRefreshTokenResponseSchema;
+export type UserRefreshTokenCommandResponse = z.infer<typeof UserRefreshTokenCommandResponseSchema>;

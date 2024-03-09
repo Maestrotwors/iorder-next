@@ -16,10 +16,8 @@ const CategoryItemSchema = z.object({
 
 const GetCatalogCategoriesResponseSchema = z.array(CategoryItemSchema);
 
-export namespace GetCatalogCategoriesCommand {
-  export const RequestQuerySchema = GetCatalogCategoriesQueryRequestSchema;
-  export type RequestQuery = z.infer<typeof RequestQuerySchema>;
+export const GetCatalogCategoriesCommandRequestQuerySchema = GetCatalogCategoriesQueryRequestSchema;
+export type GetCatalogCategoriesCommandRequestQuery = z.infer<typeof GetCatalogCategoriesCommandRequestQuerySchema>;
 
-  export const ResponseSchema = GetCatalogCategoriesResponseSchema;
-  export type Response = z.infer<typeof ResponseSchema>;
-}
+export const GetCatalogCategoriesCommandResponseSchema = GetCatalogCategoriesResponseSchema;
+export type GetCatalogCategoriesCommandResponse = z.infer<typeof GetCatalogCategoriesCommandResponseSchema>;

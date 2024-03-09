@@ -18,7 +18,7 @@ export const appRoutes: Route[] = [
     loadComponent: () => import('./pages/card/card.component').then(c => c.CardComponent),
   },
   {
-    path: 'checkbox',
+    path: 'check-box',
     loadComponent: () => import('./pages/checkbox/checkbox.component').then(c => c.CheckboxComponent),
   },
   {
@@ -30,7 +30,7 @@ export const appRoutes: Route[] = [
     loadComponent: () => import('./pages/input/input.component').then(c => c.InputComponent),
   },
   {
-    path: 'nav-manu',
+    path: 'nav-menu',
     loadComponent: () => import('./pages/navigation-menu/navigation-menu.component').then(c => c.NavigationMenuComponent),
   },
   {
