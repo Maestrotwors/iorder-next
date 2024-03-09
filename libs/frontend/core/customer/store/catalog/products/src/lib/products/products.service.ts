@@ -12,9 +12,9 @@ export class CustomerProductsService {
 
   getProducts(query: GetCatalogProductsCommand.RequestQuery): Observable<HttpResponse<GetCatalogProductsCommand.Response>> {
     const TASK_NAME = 'getProducts';
-    return this.#api.get<GetCatalogProductsCommand.Response>('catalog/products', { params: query}).pipe(
+    return this.#api.get<GetCatalogProductsCommand.Response>('catalog/products', { params: query }).pipe(
       tap(() => this.#loaderStore.addTask(TASK_NAME)),
-      //delay(1000),
+      //delay(2000),
       finalize(() => this.#loaderStore.removeTask(TASK_NAME)),
     );
   }

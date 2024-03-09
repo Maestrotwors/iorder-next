@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { ProductFeatureShared } from "../../shared/product-feature.shared";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ProductFeatureShared } from '../../shared/product-feature.shared';
 
 @Component({
   standalone: true,
@@ -7,8 +7,8 @@ import { ProductFeatureShared } from "../../shared/product-feature.shared";
   selector: 'io-customer-feature-catalog-product-title',
   template: `
     @if (currentProduct(); as product) {
-      <div class="title" [style.view-transition-name]="'product-' + product.id + '-name'">{{product.name}}</div>
-      <div class="price" [style.view-transition-name]="'product-' + product.id + '-price'">{{product.price}} грн.</div>
+      <div class="title" [style.view-transition-name]="'product-' + product.id + '-name'">{{ product.name }}</div>
+      <div class="price" [style.view-transition-name]="'product-' + product.id + '-price'">{{ product.price }} грн.</div>
       <div class="available" [style.view-transition-name]="'product-' + product.id + '-available'">Доступно: 1000</div>
     }
   `,
@@ -30,6 +30,4 @@ import { ProductFeatureShared } from "../../shared/product-feature.shared";
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FrontendFeatureCustomerCatalogProductTitleComponent extends ProductFeatureShared {
-
-}
+export class FrontendFeatureCustomerCatalogProductTitleComponent extends ProductFeatureShared {}

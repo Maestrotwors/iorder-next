@@ -12,11 +12,7 @@ import { PassportModule } from '@nestjs/passport';
 import { RefreshTokenStrategy } from '../../../../common/src/lib/strategies/refresh-token.strategy';
 
 @Module({
-  imports: [
-    DatabaseModule,
-    PassportModule.register({ defaultStrategy: 'jwt' }),
-    JwtModule.registerAsync(getJWTConfig())
-  ],
+  imports: [DatabaseModule, PassportModule.register({ defaultStrategy: 'jwt' }), JwtModule.registerAsync(getJWTConfig())],
   controllers: [AuthController],
   providers: [
     AuthService,
@@ -26,7 +22,7 @@ import { RefreshTokenStrategy } from '../../../../common/src/lib/strategies/refr
     AuthActionService,
     JwtService,
     AccessTokenStrategy,
-    RefreshTokenStrategy
+    RefreshTokenStrategy,
   ],
   exports: [AccessTokenStrategy, RefreshTokenStrategy],
 })

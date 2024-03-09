@@ -79,6 +79,8 @@
       "@iorder-next/frontend/page/customer/supplier-select": ["libs/frontend/page/customer/supplier-select/src/index.ts"],
       "@iorder-next/frontend/page/landing/main": ["libs/frontend/page/landing/main/src/index.ts"],
       "@iorder-next/frontend/page/supplier/main": ["libs/frontend/page/supplier/main/src/index.ts"],
+      "@iorder-next/frontend/ui": ["libs/frontend/ui/src/index.ts"],
+      "@iorder-next/frontend/ui-test": ["apps/frontend/ui-test/src/index.ts"],
       "@iorder-next/frontend/widget/customer/catalog/desktop-nav-menu": [
         "libs/frontend/widget/customer/catalog/desktop-nav-menu/src/index.ts"
       ],

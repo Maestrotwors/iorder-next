@@ -5,10 +5,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'io-customer-header',
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterLink
-  ],
+  imports: [CommonModule, RouterLink],
   templateUrl: './customer-header.component.html',
   styleUrl: './customer-header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

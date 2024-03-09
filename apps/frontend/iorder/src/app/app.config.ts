@@ -18,14 +18,8 @@ export const appConfig: ApplicationConfig = {
         paramsInheritanceStrategy: 'always',
       }),
     ),
-    provideHttpClient(
-      withFetch(),
-      withInterceptors([
-        ApiUrlInterceptor,
-        TokenInterceptor,
-        withHttpCacheInterceptor()
-      ])),
+    provideHttpClient(withFetch(), withInterceptors([ApiUrlInterceptor, TokenInterceptor, withHttpCacheInterceptor()])),
     provideHttpCache(),
-    provideAnimations()
+    provideAnimations(),
   ],
 };

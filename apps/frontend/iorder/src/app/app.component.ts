@@ -14,6 +14,6 @@ import { HeaderLoaderComponent } from '@iorder-next/frontend/core/shared/compone
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  readonly #breakPointService = inject(BreakPointService).breakpoint$.subscribe(() => {});
+  readonly #breakPointService = inject(BreakPointService).breakpoint$.subscribe();
   readonly #deviceInfoService = inject(DeviceInfoService);
 }

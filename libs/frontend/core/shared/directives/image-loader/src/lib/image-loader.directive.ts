@@ -5,11 +5,11 @@ import { imageNotFoundDefault } from './constants';
   selector: '[imgLoader]',
   standalone: true,
   host: {
-    "(load)": "onLoad()",
-    "(error)": "onError()",
-    "[attr.src]": 'src',
-    "[class]": "class"
-  }
+    '(load)': 'onLoad()',
+    '(error)': 'onError()',
+    '[attr.src]': 'src',
+    '[class]': 'class',
+  },
 })
 export class ImgLoaderDirective {
   @Input() loadSrc: string | null = null;

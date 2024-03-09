@@ -6,18 +6,17 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 @Component({
   selector: 'io-catalog-products-view-select',
   standalone: true,
-  imports: [
-    CommonModule,
-    SelectButtonModule,
-    FormsModule
-  ],
+  imports: [CommonModule, SelectButtonModule, FormsModule],
   templateUrl: './view-select.component.html',
   styleUrl: './view-select.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CatalogProductsViewSelectComponent {
   readonly catalogProductsViewStore = inject(CatalogProductsViewStore);
-  stateOptions = [{label: 'Card', value: 'card'}, {label: 'List', value: 'list'}];
+  stateOptions = [
+    { label: 'Card', value: 'card' },
+    { label: 'List', value: 'list' },
+  ];
   selectedSize = this.catalogProductsViewStore.productsViewType();
 
   selectView(view: CatalogProductsViewType) {

@@ -7,11 +7,7 @@ import { CATALOG_REPOSITORIES } from '@iorder-next/backend/repository';
 @Module({
   imports: [],
   controllers: [CatalogController],
-  providers: [
-    ...CATALOG_SERVICES,
-    ...CATALOG_REPOSITORIES,
-    ...CATALOG_COMMANDS
-  ],
+  providers: [...CATALOG_SERVICES, ...CATALOG_REPOSITORIES, ...CATALOG_COMMANDS],
   exports: [],
 })
 export class CatalogModule {}

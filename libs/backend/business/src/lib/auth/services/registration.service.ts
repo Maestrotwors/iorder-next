@@ -8,7 +8,7 @@ import { AuthActionService } from '@iorder-next/backend/commands';
 export class RegistrationService {
   constructor(
     private readonly tokenService: TokenService,
-    private readonly authActionService: AuthActionService
+    private readonly authActionService: AuthActionService,
   ) {}
 
   async register(dto: RegisterDto): Promise<true | null | 'user_exist'> {
@@ -20,7 +20,7 @@ export class RegistrationService {
         return 'user_exist';
       }
       const role = RoleEnum.CUSTOMER;
-      const createdUser = await this.authActionService.createNewUserCommand({email, name, role, password});
+      const createdUser = await this.authActionService.createNewUserCommand({ email, name, role, password });
 
       return createdUser;
     } catch (error) {

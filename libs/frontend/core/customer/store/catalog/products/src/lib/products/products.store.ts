@@ -26,32 +26,48 @@ export const CatalogProductsStore = signalStore(
   withComputed(store => {
     return {};
   }),
-  withMethods((store, catalogProductsService = inject(CustomerProductsService), route = inject(ActivatedRoute),  queryParams = inject(ActivatedRoute).snapshot.queryParams, router = inject(Router), destryRef = inject(DestroyRef)) => ({
-    loadProducts: rxMethod<void>(
-      pipe(
-        tap(() => patchState(store, { isLoading: true, products: [] })),
-        switchMap(() => {
-          return catalogProductsService.getProducts({ supplierId: queryParams['sId'], page: queryParams['page'] || 1, limit: queryParams?.['limit'] || 10 }).pipe(
-            tapResponse({
-              next: productsResponse => {
-                if (productsResponse.body) {
-                  patchState(store, { products: productsResponse.body.products.items, totalCountProducts: productsResponse.body.products.totalCountProducts, error: false, isLoading: false });
-                } else {
-                  patchState(store, { products: [], error: true, isLoading: false });
-                }
-              },
-              error: error => {
-                console.error(error);
-                patchState(store, { products: [], error: true, isLoading: false });
-              },
-            }),
-          );
-        }),
-        takeUntilDestroyed(destryRef),
+  withMethods(
+    (
+      store,
+      catalogProductsService = inject(CustomerProductsService),
+      route = inject(ActivatedRoute),
+      queryParams = inject(ActivatedRoute).snapshot.queryParams,
+      router = inject(Router),
+      destryRef = inject(DestroyRef),
+    ) => ({
+      loadProducts: rxMethod<void>(
+        pipe(
+          tap(() => patchState(store, { isLoading: true, products: [] })),
+          switchMap(() => {
+            return catalogProductsService
+              .getProducts({ supplierId: queryParams['sId'], page: queryParams['page'] || 1, limit: queryParams?.['limit'] || 10 })
+              .pipe(
+                tapResponse({
+                  next: productsResponse => {
+                    if (productsResponse.body) {
+                      patchState(store, {
+                        products: productsResponse.body.products.items,
+                        totalCountProducts: productsResponse.body.products.totalCountProducts,
+                        error: false,
+                        isLoading: false,
+                      });
+                    } else {
+                      patchState(store, { products: [], error: true, isLoading: false });
+                    }
+                  },
+                  error: error => {
+                    console.error(error);
+                    patchState(store, { products: [], error: true, isLoading: false });
+                  },
+                }),
+              );
+          }),
+          takeUntilDestroyed(destryRef),
+        ),
       ),
-    ),
-    navigateToProduct(productId: number) {
-      router.navigate(['product', productId], { relativeTo: route, queryParams: { sId: 1, dp: 1, le: 1 } });
-    }
-  })),
+      navigateToProduct(productId: number) {
+        router.navigate(['product', productId], { relativeTo: route, queryParams: { sId: 1, dp: 1, le: 1 } });
+      },
+    }),
+  ),
 );

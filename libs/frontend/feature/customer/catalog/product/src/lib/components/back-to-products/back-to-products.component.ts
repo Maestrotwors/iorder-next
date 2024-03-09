@@ -1,11 +1,11 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { ProductFeatureShared } from "../../shared/product-feature.shared";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ProductFeatureShared } from '../../shared/product-feature.shared';
 import { ButtonModule } from 'primeng/button';
-import { CommonModule } from "@angular/common";
+import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [ ButtonModule, CommonModule ],
+  imports: [ButtonModule, CommonModule],
   selector: 'io-customer-feature-catalog-product-back-to-products',
   template: `
     <span>

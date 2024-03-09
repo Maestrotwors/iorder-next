@@ -21,29 +21,36 @@ const initialState: CatalogCategoriesState = {
 
 export const CatalogCategoriesStore = signalStore(
   withState(initialState),
-  withMethods((store, catalogCategoriesService = inject(CatalogCategoriesService), route = inject(ActivatedRoute), destryRef = inject(DestroyRef)) => ({
-    loadCategories: rxMethod<void>(
-      pipe(
-        tap(() => patchState(store, { isLoading: true, categories: [] })),
-        switchMap(() => {
-          return catalogCategoriesService.getCategories({ supplierId: route.snapshot.queryParams['sId'] }).pipe(
-            tapResponse({
-              next: categoriesResponse => {
-                if (categoriesResponse.body) {
-                  patchState(store, { categories: categoriesResponse.body, error: false, isLoading: false });
-                } else {
+  withMethods(
+    (
+      store,
+      catalogCategoriesService = inject(CatalogCategoriesService),
+      route = inject(ActivatedRoute),
+      destryRef = inject(DestroyRef),
+    ) => ({
+      loadCategories: rxMethod<void>(
+        pipe(
+          tap(() => patchState(store, { isLoading: true, categories: [] })),
+          switchMap(() => {
+            return catalogCategoriesService.getCategories({ supplierId: route.snapshot.queryParams['sId'] }).pipe(
+              tapResponse({
+                next: categoriesResponse => {
+                  if (categoriesResponse.body) {
+                    patchState(store, { categories: categoriesResponse.body, error: false, isLoading: false });
+                  } else {
+                    patchState(store, { categories: [], error: true, isLoading: false });
+                  }
+                },
+                error: error => {
+                  console.error(error);
                   patchState(store, { categories: [], error: true, isLoading: false });
-                }
-              },
-              error: error => {
-                console.error(error);
-                patchState(store, { categories: [], error: true, isLoading: false });
-              },
-            }),
-          );
-        }),
-        takeUntilDestroyed(destryRef),
+                },
+              }),
+            );
+          }),
+          takeUntilDestroyed(destryRef),
+        ),
       ),
-    ),
-  })),
+    }),
+  ),
 );

@@ -13,7 +13,7 @@ import { RefreshTokenDto, RefreshTokenResponseDto } from './dto/refresh-token.dt
 export class AuthController {
   constructor(
     private readonly authService: AuthService,
-    private readonly registrationService: RegistrationService
+    private readonly registrationService: RegistrationService,
   ) {}
   @Get('health-check')
   async ping(@Req() req: Request): Promise<any> {
@@ -45,7 +45,7 @@ export class AuthController {
     }
 
     return {
-      created: true
+      created: true,
     };
   }
 
@@ -53,17 +53,15 @@ export class AuthController {
   @Get('refresh-token')
   @UseGuards(RefreshTokenGuard)
   async refreshToken(@Req() req: Request): Promise<RefreshTokenResponseDto> {
-    const dto: RefreshTokenDto | null = req?.user as RefreshTokenDto || null;
+    const dto: RefreshTokenDto | null = (req?.user as RefreshTokenDto) || null;
     if (!dto) {
-        throw new BadRequestException('Токен не валиден');
+      throw new BadRequestException('Токен не валиден');
     }
     return this.authService.refreshToken(dto);
   }
-
 }
 
-
-  /*
+/*
 
   @Post('password-recovery')
   async passwordRecovery(@Body() dto: PasswordRecoveryDto) {

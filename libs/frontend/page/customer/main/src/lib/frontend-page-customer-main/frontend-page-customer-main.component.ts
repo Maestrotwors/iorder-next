@@ -8,6 +8,6 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './frontend-page-customer-main.component.html',
   styleUrl: './frontend-page-customer-main.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: []
+  providers: [],
 })
 export class FrontendPageCustomerMainComponent {}

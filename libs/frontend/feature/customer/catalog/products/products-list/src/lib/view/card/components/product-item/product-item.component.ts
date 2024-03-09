@@ -6,10 +6,7 @@ import { Product } from '@iorder-next/frontend/core/customer/store/catalog/produ
 @Component({
   selector: 'io-card-product-item',
   standalone: true,
-  imports: [
-    CommonModule,
-    ImgLoaderDirective
-  ],
+  imports: [CommonModule, ImgLoaderDirective],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

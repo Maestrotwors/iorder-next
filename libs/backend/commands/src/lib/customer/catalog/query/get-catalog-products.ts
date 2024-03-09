@@ -1,7 +1,7 @@
-import { CatalogProductsRepository } from "@iorder-next/backend/repository";
-import { Injectable } from "@nestjs/common";
-import { ActionBase } from "../../../core/action.base";
-import { Product } from "@prisma/client";
+import { CatalogProductsRepository } from '@iorder-next/backend/repository';
+import { Injectable } from '@nestjs/common';
+import { ActionBase } from '../../../core/action.base';
+import { Product } from '@prisma/client';
 
 interface Dto {
   supplierId: number;
@@ -10,7 +10,9 @@ interface Dto {
 }
 @Injectable()
 export class GetCatalogProductsQuery extends ActionBase {
-  constructor(private catalogProductsRepository: CatalogProductsRepository) { super(); }
+  constructor(private catalogProductsRepository: CatalogProductsRepository) {
+    super();
+  }
   async execute(params: Dto): Promise<Product[]> {
     try {
       const page = params.page || 1;

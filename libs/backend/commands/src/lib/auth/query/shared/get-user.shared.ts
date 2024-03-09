@@ -1,7 +1,7 @@
-import { UserEntity } from "@iorder-next/backend/entities";
-import { UserRepository } from "@iorder-next/backend/repository";
-import { ActionBase } from "../../../core/action.base";
-import { User } from "@prisma/client";
+import { UserEntity } from '@iorder-next/backend/entities';
+import { UserRepository } from '@iorder-next/backend/repository';
+import { ActionBase } from '../../../core/action.base';
+import { User } from '@prisma/client';
 
 export abstract class GetUserSharedQuery extends ActionBase {
   protected readonly userRepository: UserRepository = new UserRepository(this.prismaService);

@@ -11,7 +11,7 @@ import { ConfigModule } from '@nestjs/config';
       validate: config => validateConfig(config),
     }),
     AuthModule,
-    CatalogModule
+    CatalogModule,
   ],
   controllers: [],
   providers: [],

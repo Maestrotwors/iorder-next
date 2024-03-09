@@ -10,8 +10,8 @@ export class CatalogCategoriesRepository {
   public async getCategories(params: GetCategoriesRepositoryDto): Promise<Category[]> {
     return this.prisma.category.findMany({
       where: {
-        supplierId: params.supplierId
-      }
+        supplierId: params.supplierId,
+      },
     });
   }
 }

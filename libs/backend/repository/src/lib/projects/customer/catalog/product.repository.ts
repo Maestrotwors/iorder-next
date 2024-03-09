@@ -10,8 +10,8 @@ export class CatalogProductRepository {
   public async getProduct(params: GetProductRepositoryDto): Promise<Product | null> {
     return this.prisma.product.findUnique({
       where: {
-        id: params.productId
-      }
+        id: params.productId,
+      },
     });
   }
 }

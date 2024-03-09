@@ -6,7 +6,7 @@ import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 @Component({
   selector: 'io-customer-feature-catalog-products-catalog-pagination',
   standalone: true,
-  imports: [ CommonModule, PaginatorModule ],
+  imports: [CommonModule, PaginatorModule],
   templateUrl: './pagination-products.component.html',
   styleUrls: ['./pagination-products.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -15,8 +15,8 @@ export class FrontendFeatureCustomerCatalogPaginationProductsComponent {
   readonly catalogProductsStore = inject(CatalogProductsStore);
   page = input('page');
 
-  first: number = 50;
-  rows: number = 10;
+  first = 50;
+  rows = 10;
 
   onPageChange(event: PaginatorState): void {
     this.first = event.first || 0;

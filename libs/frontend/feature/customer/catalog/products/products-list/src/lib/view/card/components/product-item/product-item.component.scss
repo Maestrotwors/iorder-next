@@ -2,14 +2,14 @@
   height: 23rem;
   display: grid;
   grid-template-rows: 230px 3rem 1fr auto;
-  border: 1px solid rgba(179,179,179,.212);
+  border: 1px solid rgba(179, 179, 179, 0.212);
   border-radius: 0.5rem;
   padding: 8px;
   height: 28rem;
 }
 
 .card:hover {
-  box-shadow: 0 0 10px 0 rgba(0,0,0.2,0.4);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0.2, 0.4);
   transition: box-shadow 0.2s ease-in-out;
 }
 

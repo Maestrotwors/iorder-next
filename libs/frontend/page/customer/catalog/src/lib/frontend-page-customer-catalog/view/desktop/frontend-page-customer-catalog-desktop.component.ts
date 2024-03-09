@@ -11,7 +11,7 @@ import { FrontendWidgetCustomerCatalogDesktopNavMenuComponent } from '@iorder-ne
     FrontendSharedCustomerFooterDesktopComponent,
     FrontendWidgetCustomerCatalogDesktopNavMenuComponent,
     RouterOutlet,
-    FrontendCustomerHeaderComponent
+    FrontendCustomerHeaderComponent,
   ],
   templateUrl: './frontend-page-customer-catalog-desktop.component.html',
   styleUrl: './frontend-page-customer-catalog-desktop.component.scss',

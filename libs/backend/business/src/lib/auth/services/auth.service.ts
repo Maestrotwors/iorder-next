@@ -12,7 +12,7 @@ import { AuthActionService } from '@iorder-next/backend/commands';
 export class AuthService {
   constructor(
     private readonly tokenService: TokenService,
-    private readonly authActionService: AuthActionService
+    private readonly authActionService: AuthActionService,
   ) {}
 
   async login(dto: LoginDto): Promise<LoginResponseDto> {
@@ -43,11 +43,11 @@ export class AuthService {
 
     if (!setNewPassword)
       throw new InternalServerErrorException({
-          status: ChangePasswordResponseEnum.Error,
+        status: ChangePasswordResponseEnum.Error,
       });
 
     return {
-        status: ChangePasswordResponseEnum.Success,
+      status: ChangePasswordResponseEnum.Success,
     };
   }
 

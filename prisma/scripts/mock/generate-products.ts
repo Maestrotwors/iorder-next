@@ -11,8 +11,7 @@ async function main() {
       create: {
         name: 'MR PROPER Рідкий миючий засіб для прибирання підлоги та стін Лимон 1л - длинный текст далее длинный текст далее длинный текст далее',
         price: 30,
-        mainImageUrl:
-          'https://prodasnovastacc.blob.core.windows.net/product-images/3/4084500644762.jpg',
+        mainImageUrl: 'https://prodasnovastacc.blob.core.windows.net/product-images/3/4084500644762.jpg',
       },
     });
   }

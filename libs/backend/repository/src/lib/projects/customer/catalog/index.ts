@@ -6,8 +6,4 @@ export * from './product.repository';
 export * from './products.repository';
 export * from './categories.repository';
 
-export const CATALOG_REPOSITORIES = [
-  CatalogProductsRepository,
-  CatalogProductRepository,
-  CatalogCategoriesRepository
-];
+export const CATALOG_REPOSITORIES = [CatalogProductsRepository, CatalogProductRepository, CatalogCategoriesRepository];

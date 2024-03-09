@@ -4,9 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 @Component({
   selector: 'io-catalog-products-order-units',
   standalone: true,
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   templateUrl: './order-units.component.html',
   styleUrl: './order-units.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

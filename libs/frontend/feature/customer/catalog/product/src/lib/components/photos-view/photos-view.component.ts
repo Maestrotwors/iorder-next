@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { ProductFeatureShared } from "../../shared/product-feature.shared";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ProductFeatureShared } from '../../shared/product-feature.shared';
 
 @Component({
   standalone: true,
@@ -9,6 +9,4 @@ import { ProductFeatureShared } from "../../shared/product-feature.shared";
   styleUrl: './photos-view.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FrontendFeatureCustomerCatalogProductPhotosViewComponent extends ProductFeatureShared {
-
-}
+export class FrontendFeatureCustomerCatalogProductPhotosViewComponent extends ProductFeatureShared {}

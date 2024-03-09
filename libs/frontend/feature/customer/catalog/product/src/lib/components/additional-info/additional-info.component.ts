@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { ProductFeatureShared } from "../../shared/product-feature.shared";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ProductFeatureShared } from '../../shared/product-feature.shared';
 
 @Component({
   standalone: true,
@@ -8,6 +8,4 @@ import { ProductFeatureShared } from "../../shared/product-feature.shared";
   template: `io-customer-feature-catalog-product-additional-info`,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FrontendFeatureCustomerCatalogProductAdditionalInfoComponent extends ProductFeatureShared {
-
-}
+export class FrontendFeatureCustomerCatalogProductAdditionalInfoComponent extends ProductFeatureShared {}

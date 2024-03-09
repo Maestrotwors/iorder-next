@@ -9,15 +9,11 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 @Component({
   selector: 'io-customer-feature-catalog-products-list-card-view',
   standalone: true,
-  imports: [
-    CommonModule,
-    CardProductItemComponent,
-    ScrollingModule
-  ],
+  imports: [CommonModule, CardProductItemComponent, ScrollingModule],
   templateUrl: './card-view.component.html',
   styleUrl: './card-view.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [ FadeInAnimation ],
+  animations: [FadeInAnimation],
   providers: [],
 })
 export class FrontendFeatureCustomerCatalogProductsListCardViewComponent {

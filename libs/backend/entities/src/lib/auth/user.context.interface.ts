@@ -1,4 +1,4 @@
 export interface UserContext {
-    userId: string;
-    userRole: number;
+  userId: string;
+  userRole: number;
 }

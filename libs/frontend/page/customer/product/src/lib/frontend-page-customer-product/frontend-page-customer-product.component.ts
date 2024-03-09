@@ -1,7 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnInit, inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/catalog/product';
-import { FrontendWidgetCustomerCatalogProductDesktopComponent, FrontendWidgetCustomerCatalogProductMobileComponent } from '@iorder-next/frontend/widget/customer/catalog/product';
+import {
+  FrontendWidgetCustomerCatalogProductDesktopComponent,
+  FrontendWidgetCustomerCatalogProductMobileComponent,
+} from '@iorder-next/frontend/widget/customer/catalog/product';
 import { IfMobileDirective, IfNotMobileDirective } from '@iorder-next/frontend/core/shared/directives/break-point';
 
 @Component({
@@ -12,7 +15,7 @@ import { IfMobileDirective, IfNotMobileDirective } from '@iorder-next/frontend/c
     FrontendWidgetCustomerCatalogProductDesktopComponent,
     FrontendWidgetCustomerCatalogProductMobileComponent,
     IfMobileDirective,
-    IfNotMobileDirective
+    IfNotMobileDirective,
   ],
   templateUrl: './frontend-page-customer-product.component.html',
   styleUrl: './frontend-page-customer-product.component.scss',
@@ -21,7 +24,7 @@ import { IfMobileDirective, IfNotMobileDirective } from '@iorder-next/frontend/c
 export class FrontendPageCustomerProductComponent implements OnInit {
   #catalogProductStore = inject(CatalogProductStore);
 
-  @Input() productId: string = '0';
+  @Input() productId = '0';
 
   ngOnInit(): void {
     this.loadData();

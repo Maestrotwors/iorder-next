@@ -12,12 +12,12 @@ import {
   imports: [
     FrontendFeatureCustomerCatalogProductsListListViewComponent,
     FrontendFeatureCustomerCatalogProductsListCardViewComponent,
-    FrontendFeatureCustomerCatalogPaginationProductsComponent
+    FrontendFeatureCustomerCatalogPaginationProductsComponent,
   ],
   templateUrl: './frontend-widget-customer-catalog-products-list.component.html',
   styleUrl: './frontend-widget-customer-catalog-products-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: []
+  providers: [],
 })
 export class FrontendWidgetCustomerCatalogProductsListComponent {
   catalogProductsViewStore = inject(CatalogProductsViewStore);

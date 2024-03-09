@@ -10,6 +10,4 @@ import { FrontendWidgetCustomerCatalogProductsListComponent } from '@iorder-next
   styleUrl: './frontend-page-customer-products.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FrontendPageCustomerProductsComponent {
-
-}
+export class FrontendPageCustomerProductsComponent {}

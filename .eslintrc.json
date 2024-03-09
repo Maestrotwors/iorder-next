@@ -24,21 +24,22 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "frontend-layer:application",
+                "sourceTag": "frontend-layer:app",
                 "onlyDependOnLibsWithTags": [
                   "frontend-layer:page",
                   "frontend-layer:widget",
                   "frontend-layer:feature",
-                  "frontend-layer:core"
+                  "frontend-layer:core",
+                  "frontend-routing-core"
                 ]
               },
               {
+                "sourceTag": "frontend-routing-core",
+                "onlyDependOnLibsWithTags": ["frontend-layer:page"]
+              },
+              {
                 "sourceTag": "frontend-layer:page",
-                "onlyDependOnLibsWithTags": [
-                  "frontend-layer:widget",
-                  "frontend-layer:feature",
-                  "frontend-layer:core"
-                ]
+                "onlyDependOnLibsWithTags": ["frontend-layer:widget", "frontend-layer:feature", "frontend-layer:core"]
               },
               {
                 "sourceTag": "frontend-layer:widget",
@@ -50,7 +51,7 @@
               },
               {
                 "sourceTag": "frontend-layer:core",
-                "onlyDependOnLibsWithTags": ["frontend-layer:core"]
+                "onlyDependOnLibsWithTags": ["frontend-layer:core", "layer:contract"]
               },
               {
                 "sourceTag": "layer:contract",

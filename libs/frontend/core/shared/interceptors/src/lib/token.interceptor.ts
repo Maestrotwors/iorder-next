@@ -1,10 +1,7 @@
-import { HttpEvent, HttpHandlerFn, HttpInterceptorFn, HttpRequest } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { HttpEvent, HttpHandlerFn, HttpInterceptorFn, HttpRequest } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-export const TokenInterceptor: HttpInterceptorFn = (
-  req: HttpRequest<unknown>,
-  next: HttpHandlerFn
-): Observable<HttpEvent<unknown>> => {
+export const TokenInterceptor: HttpInterceptorFn = (req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> => {
   const authToken = '123456';
 
   if (authToken) {
@@ -17,4 +14,4 @@ export const TokenInterceptor: HttpInterceptorFn = (
   } else {
     return next(req);
   }
-}
+};

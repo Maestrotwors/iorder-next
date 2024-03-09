@@ -1,7 +1,10 @@
 @if (catalogProductStore.product(); as product) {
   <div class="part-image">
-    <img [src]="product.mainImageUrl" [style.view-transition-name]="'product-' + product.id + '-image'" style="max-width: 250px; max-height: 300px;" />
+    <img
+      [src]="product.mainImageUrl"
+      [style.view-transition-name]="'product-' + product.id + '-image'"
+      style="max-width: 250px; max-height: 300px"
+    />
   </div>
   <div class="part-slider-images"></div>
 }
-

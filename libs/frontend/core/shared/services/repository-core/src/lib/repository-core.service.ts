@@ -1,12 +1,12 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
-@Injectable({ providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class RepositoryCoreService {
-  set(key: string, value: string, dbName?: string): void {
-    localStorage.setItem(key, value)
+  set(key: string, value: string): void {
+    localStorage.setItem(key, value);
   }
 
-  get(key: string, dbName?: string): string | null {
+  get(key: string): string | null {
     return localStorage.getItem(key);
   }
 

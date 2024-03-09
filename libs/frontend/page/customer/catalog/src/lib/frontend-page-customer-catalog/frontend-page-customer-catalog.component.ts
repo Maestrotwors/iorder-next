@@ -7,7 +7,6 @@ import { IfDesktopDirective, IfNotDesktopDirective } from '@iorder-next/frontend
 import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/store/catalog/categories';
 import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/catalog/product';
 
-
 @Component({
   selector: 'io-customer-page-catalog',
   standalone: true,
@@ -17,17 +16,12 @@ import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/c
     AsyncPipe,
     IfNotDesktopDirective,
     IfDesktopDirective,
-    CommonModule
+    CommonModule,
   ],
   templateUrl: './frontend-page-customer-catalog.component.html',
   styleUrl: './frontend-page-customer-catalog.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [
-    CatalogProductsStore,
-    CatalogCategoriesStore,
-    CatalogProductsViewStore,
-    CatalogProductStore
-  ],
+  providers: [CatalogProductsStore, CatalogCategoriesStore, CatalogProductsViewStore, CatalogProductStore],
 })
 export class FrontendPageCustomerCatalogComponent implements OnInit {
   readonly #catalogProductsStore = inject(CatalogProductsStore);

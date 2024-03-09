@@ -11,7 +11,7 @@ export class CatalogController {
   constructor(
     private readonly catalogProductsService: CatalogProductsService,
     private readonly catalogProductService: CatalogProductService,
-    private readonly catalogCategoriesService: CatalogCategoriesService
+    private readonly catalogCategoriesService: CatalogCategoriesService,
   ) {}
   @Get('health-check')
   async ping(): Promise<true> {
@@ -32,7 +32,6 @@ export class CatalogController {
   async getProductDetails(@Query() query: GetCatalogProductQueryDto): Promise<GetCatalogProductResponseDto> {
     const product = await this.catalogProductService.getProduct(query);
     if (!product) throw new NotFoundException('Product not found');
-    return  product;
+    return product;
   }
-
 }

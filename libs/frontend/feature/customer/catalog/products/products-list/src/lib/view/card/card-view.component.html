@@ -3,20 +3,19 @@
     @if (productsStore.products(); as products) {
       @for (product of products; let index = $index; track product.id) {
         <io-card-product-item
-          [product]="product" (click)="selectProduct(product)"
-          [@fadeIn]="{value: '', params: { time:330, delay:  index < 20 ? index * 40 : 0}}">
+          [product]="product"
+          (click)="selectProduct(product)"
+          [@fadeIn]="{ value: '', params: { time: 330, delay: index < 20 ? index * 40 : 0 } }"
+        >
         </io-card-product-item>
-      }
-      @empty {
+      } @empty {
         Empty list of products
       }
     }
-  }
-  @else {
+  } @else {
     <div>loading....</div>
   }
 </div>
-
 
 <!--
 <cdk-virtual-scroll-viewport itemSize="50" class="virtual-scroll-viewport">

@@ -1,9 +1,9 @@
 export interface IJWTPayload {
-    id: string;
-    role: number;
+  id: string;
+  role: number;
 }
 
 export interface TokenResponseDto {
-    accessToken: string;
-    refreshToken: string;
+  accessToken: string;
+  refreshToken: string;
 }

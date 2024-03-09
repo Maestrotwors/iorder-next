@@ -1,0 +1,76 @@
+{
+  "name": "frontend-ui-test",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "iorder-next",
+  "sourceRoot": "apps/frontend/ui-test/src",
+  "tags": ["frontend-layer:ui"],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/frontend/ui-test",
+        "index": "apps/frontend/ui-test/src/index.html",
+        "browser": "apps/frontend/ui-test/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/frontend/ui-test/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/frontend/ui-test/src/favicon.ico", "apps/frontend/ui-test/src/assets"],
+        "styles": ["apps/frontend/ui-test/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "port": 5000
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "frontend-ui-test:build:production"
+        },
+        "development": {
+          "buildTarget": "frontend-ui-test:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "frontend-ui-test:build"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/frontend/ui-test/jest.config.ts"
+      }
+    }
+  }
+}

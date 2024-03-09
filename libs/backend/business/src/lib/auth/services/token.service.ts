@@ -1,17 +1,17 @@
-import { Injectable } from "@nestjs/common";
-import { ConfigService } from "@nestjs/config";
-import { JwtService } from "@nestjs/jwt";
-import { RefreshTokenDto } from "../dto/refresh-token.dto";
-import { LoginDto } from "../dto/login.dto";
-import { IJWTPayload, TokenResponseDto } from "@iorder-next/backend/entities";
-import { AuthActionService } from "@iorder-next/backend/commands";
+import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+import { JwtService } from '@nestjs/jwt';
+import { RefreshTokenDto } from '../dto/refresh-token.dto';
+import { LoginDto } from '../dto/login.dto';
+import { IJWTPayload, TokenResponseDto } from '@iorder-next/backend/entities';
+import { AuthActionService } from '@iorder-next/backend/commands';
 
 @Injectable()
 export class TokenService {
   constructor(
     private readonly configService: ConfigService,
     private readonly jwtService: JwtService,
-    private readonly authActionService: AuthActionService
+    private readonly authActionService: AuthActionService,
   ) {}
 
   private accessTokenSecret = this.configService.get<string>('ACCESS_TOKEN_JWT_SECRET') || '';
@@ -54,14 +54,14 @@ export class TokenService {
   }
 
   async createToken(payload: IJWTPayload, secret: string, expiresIn: string): Promise<string> {
-      return this.jwtService.signAsync(
-          {
-              payload,
-          },
-          {
-              secret,
-              expiresIn,
-          },
-      );
+    return this.jwtService.signAsync(
+      {
+        payload,
+      },
+      {
+        secret,
+        expiresIn,
+      },
+    );
   }
 }

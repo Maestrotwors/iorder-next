@@ -28,37 +28,54 @@ const initialCatalogProductState: CatalogProductState = {
 export const CatalogProductStore = signalStore(
   { providedIn: 'root' },
   withState(initialCatalogProductState),
-  withMethods((store, catalogProductService = inject(CustomerProductService), queryParams = inject(ActivatedRoute).snapshot.queryParams, router = inject(Router), destryRef = inject(DestroyRef)) => ({
-    loadProduct: rxMethod<number>(
-      pipe(
-        tap((productId) => {
-          patchState(store, { isLoading: true })
-        }),
-        switchMap((productId) => {
-          return catalogProductService.getProduct({ supplierId: queryParams['sId'], deliveryPointId: queryParams['dp'], legalEntityId: queryParams?.['le'], productId }).pipe(
-            tapResponse({
-              next: productsResponse => {
-                if (productsResponse.body) {
-                  patchState(store, { product: productsResponse.body, error: false, isLoading: false });
-                } else {
-                  patchState(store, { product: null, error: true, isLoading: false });
-                }
-              },
-              error: error => {
-                console.error(error);
-                patchState(store, { product: null, error: true, isLoading: false });
-              },
-            }),
-          );
-        }),
-        takeUntilDestroyed(destryRef),
+  withMethods(
+    (
+      store,
+      catalogProductService = inject(CustomerProductService),
+      queryParams = inject(ActivatedRoute).snapshot.queryParams,
+      router = inject(Router),
+      destryRef = inject(DestroyRef),
+    ) => ({
+      loadProduct: rxMethod<number>(
+        pipe(
+          tap(productId => {
+            patchState(store, { isLoading: true });
+          }),
+          switchMap(productId => {
+            return catalogProductService
+              .getProduct({
+                supplierId: queryParams['sId'],
+                deliveryPointId: queryParams['dp'],
+                legalEntityId: queryParams?.['le'],
+                productId,
+              })
+              .pipe(
+                tapResponse({
+                  next: productsResponse => {
+                    if (productsResponse.body) {
+                      patchState(store, { product: productsResponse.body, error: false, isLoading: false });
+                    } else {
+                      patchState(store, { product: null, error: true, isLoading: false });
+                    }
+                  },
+                  error: error => {
+                    console.error(error);
+                    patchState(store, { product: null, error: true, isLoading: false });
+                  },
+                }),
+              );
+          }),
+          takeUntilDestroyed(destryRef),
+        ),
       ),
-    ),
-    setProduct(product: Product): void {
-      patchState(store, { product });
-    },
-    navigateToCatalog(): void {
-      router.navigate(['member-user', 'catalog'], { queryParams: { sId: queryParams['sId'], dp: queryParams['dp'], le: queryParams?.['le'], page: 1}});
-    }
-  })),
+      setProduct(product: Product): void {
+        patchState(store, { product });
+      },
+      navigateToCatalog(): void {
+        router.navigate(['member-user', 'catalog'], {
+          queryParams: { sId: queryParams['sId'], dp: queryParams['dp'], le: queryParams?.['le'], page: 1 },
+        });
+      },
+    }),
+  ),
 );

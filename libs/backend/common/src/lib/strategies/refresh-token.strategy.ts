@@ -7,9 +7,7 @@ import { IJWTPayload } from '@iorder-next/backend/entities';
 
 @Injectable()
 export class RefreshTokenStrategy extends PassportStrategy(Strategy, 'refreshTokenStrategy') {
-  constructor(
-    private readonly configService: ConfigService
-  ) {
+  constructor(private readonly configService: ConfigService) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       passReqToCallback: true,

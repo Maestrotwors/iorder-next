@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -7,6 +7,4 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
   template: `io-customer-widget-catalog-product-mobile`,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FrontendWidgetCustomerCatalogProductMobileComponent {
-
-}
+export class FrontendWidgetCustomerCatalogProductMobileComponent {}

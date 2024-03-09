@@ -1,5 +1,5 @@
-import { PrismaService } from "@iorder-next/backend/common";
-import { Logger } from "@nestjs/common";
+import { PrismaService } from '@iorder-next/backend/common';
+import { Logger } from '@nestjs/common';
 
 export abstract class ActionBase {
   protected readonly prismaService: PrismaService = new PrismaService();

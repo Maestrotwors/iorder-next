@@ -5,10 +5,7 @@ import { FrontendCustomerHeaderComponent } from '@iorder-next/frontend/core/cust
 @Component({
   selector: 'io-customer-page-supplier-select',
   standalone: true,
-  imports: [
-    CommonModule,
-    FrontendCustomerHeaderComponent
-  ],
+  imports: [CommonModule, FrontendCustomerHeaderComponent],
   templateUrl: './frontend-page-customer-supplier-select.component.html',
   styleUrl: './frontend-page-customer-supplier-select.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
