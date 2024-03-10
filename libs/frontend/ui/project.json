@@ -2,7 +2,7 @@
   "name": "frontend-ui",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/ui/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:ui"],
   "projectType": "library",
   "targets": {
@@ -17,10 +17,7 @@
       "executor": "@nx/js:tsc",
       "options": {
         "main": "./src/index.ts",
-        "additionalEntryPoints": [
-          "./src/lib/components/button/src/index.ts",
-          "./src/lib/components/checkbox/src/index.ts"
-        ],
+        "additionalEntryPoints": ["./src/lib/components/button/src/index.ts", "./src/lib/components/checkbox/src/index.ts"],
         "generateExportsField": true
       }
     }

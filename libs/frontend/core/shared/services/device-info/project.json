@@ -2,7 +2,7 @@
   "name": "frontend-core-shared-services-device-info",
   "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/core/shared/services/device-info/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:core", "scope:shared"],
   "projectType": "library",
   "targets": {

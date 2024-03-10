@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UiButtonComponent } from '@iorder-next/frontend/ui';
 
 @Component({
-  selector: 'iorder-next-button',
+  selector: 'ui-button',
   standalone: true,
   imports: [CommonModule, UiButtonComponent],
   templateUrl: './button.component.html',

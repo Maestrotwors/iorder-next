@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'iorder-next-customer-feature-catalog-products-list-mobile-view',
+  selector: 'io-customer-feature-catalog-products-list-mobile-view',
   standalone: true,
   imports: [],
   templateUrl: './mobile-view.component.html',

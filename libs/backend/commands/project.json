@@ -10,13 +10,6 @@
       "options": {
         "jestConfig": "libs/backend/commands/jest.config.ts"
       }
-    },
-    "build": {
-      "executor": "@nx/js:tsc",
-      "options": {
-        "main": "./src/index.ts",
-        "generateExportsField": true
-      }
     }
   },
   "tags": ["backend-layer:commands"]

@@ -2,7 +2,7 @@
   "name": "frontend-page-admin-main",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/page/admin/main/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:page", "scope:admin"],
   "projectType": "library",
   "targets": {

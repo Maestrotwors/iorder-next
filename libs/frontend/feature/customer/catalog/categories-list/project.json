@@ -2,7 +2,7 @@
   "name": "frontend-feature-customer-catalog-categories-list",
   "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/feature/customer/catalog/categories-list/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:feature", "scope:app-customer"],
   "projectType": "library",
   "targets": {

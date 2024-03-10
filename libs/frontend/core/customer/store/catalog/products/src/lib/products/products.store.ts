@@ -1,6 +1,6 @@
-import { patchState, signalStore, withComputed, withMethods, withState } from '@ngrx/signals';
+import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
-import { DestroyRef, computed, inject } from '@angular/core';
+import { DestroyRef, inject } from '@angular/core';
 import { pipe, switchMap, tap } from 'rxjs';
 import { tapResponse } from '@ngrx/operators';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -8,7 +8,7 @@ import { CustomerProductsService } from './products.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 type CatalogProductsState = {
-  products: any[];
+  products: unknown[];
   totalCountProducts: number;
   isLoading: boolean;
   error: boolean;
@@ -23,9 +23,6 @@ const initialCatalogProductsState: CatalogProductsState = {
 
 export const CatalogProductsStore = signalStore(
   withState(initialCatalogProductsState),
-  withComputed(store => {
-    return {};
-  }),
   withMethods(
     (
       store,
@@ -55,8 +52,7 @@ export const CatalogProductsStore = signalStore(
                       patchState(store, { products: [], error: true, isLoading: false });
                     }
                   },
-                  error: error => {
-                    console.error(error);
+                  error: () => {
                     patchState(store, { products: [], error: true, isLoading: false });
                   },
                 }),

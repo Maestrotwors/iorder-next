@@ -1,13 +1,22 @@
 <div class="p-2.75 cursor-pointer focus-within:bg-[red] relative" (click)="checkToggle()">
-  <svg xmlns="http://www.w3.org/2000/svg" *ngIf="state === 'checked'" viewBox="0 0 24 24" fill="none"
-    class="bg-[#6750A4] w-4.5 h-4.5 rounded-[0.125rem]">
-    <path d="M10 16.4L6 12.4L7.4 11L10 13.6L16.6 7L18 8.4L10 16.4Z" fill="white"/>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    *ngIf="state === 'checked'"
+    viewBox="0 0 24 24"
+    fill="none"
+    class="bg-[#6750A4] w-4.5 h-4.5 rounded-[0.125rem]"
+  >
+    <path d="M10 16.4L6 12.4L7.4 11L10 13.6L16.6 7L18 8.4L10 16.4Z" fill="white" />
   </svg>
-  <svg *ngIf="state === 'indeterminate'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="bg-[#6750A4] w-4.5 h-4.5 rounded-[0.125rem]">
-    <path d="M7 13V11H17V13H7Z" fill="white"/>
+  <svg
+    *ngIf="state === 'indeterminate'"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    class="bg-[#6750A4] w-4.5 h-4.5 rounded-[0.125rem]"
+  >
+    <path d="M7 13V11H17V13H7Z" fill="white" />
   </svg>
   <span class="rounded-[0.125rem] w-4.5 h-4.5 border-2" *ngIf="state === 'unchecked'"></span>
-  <input type="checkbox" class="absolute w-0 h-0 p-0">
+  <input type="checkbox" class="absolute w-0 h-0 p-0" />
 </div>
-
-

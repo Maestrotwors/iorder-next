@@ -2,7 +2,7 @@
   "name": "frontend-widget-customer-catalog-desktop-nav-menu",
   "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/widget/customer/catalog/desktop-nav-menu/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:widget", "scope:app-customer"],
   "projectType": "library",
   "targets": {

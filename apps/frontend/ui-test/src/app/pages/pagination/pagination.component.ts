@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'iorder-next-pagination',
+  selector: 'ui-pagination',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './pagination.component.html',

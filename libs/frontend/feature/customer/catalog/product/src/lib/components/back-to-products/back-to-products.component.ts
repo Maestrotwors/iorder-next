@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   standalone: true,
   imports: [ButtonModule, CommonModule],
-  selector: 'iorder-next-customer-feature-catalog-product-back-to-products',
+  selector: 'io-customer-feature-catalog-product-back-to-products',
   template: `
     <span>
       <p-button icon="pi pi-arrow-left" [outlined]="true" (click)="goToCatalogProducts()"></p-button>

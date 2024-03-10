@@ -4,8 +4,8 @@ import { ProductFeatureShared } from '../../shared/product-feature.shared';
 @Component({
   standalone: true,
   imports: [],
-  selector: 'iorder-next-customer-feature-catalog-product-description',
-  template: `iorder-next-customer-feature-catalog-product-description`,
+  selector: 'io-customer-feature-catalog-product-description',
+  template: `io-customer-feature-catalog-product-description`,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FrontendFeatureCustomerCatalogProductDescriptionComponent extends ProductFeatureShared {}

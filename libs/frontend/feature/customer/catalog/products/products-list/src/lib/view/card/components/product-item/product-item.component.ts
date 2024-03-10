@@ -4,7 +4,7 @@ import { ImgLoaderDirective } from '@iorder-next/frontend/core/shared/directives
 import { Product } from '@iorder-next/frontend/core/customer/store/catalog/product';
 
 @Component({
-  selector: 'iorder-next-card-product-item',
+  selector: 'io-card-product-item',
   standalone: true,
   imports: [CommonModule, ImgLoaderDirective],
   templateUrl: './product-item.component.html',

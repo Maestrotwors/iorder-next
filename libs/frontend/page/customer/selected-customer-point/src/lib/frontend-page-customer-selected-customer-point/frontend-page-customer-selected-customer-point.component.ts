@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'iorder-next-customer-page-selected-customer-point',
+  selector: 'io-customer-page-selected-customer-point',
   standalone: true,
   imports: [CommonModule, RouterOutlet],
   templateUrl: './frontend-page-customer-selected-customer-point.component.html',

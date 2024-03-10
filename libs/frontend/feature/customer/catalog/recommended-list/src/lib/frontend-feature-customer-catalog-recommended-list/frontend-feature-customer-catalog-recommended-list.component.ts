@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'iorder-next-customer-feature-catalog-recommended-list',
+  selector: 'io-customer-feature-catalog-recommended-list',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './frontend-feature-customer-catalog-recommended-list.component.html',

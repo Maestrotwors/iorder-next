@@ -7,7 +7,7 @@ import {
 } from '@iorder-next/frontend/feature/customer/catalog/products/products-list';
 
 @Component({
-  selector: 'iorder-next-customer-widget-catalog-products-list',
+  selector: 'io-customer-widget-catalog-products-list',
   standalone: true,
   imports: [
     FrontendFeatureCustomerCatalogProductsListListViewComponent,

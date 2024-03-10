@@ -3,7 +3,7 @@ import { FrontendSharedCustomerFooterMobileComponent } from '@iorder-next/fronte
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'iorder-next-customer-page-catalog-mobile',
+  selector: 'io-customer-page-catalog-mobile',
   standalone: true,
   imports: [FrontendSharedCustomerFooterMobileComponent, RouterOutlet],
   templateUrl: './frontend-page-customer-catalog-mobile.component.html',

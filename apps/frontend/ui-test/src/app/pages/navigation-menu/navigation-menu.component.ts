@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'iorder-next-navigation-menu',
+  selector: 'ui-navigation-menu',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navigation-menu.component.html',

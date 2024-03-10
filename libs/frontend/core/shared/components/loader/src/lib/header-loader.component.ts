@@ -3,7 +3,7 @@ import { ProgressBarModule } from 'primeng/progressbar';
 import { LoaderStore } from './loader-status.service';
 
 @Component({
-  selector: 'iorder-next-header-loader',
+  selector: 'io-header-loader',
   imports: [ProgressBarModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `

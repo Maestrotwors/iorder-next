@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { BehaviorSubject, distinctUntilChanged, filter, map, tap } from 'rxjs';
+import { BehaviorSubject, distinctUntilChanged, map, tap } from 'rxjs';
 import { DeviceWidth, DeviceWidthEnum } from './device-width.interface';
 import { breakPointConfig } from './break-point.config';
 

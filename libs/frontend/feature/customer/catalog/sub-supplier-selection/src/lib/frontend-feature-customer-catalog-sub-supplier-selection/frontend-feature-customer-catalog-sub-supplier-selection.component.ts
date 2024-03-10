@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'iorder-next-customer-feature-catalog-sub-supplier-selection',
+  selector: 'io-customer-feature-catalog-sub-supplier-selection',
   standalone: true,
   imports: [],
   templateUrl: './frontend-feature-customer-catalog-sub-supplier-selection.component.html',

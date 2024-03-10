@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'iorder-next-radio',
+  selector: 'ui-radio',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './radio.component.html',

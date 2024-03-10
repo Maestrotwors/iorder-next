@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'iorder-next-customer-page-contactUs',
+  selector: 'io-customer-page-contact-us',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './frontend-page-customer-contact-us.component.html',

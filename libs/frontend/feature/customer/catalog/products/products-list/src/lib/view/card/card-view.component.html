@@ -2,12 +2,12 @@
   @if (!productsStore.isLoading()) {
     @if (productsStore.products(); as products) {
       @for (product of products; let index = $index; track product.id) {
-        <iorder-next-card-product-item
+        <io-card-product-item
           [product]="product"
           (click)="selectProduct(product)"
           [@fadeIn]="{ value: '', params: { time: 330, delay: index < 20 ? index * 40 : 0 } }"
         >
-        </iorder-next-card-product-item>
+        </io-card-product-item>
       } @empty {
         Empty list of products
       }

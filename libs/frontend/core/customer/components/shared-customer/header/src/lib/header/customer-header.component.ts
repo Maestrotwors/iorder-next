@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'iorder-next-customer-header',
+  selector: 'io-customer-header',
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './customer-header.component.html',

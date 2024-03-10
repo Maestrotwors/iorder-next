@@ -1,5 +1,5 @@
 import { Directive, inject } from '@angular/core';
-import { CatalogProductStore, Product } from '@iorder-next/frontend/core/customer/store/catalog/product';
+import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/catalog/product';
 
 @Directive({
   standalone: true,

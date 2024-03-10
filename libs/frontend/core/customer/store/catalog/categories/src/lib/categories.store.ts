@@ -8,7 +8,7 @@ import { CatalogCategoriesService } from './categories.service';
 import { ActivatedRoute } from '@angular/router';
 
 type CatalogCategoriesState = {
-  categories: any[];
+  categories: unknown[];
   isLoading: boolean;
   error: boolean;
 };
@@ -41,8 +41,7 @@ export const CatalogCategoriesStore = signalStore(
                     patchState(store, { categories: [], error: true, isLoading: false });
                   }
                 },
-                error: error => {
-                  console.error(error);
+                error: () => {
                   patchState(store, { categories: [], error: true, isLoading: false });
                 },
               }),

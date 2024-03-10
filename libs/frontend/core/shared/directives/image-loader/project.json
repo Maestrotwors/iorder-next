@@ -2,7 +2,7 @@
   "name": "frontend-core-shared-directives-image-loader",
   "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/core/shared/directives/image-loader/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:core", "project:shared"],
   "projectType": "library",
   "targets": {

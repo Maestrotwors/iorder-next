@@ -38,7 +38,7 @@ export const CatalogProductStore = signalStore(
     ) => ({
       loadProduct: rxMethod<number>(
         pipe(
-          tap(productId => {
+          tap(() => {
             patchState(store, { isLoading: true });
           }),
           switchMap(productId => {
@@ -58,8 +58,7 @@ export const CatalogProductStore = signalStore(
                       patchState(store, { product: null, error: true, isLoading: false });
                     }
                   },
-                  error: error => {
-                    console.error(error);
+                  error: () => {
                     patchState(store, { product: null, error: true, isLoading: false });
                   },
                 }),

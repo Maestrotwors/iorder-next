@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'iorder-next-customer-shared-footer-mobile',
+  selector: 'io-customer-shared-footer-mobile',
   standalone: true,
   imports: [],
   templateUrl: './frontend-shared-customer-mobile-footer.component.html',

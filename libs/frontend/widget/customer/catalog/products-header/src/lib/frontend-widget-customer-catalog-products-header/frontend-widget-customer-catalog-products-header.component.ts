@@ -7,7 +7,7 @@ import {
 } from '@iorder-next/frontend/feature/customer/catalog/products/header-products-info';
 
 @Component({
-  selector: 'iorder-next-customer-widget-catalog-products-header',
+  selector: 'io-customer-widget-catalog-products-header',
   standalone: true,
   imports: [CommonModule, CatalogProductsViewSelectComponent, CatalogProductsFilterComponent, CatalogProductsOrderUnitsComponent],
   templateUrl: './frontend-widget-customer-catalog-products-header.component.html',

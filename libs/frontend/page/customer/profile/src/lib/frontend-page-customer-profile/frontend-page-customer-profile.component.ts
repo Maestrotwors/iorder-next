@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'iorder-next-customer-page-profile',
+  selector: 'io-customer-page-profile',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './frontend-page-customer-profile.component.html',

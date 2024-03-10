@@ -4,7 +4,7 @@ import { MenuService } from './menu.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'iorder-next-ui-test-nav-menu',
+  selector: 'ui-test-nav-menu',
   standalone: true,
   imports: [CommonModule, RouterLink, RouterLinkActive],
   template: `

@@ -2,7 +2,7 @@
   "name": "frontend-core-shared-routing",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/core/shared/routing/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-routing-core", "scope:shared"],
   "projectType": "library",
   "targets": {

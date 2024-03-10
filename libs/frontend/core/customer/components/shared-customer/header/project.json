@@ -2,7 +2,7 @@
   "name": "frontend-core-customer-components-shared-customer-header",
   "$schema": "../../../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/core/customer/components/shared-customer/header/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:core", "scope:app-customer"],
   "projectType": "library",
   "targets": {

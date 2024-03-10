@@ -2,7 +2,7 @@
   "name": "frontend-ui-test",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "sourceRoot": "apps/frontend/ui-test/src",
   "tags": ["frontend-layer:app"],
   "targets": {

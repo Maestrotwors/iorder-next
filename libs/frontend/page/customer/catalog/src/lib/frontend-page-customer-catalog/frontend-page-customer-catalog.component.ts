@@ -8,7 +8,7 @@ import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/stor
 import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/catalog/product';
 
 @Component({
-  selector: 'iorder-next-customer-page-catalog',
+  selector: 'io-customer-page-catalog',
   standalone: true,
   imports: [
     FrontendPageCustomerCatalogDesktopComponent,

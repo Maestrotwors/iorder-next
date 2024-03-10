@@ -2,7 +2,7 @@
   "name": "frontend-core-shared-services-break-point",
   "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/core/shared/services/break-point/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:core", "scope:shared"],
   "projectType": "library",
   "targets": {

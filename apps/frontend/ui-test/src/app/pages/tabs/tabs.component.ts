@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'iorder-next-tabs',
+  selector: 'ui-tabs',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './tabs.component.html',

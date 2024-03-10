@@ -4,13 +4,13 @@ import { UiTestNavMenuComponent } from './menu.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'iorder-next-root',
+  selector: 'ui-root',
   standalone: true,
   imports: [CommonModule, UiTestNavMenuComponent, RouterOutlet],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="container">
-      <iorder-next-ui-test-nav-menu class="menu"></iorder-next-ui-test-nav-menu>
+      <ui-test-nav-menu class="menu"></ui-test-nav-menu>
       <div class="content">
         <router-outlet></router-outlet>
       </div>

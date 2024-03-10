@@ -30,6 +30,7 @@
                   "frontend-layer:widget",
                   "frontend-layer:feature",
                   "frontend-layer:core",
+                  "backend-layer:repository",
                   "frontend-layer:ui",
                   "frontend-routing-core"
                 ]
@@ -62,10 +63,17 @@
                 "sourceTag": "frontend-layer:ui",
                 "onlyDependOnLibsWithTags": []
               },
-
+              {
+                "sourceTag": "backend-layer:app",
+                "onlyDependOnLibsWithTags": ["backend-layer:business", "backend-layer:common"]
+              },
               {
                 "sourceTag": "backend-layer:business",
-                "onlyDependOnLibsWithTags": ["layer:contract", "backend-layer:common", "backend-layer:entity", "backend-layer:commands"]
+                "onlyDependOnLibsWithTags": ["layer:contract", "backend-layer:common", "backend-layer:entity", "backend-layer:commands", "backend-layer:repository"]
+              },
+              {
+                "sourceTag": "backend-layer:common",
+                "onlyDependOnLibsWithTags": ["backend-layer:entity"]
               },
               {
                 "sourceTag": "backend-layer:commands",

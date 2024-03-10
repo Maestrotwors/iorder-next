@@ -5,10 +5,8 @@ import { FadeInAnimation } from '@iorder-next/frontend/core/shared/animations';
 @Component({
   standalone: true,
   imports: [],
-  selector: 'iorder-next-customer-feature-catalog-product-bread-crumbs',
-  template: `
-    <div [@fadeIn]="{ value: '', params: { time: 100, delay: 50 } }">iorder-next-customer-feature-catalog-product-bread-crumbs</div>
-  `,
+  selector: 'io-customer-feature-catalog-product-bread-crumbs',
+  template: ` <div [@fadeIn]="{ value: '', params: { time: 100, delay: 50 } }">io-customer-feature-catalog-product-bread-crumbs</div> `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [FadeInAnimation],
 })

@@ -4,21 +4,16 @@
 }
 
 :host(:focus) {
-
 }
 
 :host(:active) {
-
 }
 
 :host([disabled]) {
-
 }
 
-
-
 :host(.filled) {
-  @apply bg-primary40 shadow-level0 shadow-neutral0 ;
+  @apply bg-primary40 shadow-level0 shadow-neutral0;
   @apply text-primary100;
 }
 
@@ -31,7 +26,6 @@
 }
 
 :host(.filled:active) {
-
 }
 
 :host(.filled[disabled]) {
@@ -39,32 +33,23 @@
   @apply text-neutral10/38;
 }
 
-
-
 :host(.outlined) {
-
 }
 
 :host(.outlined:hover) {
-
 }
 
 :host(.outlined:focus) {
-
 }
 
 :host(.outlined:active) {
-
 }
 
 :host(.outlined[disabled]) {
-
 }
 
-
-
 :host(.elevated) {
-  @apply bg-neutral96 shadow-level1 shadow-neutral0/15 ;
+  @apply bg-neutral96 shadow-level1 shadow-neutral0/15;
   @apply text-primary40 text-label-lg;
 }
 
@@ -84,46 +69,32 @@
   @apply shadow-level0 bg-neutral10/12 text-neutral10/38 cursor-not-allowed;
 }
 
-
-
 :host(.tonal) {
-
 }
 
 :host(.tonal:hover) {
-
 }
 
 :host(.tonal:focus) {
-
 }
 
 :host(.tonal:active) {
-
 }
 
 :host(.tonal[disabled]) {
-
 }
 
-
-
 :host(.text) {
-
 }
 
 :host(.text:hover) {
-
 }
 
 :host(.text:focus) {
-
 }
 
 :host(.text:active) {
-
 }
 
 :host(.text[disabled]) {
-
 }

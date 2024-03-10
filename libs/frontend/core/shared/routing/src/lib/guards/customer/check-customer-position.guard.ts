@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivateFn, Router } from '@angular/router';
 
-export const checkCustomerPositionGuard: CanActivateFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+export const checkCustomerPositionGuard: CanActivateFn = (route: ActivatedRouteSnapshot) => {
   const sId = route.queryParams['sId'];
   const dp = route.queryParams['dp'];
   const le = route.queryParams['le'];

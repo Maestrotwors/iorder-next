@@ -2,7 +2,7 @@
   "name": "frontend-page-customer-order",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/page/customer/order/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:page", "scope:app-customer"],
   "projectType": "library",
   "targets": {

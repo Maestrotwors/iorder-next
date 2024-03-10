@@ -2,7 +2,7 @@
   "name": "frontend-widget-customer-catalog-products-list",
   "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/widget/customer/catalog/products-list/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:widget", "scope:app-customer"],
   "projectType": "library",
   "targets": {

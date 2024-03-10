@@ -1,4 +1,4 @@
-const appConfig = {
+export const appConfig = {
   screen: {
     maxTabletAndLess: 992,
     maxBigMobile: 768,

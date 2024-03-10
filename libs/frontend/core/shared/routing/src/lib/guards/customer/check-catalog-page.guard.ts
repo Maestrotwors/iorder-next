@@ -1,5 +1,5 @@
 import { inject } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivateFn, Router } from '@angular/router';
 
 export const checkCatalogPageGuard: CanActivateFn = (route: ActivatedRouteSnapshot) => {
   if (+route.queryParams['page'] > 0) {

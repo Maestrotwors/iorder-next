@@ -15,10 +15,6 @@ export class AuthController {
     private readonly authService: AuthService,
     private readonly registrationService: RegistrationService,
   ) {}
-  @Get('health-check')
-  async ping(@Req() req: Request): Promise<any> {
-    return 'ping';
-  }
 
   @Post('login')
   async login(@Body() dto: LoginDto): Promise<LoginResponseDto> {

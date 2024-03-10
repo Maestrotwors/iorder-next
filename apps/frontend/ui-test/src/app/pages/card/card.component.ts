@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'iorder-next-card',
+  selector: 'ui-card',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './card.component.html',

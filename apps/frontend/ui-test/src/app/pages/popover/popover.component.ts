@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'iorder-next-popover',
+  selector: 'ui-popover',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './popover.component.html',

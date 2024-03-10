@@ -3,7 +3,6 @@ import { TokenService } from './token.service';
 import { LoginDto, LoginResponseDto } from '../dto/login.dto';
 import { RefreshTokenDto, RefreshTokenResponseDto } from '../dto/refresh-token.dto';
 import { IJWTPayload } from '@iorder-next/backend/entities';
-import { SetNewPasswordDto, SetNewPasswordResponseDto } from '../dto/set-new-password.dto';
 import { ChangePasswordResponseDto } from '../dto/change-password.dto';
 import { ChangePasswordResponseEnum } from '@iorder-next/contracts/api';
 import { AuthActionService } from '@iorder-next/backend/commands';

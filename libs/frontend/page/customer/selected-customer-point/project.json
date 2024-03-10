@@ -2,7 +2,7 @@
   "name": "frontend-page-customer-selected-customer-point",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/page/customer/selected-customer-point/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:page", "scope:app-customer"],
   "projectType": "library",
   "targets": {

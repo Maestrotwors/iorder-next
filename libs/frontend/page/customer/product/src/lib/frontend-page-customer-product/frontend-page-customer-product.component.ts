@@ -8,7 +8,7 @@ import {
 import { IfMobileDirective, IfNotMobileDirective } from '@iorder-next/frontend/core/shared/directives/break-point';
 
 @Component({
-  selector: 'iorder-next-customer-page-product',
+  selector: 'io-customer-page-product',
   standalone: true,
   imports: [
     CommonModule,
