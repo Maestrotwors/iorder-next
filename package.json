@@ -11,7 +11,7 @@
     "migrate:deploy": "prisma migrate deploy",
     "clear-cache": "npm cache clean --force ",
     "format": "nx format --all --fix",
-    "lint": "nx run-many -t lint --fix",
+    "lint": "nx run many -t lint --fix",
     "build-all": "nx run-many -t build",
     "build:front": "nx build frontend-iorder",
     "update": "nx migrate latest",

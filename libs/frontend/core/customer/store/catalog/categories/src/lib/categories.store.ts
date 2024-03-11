@@ -8,10 +8,10 @@ import { CatalogCategoriesService } from './categories.service';
 import { ActivatedRoute } from '@angular/router';
 import { GetCatalogCategoriesCommandResponse } from '@iorder-next/contracts/api';
 
-export type Category = Required<GetCatalogCategoriesCommandResponse>;
+export type Categories = Required<GetCatalogCategoriesCommandResponse>;
 
 type CatalogCategoriesState = {
-  categories: Category[];
+  categories: Categories;
   isLoading: boolean;
   error: boolean;
 };
