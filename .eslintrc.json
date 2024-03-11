@@ -17,6 +17,12 @@
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-namespace": "off",
         "no-console": "error",
+        /*"@angular-eslint/no-host-metadata-property": [
+          "error",
+          {
+            "allowStatic": true
+          }
+        ],*/
         "@nx/enforce-module-boundaries": [
           "error",
           {
@@ -69,7 +75,13 @@
               },
               {
                 "sourceTag": "backend-layer:business",
-                "onlyDependOnLibsWithTags": ["layer:contract", "backend-layer:common", "backend-layer:entity", "backend-layer:commands", "backend-layer:repository"]
+                "onlyDependOnLibsWithTags": [
+                  "layer:contract",
+                  "backend-layer:common",
+                  "backend-layer:entity",
+                  "backend-layer:commands",
+                  "backend-layer:repository"
+                ]
               },
               {
                 "sourceTag": "backend-layer:common",

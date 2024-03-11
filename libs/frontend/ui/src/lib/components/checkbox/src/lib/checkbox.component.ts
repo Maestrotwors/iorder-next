@@ -35,9 +35,9 @@ export class UiCheckboxComponent implements ControlValueAccessor {
     }
   }
 
-  onChange: unknown = () => {};
+  onChange: unknown;
 
-  onTouch: unknown = () => {};
+  onTouch: unknown;
 
   set value(val: CheckBoxState) {
     this.state = val;

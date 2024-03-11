@@ -43,6 +43,7 @@
       "@iorder-next/frontend/core/shared/services/break-point": ["libs/frontend/core/shared/services/break-point/src/index.ts"],
       "@iorder-next/frontend/core/shared/services/device-info": ["libs/frontend/core/shared/services/device-info/src/index.ts"],
       "@iorder-next/frontend/core/shared/services/repository-core": ["libs/frontend/core/shared/services/repository-core/src/index.ts"],
+      "@iorder-next/frontend/core/shared/styles": ["libs/frontend/core/shared/styles/src/index.ts"],
       "@iorder-next/frontend/feature/customer/catalog/categories-list": [
         "libs/frontend/feature/customer/catalog/categories-list/src/index.ts"
       ],

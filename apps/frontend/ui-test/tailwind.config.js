@@ -5,6 +5,12 @@ const { join } = require('path');
 module.exports = {
   content: [join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html}'), ...createGlobPatternsForDependencies(__dirname)],
   theme: {
+    screens: {
+      'sm-mobile': `var(--screen-small-mobile)`,
+      mobile: `var(--screen-mobile)`,
+      tablet: `var(--screen-small-tablet)`,
+      desktop: `var(--screen-desktop)`,
+    },
     extend: {
       spacing: {
         2.75: '0.6875rem',
@@ -153,5 +159,5 @@ module.exports = {
       ],
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };

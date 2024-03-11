@@ -7,8 +7,15 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CustomerProductsService } from './products.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  mainImageUrl: string | null;
+}
+
 type CatalogProductsState = {
-  products: unknown[];
+  products: Product[];
   totalCountProducts: number;
   isLoading: boolean;
   error: boolean;

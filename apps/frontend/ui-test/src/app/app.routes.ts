@@ -6,6 +6,10 @@ export const appRoutes: Route[] = [
     loadComponent: () => import('./pages/button/button.component').then(c => c.ButtonComponent),
   },
   {
+    path: 'badge',
+    loadComponent: () => import('./pages/badge/badge.component').then(c => c.BadgeComponent),
+  },
+  {
     path: 'alert',
     loadComponent: () => import('./pages/alert/alert.component').then(c => c.AlertComponent),
   },

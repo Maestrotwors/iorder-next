@@ -1,3 +1,4 @@
+/* eslint-disable @angular-eslint/no-host-metadata-property */
 import { Directive, Input } from '@angular/core';
 import { imageNotFoundDefault } from './constants';
 

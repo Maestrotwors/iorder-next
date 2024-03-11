@@ -6,9 +6,12 @@ import { tapResponse } from '@ngrx/operators';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CatalogCategoriesService } from './categories.service';
 import { ActivatedRoute } from '@angular/router';
+import { GetCatalogCategoriesCommandResponse } from '@iorder-next/contracts/api';
+
+export type Category = Required<GetCatalogCategoriesCommandResponse>;
 
 type CatalogCategoriesState = {
-  categories: unknown[];
+  categories: Category[];
   isLoading: boolean;
   error: boolean;
 };

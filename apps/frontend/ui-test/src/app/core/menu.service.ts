@@ -10,6 +10,10 @@ export class MenuService {
       url: 'button',
     },
     {
+      title: 'Badge',
+      url: 'badge',
+    },
+    {
       title: 'Calendar',
       url: 'calendar',
     },
