@@ -1,0 +1,10 @@
+<div class="container" [style]="{ 'background-color': backgroundColor, color: textColor, 'border-color': borderColor }">
+  <div>
+    <ng-content></ng-content>
+  </div>
+  @if (closable() !== undefined) {
+    <div class="v-center-items">
+      <i-lucide class="close-icon" name="x" [size]="12" [strokeWidth]="1" (click)="close()"></i-lucide>
+    </div>
+  }
+</div>

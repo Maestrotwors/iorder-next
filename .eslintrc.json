@@ -17,12 +17,6 @@
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-namespace": "off",
         "no-console": "error",
-        /*"@angular-eslint/no-host-metadata-property": [
-          "error",
-          {
-            "allowStatic": true
-          }
-        ],*/
         "@nx/enforce-module-boundaries": [
           "error",
           {

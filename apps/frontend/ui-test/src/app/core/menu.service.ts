@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { RouteEnum } from './route.model';
 
 @Injectable({
   providedIn: 'root',
@@ -7,71 +8,75 @@ export class MenuService {
   menuList = [
     {
       title: 'Button',
-      url: 'button',
+      url: RouteEnum.BUTTON,
+    },
+    {
+      title: 'Tag',
+      url: RouteEnum.TAG,
     },
     {
       title: 'Badge',
-      url: 'badge',
+      url: RouteEnum.BADGE,
     },
     {
       title: 'Calendar',
-      url: 'calendar',
+      url: RouteEnum.CALENDAR,
     },
     {
       title: 'Card',
-      url: 'card',
+      url: RouteEnum.CARD,
     },
     {
       title: 'CheckBox',
-      url: 'check-box',
+      url: RouteEnum.CHECKBOX,
     },
     {
       title: 'Collapse',
-      url: 'collapsible',
+      url: RouteEnum.COLLAPSIBLE,
     },
     {
       title: 'Input',
-      url: 'input',
+      url: RouteEnum.INPUT,
     },
     {
       title: 'Nav Menu',
-      url: 'nav-menu',
+      url: RouteEnum.NAV_MENU,
     },
     {
       title: 'Pagination',
-      url: 'paginator',
+      url: RouteEnum.PAGINATOR,
     },
     {
       title: 'Popover',
-      url: 'popover',
+      url: RouteEnum.POPOVER,
     },
     {
       title: 'Progress',
-      url: 'progress',
+      url: RouteEnum.PROGRESS_BAR,
     },
     {
       title: 'Radio',
-      url: 'radio',
+      url: RouteEnum.RADIO,
     },
     {
       title: 'Scroll-Area',
-      url: 'scroll-area',
+      url: RouteEnum.SCROLL_AREA,
     },
     {
       title: 'Select',
-      url: 'select',
+      url: RouteEnum.SELECT,
     },
     {
       title: 'Tabs',
-      url: 'tabs',
+      url: RouteEnum.TABS,
     },
     {
       title: 'Toast',
-      url: 'toast',
+      url: RouteEnum.TOAST,
     },
     {
       title: 'Tooltip',
-      url: 'tooltip',
+      url: RouteEnum.TOOLTIP,
     },
   ];
 }

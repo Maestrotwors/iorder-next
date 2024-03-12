@@ -1,0 +1,20 @@
+.container {
+  @apply border-zinc-300 bg-zinc-50 inline-block py-0 px-2 my-0 mr-2 ml-0 h-auto leading-5 whitespace-nowrap rounded-sm border border-solid text-neutral-800 text-sm cursor-default;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: "tnum";
+  transition: all 0.3s ease 0s;
+
+  display: inline-grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  width: auto;
+}
+.close-icon:hover {
+  @apply cursor-pointer;
+  transition: transform .2s ease;
+  transform: scale(1.2);
+}

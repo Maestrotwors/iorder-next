@@ -17,7 +17,20 @@
       "executor": "@nx/js:tsc",
       "options": {
         "main": "./src/index.ts",
-        "additionalEntryPoints": ["./src/lib/components/button/src/index.ts", "./src/lib/components/checkbox/src/index.ts"],
+        "additionalEntryPoints": [
+          "./accordion/src/index.ts",
+          "./alert/src/index.ts",
+          "./button/src/index.ts",
+          "./card/src/index.ts",
+          "./check-box/src/index.ts",
+          "./input/src/index.ts",
+          "./option/src/index.ts",
+          "./select/src/index.ts",
+          "./table/src/index.ts",
+          "./tag/src/index.ts",
+          "./toast/src/index.ts",
+          "./tooltip/src/index.ts"
+        ],
         "generateExportsField": true
       }
     }
