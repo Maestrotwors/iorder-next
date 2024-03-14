@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { CustomerRoutePath } from '../paths/customer.route-path';
 import { checkCustomerPositionGuard } from '../guards/customer/check-customer-position.guard';
 import { checkCatalogPageGuard } from '../guards/customer/check-catalog-page.guard';
+import { CustomerRoutePath } from '@iorder-next/frontend/core/shared/routing-paths';
 
 export const routes: Routes = [
   {
@@ -12,6 +12,14 @@ export const routes: Routes = [
         path: CustomerRoutePath.SuppliersSelection,
         loadComponent: () =>
           import('@iorder-next/frontend/page/customer/supplier-select').then(c => c.FrontendPageCustomerSupplierSelectComponent),
+      },
+      {
+        path: CustomerRoutePath.Order,
+        loadComponent: () => import('@iorder-next/frontend/page/customer/order').then(c => c.FrontendPageCustomerOrderComponent),
+      },
+      {
+        path: CustomerRoutePath.Contact,
+        loadComponent: () => import('@iorder-next/frontend/page/customer/contact-us').then(c => c.FrontendPageCustomerContactUsComponent),
       },
       {
         path: '',

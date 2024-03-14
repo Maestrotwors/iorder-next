@@ -1,0 +1,10 @@
+<ng-container *ifDesktop>
+  @defer (on immediate) {
+    <io-customer-widget-contact-us-desktop></io-customer-widget-contact-us-desktop>
+  }
+</ng-container>
+<ng-container *ifNotDesktop>
+  @defer (on immediate) {
+    <io-customer-widget-contact-us-mobile></io-customer-widget-contact-us-mobile>
+  }
+</ng-container>

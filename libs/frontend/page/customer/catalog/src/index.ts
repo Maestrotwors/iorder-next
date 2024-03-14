@@ -1,1 +1,1 @@
-export * from './lib/frontend-page-customer-catalog/frontend-page-customer-catalog.component';
+export * from './lib/catalog/frontend-page-customer-catalog.component';

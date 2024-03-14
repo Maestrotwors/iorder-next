@@ -1,5 +1,5 @@
 import { Route } from '@angular/router';
-import { RootRoutePath } from './paths/root.route-path';
+import { RootRoutePath } from '@iorder-next/frontend/core/shared/routing-paths';
 
 export const appRoutes: Route[] = [
   {

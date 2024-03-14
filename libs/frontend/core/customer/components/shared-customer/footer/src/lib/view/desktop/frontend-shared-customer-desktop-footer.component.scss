@@ -1,0 +1,18 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 1rem var(--standard-h-padding);
+  background-color: var(--standard-secondary-background-color);
+}
+
+.title {
+  font-size: 0.8rem;
+  color: grey;
+  margin: 0.4rem 0;
+}
+
+.iorder-logo {
+  .logo-icon {
+    max-height: 1.2rem;
+  }
+}

@@ -1,0 +1,31 @@
+:host {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 0 var(--standard-h-padding);
+
+  .part-contact-form {
+    border-right: var(--standard-border);
+    padding-top: var(--standard-v-padding);
+    padding-right: var(--standard-h-padding);
+  }
+
+  .part-contacts-list {
+    padding-top: var(--standard-v-padding);
+    padding-left: var(--standard-h-padding);
+  }
+
+  /*.content {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin-left: var(--standard-h-padding);
+    padding-top: var(--standard-v-padding);
+  }*/
+}

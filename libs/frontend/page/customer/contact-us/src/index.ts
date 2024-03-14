@@ -1,1 +1,1 @@
-export * from './lib/frontend-page-customer-contact-us/frontend-page-customer-contact-us.component';
+export * from './lib/contact-us/contact-us.component';

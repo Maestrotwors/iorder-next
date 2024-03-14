@@ -1,0 +1,13 @@
+<io-customer-header></io-customer-header>
+<io-customer-sub-header></io-customer-sub-header>
+<div class="container">
+  <io-customer-feature-order-sub-suppliers-navigation></io-customer-feature-order-sub-suppliers-navigation>
+  <div class="content">
+    <io-order-header></io-order-header>
+    <io-order-table></io-order-table>
+    <io-order-footer></io-order-footer>
+  </div>
+</div>
+@defer (on immediate) {
+  <io-customer-shared-footer-desktop></io-customer-shared-footer-desktop>
+}

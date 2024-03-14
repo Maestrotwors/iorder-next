@@ -1,0 +1,22 @@
+.buttons {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  border-top: var(--standard-border);
+  padding: 3rem 0;
+
+  .buttons-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 0.5rem;
+  }
+}
+
+.total-price {
+  @apply font-bold;
+}
+
+
+.right-panel {
+  text-align: right;
+  padding: 1rem 0;
+}

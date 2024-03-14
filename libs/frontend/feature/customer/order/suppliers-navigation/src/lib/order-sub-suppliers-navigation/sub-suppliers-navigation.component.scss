@@ -1,0 +1,17 @@
+.item {
+  background-color: rgb(236, 236, 236);
+  cursor: pointer;
+}
+
+.item-result {
+  background-color: rgb(200, 200, 200);
+}
+
+.item:hover {
+  background-color: rgb(191, 196, 210);
+}
+
+.container {
+  display: grid;
+  grid-gap: 0.6rem;
+}

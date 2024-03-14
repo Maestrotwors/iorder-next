@@ -1,1 +1,31 @@
-<p>frontend-shared-customer-footer works!</p>
+<div class="iorder-logo">
+  <img src="/assets/images/iorder/iorder.png" class="logo-icon" />
+</div>
+<div>
+  <div class="title">Інформація про компанію</div>
+  <div>
+    <a class="link small-text" [routerLink]="['/member-user/' + linksEnum.Rules]">Правила користування сайтом</a>
+  </div>
+  <div>
+    <a class="link small-text" [routerLink]="['/member-user/' + linksEnum.HowToUse]">Як користуватись?</a>
+  </div>
+</div>
+<div>
+  <div class="title">Графік роботи</div>
+  <div>з ПН по ПТ з 9:00 до 18:00</div>
+  <div>
+    <a class="link small-text">+38 044 333 49 43</a>
+  </div>
+  <div>
+    <a class="link small-text">+38 (050) 305 03 24</a>
+  </div>
+</div>
+<div>
+  <div class="title">Допомога</div>
+  <div>
+    <a class="link small-text" [routerLink]="['/member-user/' + linksEnum.Delivery]">Оплата та доставка</a>
+  </div>
+  <div>
+    <a class="link small-text" [routerLink]="['/member-user/' + linksEnum.Refund]">Повернення та обмін</a>
+  </div>
+</div>
