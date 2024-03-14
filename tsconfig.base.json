@@ -79,19 +79,12 @@
       "@iorder-next/frontend/page/customer/selected-customer-point": ["libs/frontend/page/customer/selected-customer-point/src/index.ts"],
       "@iorder-next/frontend/page/customer/supplier-select": ["libs/frontend/page/customer/supplier-select/src/index.ts"],
       "@iorder-next/frontend/page/landing/main": ["libs/frontend/page/landing/main/src/index.ts"],
+      "@iorder-next/frontend/page/landing/register": ["libs/frontend/page/landing/register/src/index.ts"],
+      "@iorder-next/frontend/page/landing/sign-in": ["libs/frontend/page/landing/sign-in/src/index.ts"],
       "@iorder-next/frontend/page/supplier/main": ["libs/frontend/page/supplier/main/src/index.ts"],
       "@iorder-next/frontend/ui": ["libs/frontend/ui/src/index.ts"],
       "@iorder-next/frontend/ui-test": ["apps/frontend/ui-test/src/index.ts"],
       "@iorder-next/frontend/ui/accordion": ["libs/frontend/ui/accordion/src/index.ts"],
-      "@iorder-next/frontend/widget/customer/catalog/desktop-nav-menu": [
-        "libs/frontend/widget/customer/catalog/desktop-nav-menu/src/index.ts"
-      ],
-      "@iorder-next/frontend/widget/customer/catalog/product": ["libs/frontend/widget/customer/catalog/product/src/index.ts"],
-      "@iorder-next/frontend/widget/customer/catalog/products-header": [
-        "libs/frontend/widget/customer/catalog/products-header/src/index.ts"
-      ],
-      "@iorder-next/frontend/widget/customer/catalog/products-list": ["libs/frontend/widget/customer/catalog/products-list/src/index.ts"],
-      "@iorder-next/plugins/nx-plugin": ["libs/plugins/nx-plugin/src/index.ts"],
       "@iorder-next/frontend/ui/alert": ["libs/frontend/ui/alert/src/index.ts"],
       "@iorder-next/frontend/ui/button": ["libs/frontend/ui/button/src/index.ts"],
       "@iorder-next/frontend/ui/card": ["libs/frontend/ui/card/src/index.ts"],
@@ -102,7 +95,16 @@
       "@iorder-next/frontend/ui/table": ["libs/frontend/ui/table/src/index.ts"],
       "@iorder-next/frontend/ui/tag": ["libs/frontend/ui/tag/src/index.ts"],
       "@iorder-next/frontend/ui/toast": ["libs/frontend/ui/toast/src/index.ts"],
-      "@iorder-next/frontend/ui/tooltip": ["libs/frontend/ui/tooltip/src/index.ts"]
+      "@iorder-next/frontend/ui/tooltip": ["libs/frontend/ui/tooltip/src/index.ts"],
+      "@iorder-next/frontend/widget/customer/catalog/desktop-nav-menu": [
+        "libs/frontend/widget/customer/catalog/desktop-nav-menu/src/index.ts"
+      ],
+      "@iorder-next/frontend/widget/customer/catalog/product": ["libs/frontend/widget/customer/catalog/product/src/index.ts"],
+      "@iorder-next/frontend/widget/customer/catalog/products-header": [
+        "libs/frontend/widget/customer/catalog/products-header/src/index.ts"
+      ],
+      "@iorder-next/frontend/widget/customer/catalog/products-list": ["libs/frontend/widget/customer/catalog/products-list/src/index.ts"],
+      "@iorder-next/plugins/nx-plugin": ["libs/plugins/nx-plugin/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

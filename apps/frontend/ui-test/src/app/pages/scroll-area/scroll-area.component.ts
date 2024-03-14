@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'ui-scroll-area',
+  selector: 'ui-page-scroll-area',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './scroll-area.component.html',

@@ -3,6 +3,7 @@ const { colors: defaultColors } = require('tailwindcss/defaultTheme')
 const { join } = require('path');
 module.exports = {
   content: [join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html}'), ...createGlobPatternsForDependencies(__dirname)],
+  important: true,
   theme: {
     extend: {
       spacing: {
@@ -13,7 +14,7 @@ module.exports = {
         neutral0: '#000000',
         neutral10: '#1C1B1F',
         neutral96: '#F7F2FA',
-        primary40: '#6750A4',
+        primary40: '#2563eb',
         primary100: '#FFFFFF'
       },
       screens: {
@@ -26,6 +27,7 @@ module.exports = {
         12: '0.12',
         15: '0.15',
         38: '0.38',
+        60: '0.60',
         88: '0.88',
         92: '0.92',
       },

@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'ui-calendar',
+  selector: 'ui-page-calendar',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './calendar.component.html',

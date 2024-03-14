@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UiTagComponent } from '@iorder-next/frontend/ui/tag';
 
 @Component({
-  selector: 'ui-test-tag',
+  selector: 'ui-page-tag',
   standalone: true,
   imports: [CommonModule, UiTagComponent],
   templateUrl: './tag.component.html',

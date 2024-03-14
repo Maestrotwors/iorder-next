@@ -26,12 +26,6 @@ export const routes: Routes = [
             loadComponent: () => import('@iorder-next/frontend/page/customer/catalog').then(c => c.FrontendPageCustomerCatalogComponent),
             children: [
               {
-                path: '',
-                loadComponent: () =>
-                  import('@iorder-next/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
-                canActivate: [checkCatalogPageGuard],
-              },
-              {
                 path: ':categoryId',
                 loadComponent: () =>
                   import('@iorder-next/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
@@ -41,6 +35,12 @@ export const routes: Routes = [
                 path: 'product/:productId',
                 loadComponent: () =>
                   import('@iorder-next/frontend/page/customer/product').then(c => c.FrontendPageCustomerProductComponent),
+              },
+              {
+                path: '',
+                loadComponent: () =>
+                  import('@iorder-next/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
+                canActivate: [checkCatalogPageGuard],
               },
             ],
           },

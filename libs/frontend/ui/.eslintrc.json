@@ -10,7 +10,6 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "iorderNext",
             "style": "camelCase"
           }
         ],

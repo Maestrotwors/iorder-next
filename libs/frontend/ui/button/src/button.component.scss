@@ -2,3 +2,29 @@
   @apply inline-flex justify-center items-center py-2 px-4 m-0 h-8 text-sm font-medium leading-5 text-center normal-case whitespace-nowrap bg-none rounded-md border-0 border-solid duration-150 ease-in-out cursor-pointer border-zinc-200 bg-zinc-800 text-zinc-50 bg-opacity-[0.9];
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
 }
+
+:host(.filled) {
+  @apply bg-primary40 shadow-level0 shadow-neutral0 ;
+  @apply text-primary100;
+}
+
+:host(.filled:hover) {
+  @apply bg-primary40/92 shadow-level1;
+}
+
+:host(.filled:focus-visible) {
+  @apply bg-primary40/92 shadow-level0;
+}
+
+:host(.filled:active) {
+  @apply bg-primary40/92 shadow-level2;
+}
+
+:host(.filled[disabled]) {
+  @apply bg-neutral10/12 shadow-level0;
+  @apply text-neutral10/38;
+}
+
+:host(.filled:active) {
+  @apply bg-primary40/60 shadow-level2;
+}

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UiAccordionComponent } from '@iorder-next/frontend/ui/accordion';
 
 @Component({
-  selector: 'ui-collapsible',
+  selector: 'ui-page-collapsible',
   standalone: true,
   imports: [CommonModule, UiAccordionComponent],
   templateUrl: './collapsible.component.html',

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, forwardRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { CheckBoxState } from './interfaces/check-box-state.interface';
+import { CheckBoxState, CheckBoxStateEnum } from './interfaces/check-box-state.interface';
 
 @Component({
   selector: 'ui-checkbox',
@@ -23,21 +23,21 @@ export class UiCheckboxComponent implements ControlValueAccessor {
 
   checkToggle() {
     switch (this.state) {
-      case 'checked':
-        this.state = 'unchecked';
+      case CheckBoxStateEnum.Checked:
+        this.state = CheckBoxStateEnum.Unchecked;
         break;
-      case 'unchecked':
-        this.state = 'checked';
+      case CheckBoxStateEnum.Unchecked:
+        this.state = CheckBoxStateEnum.Checked;
         break;
-      case 'indeterminate':
-        this.state = 'checked';
+      case CheckBoxStateEnum.Indeterminate:
+        this.state = CheckBoxStateEnum.Checked;
         break;
     }
   }
 
-  onChange: unknown;
+  onChange: any = () => {};
 
-  onTouch: unknown;
+  onTouch: any = () => {};
 
   set value(val: CheckBoxState) {
     this.state = val;

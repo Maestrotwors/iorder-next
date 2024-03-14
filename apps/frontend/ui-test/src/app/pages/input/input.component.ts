@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'ui-input',
+  selector: 'ui-page-input',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './input.component.html',

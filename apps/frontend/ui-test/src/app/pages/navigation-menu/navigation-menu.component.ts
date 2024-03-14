@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'ui-navigation-menu',
+  selector: 'ui-page-navigation-menu',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navigation-menu.component.html',
