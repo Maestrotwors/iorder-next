@@ -1,0 +1,24 @@
+:host {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.content {
+  height: 100%;
+  padding: 0 var(--standard-h-padding);
+  display: grid;
+  grid-template-columns: 1fr auto 20rem;
+}
+
+.part-contracts {
+
+}
+.part-delivery-points-list {
+  padding-left: var(--standard-h-padding);
+}
+
+.col-border {
+  border-right: var(--standard-border);
+  margin-left: var(--standard-h-padding);
+}

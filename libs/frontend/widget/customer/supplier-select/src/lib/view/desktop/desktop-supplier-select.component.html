@@ -1,0 +1,20 @@
+<io-customer-header></io-customer-header>
+<io-customer-sub-header></io-customer-sub-header>
+<div class="content">
+  <div class="part-contracts">
+    <io-contracts-header></io-contracts-header>
+    <io-contracts-signed></io-contracts-signed>
+    <io-contracts-unsigned></io-contracts-unsigned>
+  </div>
+  <div class="col-border"></div>
+  <div class="part-delivery-points-list">
+    <io-go-to-catalog></io-go-to-catalog>
+    <io-legal-entities-list></io-legal-entities-list>
+    <io-delivery-points-header></io-delivery-points-header>
+    <io-delivery-points-filter></io-delivery-points-filter>
+    <io-delivery-points-list></io-delivery-points-list>
+  </div>
+</div>
+@defer (on immediate) {
+  <io-customer-shared-footer-desktop></io-customer-shared-footer-desktop>
+}

@@ -26,8 +26,23 @@
   font-weight: bold;
 }
 
+.title-text-sm {
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+.title-text-xs {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .m-title {
   margin: 0.5rem 0;
+}
+
+.secondary-text {
+  font-size: 0.85rem;
+  color: gray;
 }
 
 .small-text {

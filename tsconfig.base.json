@@ -70,6 +70,7 @@
       ],
       "@io/frontend/feature/customer/refund": ["libs/frontend/feature/customer/refund/src/index.ts"],
       "@io/frontend/feature/customer/rules": ["libs/frontend/feature/customer/rules/src/index.ts"],
+      "@io/frontend/feature/customer/supplier-select": ["libs/frontend/feature/customer/supplier-select/src/index.ts"],
       "@io/frontend/page/admin/main": ["libs/frontend/page/admin/main/src/index.ts"],
       "@io/frontend/page/customer/catalog": ["libs/frontend/page/customer/catalog/src/index.ts"],
       "@io/frontend/page/customer/contact-us": ["libs/frontend/page/customer/contact-us/src/index.ts"],
@@ -109,6 +110,7 @@
       "@io/frontend/widget/customer/contact-us": ["libs/frontend/widget/customer/contact-us/src/index.ts"],
       "@io/frontend/widget/customer/default-page-container": ["libs/frontend/widget/customer/default-page-container/src/index.ts"],
       "@io/frontend/widget/customer/order": ["libs/frontend/widget/customer/order/src/index.ts"],
+      "@io/frontend/widget/customer/supplier-select": ["libs/frontend/widget/customer/supplier-select/src/index.ts"],
       "@io/plugins/nx-plugin": ["libs/plugins/nx-plugin/src/index.ts"],
       "undefined/menu": ["libs/frontend/ui/menu/src/index.ts"]
     }
