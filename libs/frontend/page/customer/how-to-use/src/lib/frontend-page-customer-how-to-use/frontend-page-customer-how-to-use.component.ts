@@ -2,10 +2,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IfDesktopDirective, IfNotDesktopDirective } from '@io/frontend/core/shared/directives/break-point';
 import {
-  FrontendCustomerHeaderComponent,
-  FrontendCustomerSubHeaderComponent,
-} from '@io/frontend/core/customer/components/shared-customer/header';
-import { FrontendSharedCustomerFooterDesktopComponent } from '@io/frontend/core/customer/components/shared-customer/footer';
+  FrontendWidgetCustomerDesktopDefaultPageContainerComponent,
+  FrontendWidgetCustomerMobileDefaultPageContainerComponent,
+} from '@io/frontend/widget/customer/default-page-container';
+import { FrontendFeatureCustomerHowToUseComponent } from '@io/frontend/feature/customer/how-to-use';
 
 @Component({
   selector: 'io-customer-page-how-to-use',
@@ -14,9 +14,9 @@ import { FrontendSharedCustomerFooterDesktopComponent } from '@io/frontend/core/
     CommonModule,
     IfNotDesktopDirective,
     IfDesktopDirective,
-    FrontendCustomerHeaderComponent,
-    FrontendCustomerSubHeaderComponent,
-    FrontendSharedCustomerFooterDesktopComponent,
+    FrontendWidgetCustomerDesktopDefaultPageContainerComponent,
+    FrontendWidgetCustomerMobileDefaultPageContainerComponent,
+    FrontendFeatureCustomerHowToUseComponent,
   ],
   templateUrl: './frontend-page-customer-how-to-use.component.html',
   styleUrl: './frontend-page-customer-how-to-use.component.scss',

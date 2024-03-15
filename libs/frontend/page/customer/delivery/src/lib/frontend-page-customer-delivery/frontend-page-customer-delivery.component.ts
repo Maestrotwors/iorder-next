@@ -5,6 +5,7 @@ import {
   FrontendWidgetCustomerDesktopDefaultPageContainerComponent,
   FrontendWidgetCustomerMobileDefaultPageContainerComponent,
 } from '@io/frontend/widget/customer/default-page-container';
+import { FrontendFeatureCustomerDeliveryComponent } from '@io/frontend/feature/customer/delivery';
 
 @Component({
   selector: 'io-customer-page-delivery',
@@ -15,6 +16,7 @@ import {
     IfDesktopDirective,
     FrontendWidgetCustomerDesktopDefaultPageContainerComponent,
     FrontendWidgetCustomerMobileDefaultPageContainerComponent,
+    FrontendFeatureCustomerDeliveryComponent,
   ],
   templateUrl: './frontend-page-customer-delivery.component.html',
   styleUrl: './frontend-page-customer-delivery.component.scss',

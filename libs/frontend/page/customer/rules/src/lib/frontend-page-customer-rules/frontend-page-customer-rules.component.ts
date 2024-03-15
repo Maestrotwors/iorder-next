@@ -5,6 +5,7 @@ import {
   FrontendWidgetCustomerDesktopDefaultPageContainerComponent,
   FrontendWidgetCustomerMobileDefaultPageContainerComponent,
 } from '@io/frontend/widget/customer/default-page-container';
+import { FrontendFeatureCustomerRulesComponent } from '@io/frontend/feature/customer/rules';
 
 @Component({
   selector: 'io-customer-page-rules',
@@ -15,6 +16,7 @@ import {
     IfDesktopDirective,
     FrontendWidgetCustomerDesktopDefaultPageContainerComponent,
     FrontendWidgetCustomerMobileDefaultPageContainerComponent,
+    FrontendFeatureCustomerRulesComponent,
   ],
   templateUrl: './frontend-page-customer-rules.component.html',
   styleUrl: './frontend-page-customer-rules.component.scss',

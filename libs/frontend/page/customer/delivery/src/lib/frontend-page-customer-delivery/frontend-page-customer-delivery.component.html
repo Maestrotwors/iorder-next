@@ -1,6 +1,8 @@
 <ng-container *ifDesktop>
   @defer (on immediate) {
-    <io-customer-widget-desktop-default-page-container> fff </io-customer-widget-desktop-default-page-container>
+    <io-customer-widget-desktop-default-page-container>
+      <io-customer-feature-delivery></io-customer-feature-delivery>
+    </io-customer-widget-desktop-default-page-container>
   }
 </ng-container>
 <ng-container *ifNotDesktop>

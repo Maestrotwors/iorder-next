@@ -1,11 +1,8 @@
 <ng-container *ifDesktop>
   @defer (on immediate) {
-    <io-customer-header></io-customer-header>
-    <io-customer-sub-header></io-customer-sub-header>
-    <div class="content">1</div>
-    @defer (on immediate) {
-      <io-customer-shared-footer-desktop></io-customer-shared-footer-desktop>
-    }
+    <io-customer-widget-desktop-default-page-container>
+      <io-customer-feature-how-to-use></io-customer-feature-how-to-use>
+    </io-customer-widget-desktop-default-page-container>
   }
 </ng-container>
 <ng-container *ifNotDesktop>

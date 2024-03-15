@@ -5,6 +5,7 @@ import {
   FrontendWidgetCustomerDesktopDefaultPageContainerComponent,
   FrontendWidgetCustomerMobileDefaultPageContainerComponent,
 } from '@io/frontend/widget/customer/default-page-container';
+import { FrontendFeatureCustomerRefundComponent } from '@io/frontend/feature/customer/refund';
 
 @Component({
   selector: 'io-customer-page-refund',
@@ -15,6 +16,7 @@ import {
     IfDesktopDirective,
     FrontendWidgetCustomerDesktopDefaultPageContainerComponent,
     FrontendWidgetCustomerMobileDefaultPageContainerComponent,
+    FrontendFeatureCustomerRefundComponent,
   ],
   templateUrl: './frontend-page-customer-refund.component.html',
   styleUrl: './frontend-page-customer-refund.component.scss',
