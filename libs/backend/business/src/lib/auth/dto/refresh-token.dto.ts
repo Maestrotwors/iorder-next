@@ -1,4 +1,4 @@
-import { UserRefreshTokenCommandRequestSchema, UserRefreshTokenCommandResponseSchema } from '@iorder-next/contracts/api';
+import { UserRefreshTokenCommandRequestSchema, UserRefreshTokenCommandResponseSchema } from '@io/contracts/api';
 import { createZodDto } from 'nestjs-zod';
 
 export class RefreshTokenDto extends createZodDto(UserRefreshTokenCommandRequestSchema) {}

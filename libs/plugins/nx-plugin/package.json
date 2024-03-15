@@ -1,5 +1,5 @@
 {
-  "name": "@iorder-next/plugins/nx-plugin",
+  "name": "@io/plugins/nx-plugin",
   "version": "0.0.1",
   "dependencies": {
     "@nx/devkit": "18.0.7",

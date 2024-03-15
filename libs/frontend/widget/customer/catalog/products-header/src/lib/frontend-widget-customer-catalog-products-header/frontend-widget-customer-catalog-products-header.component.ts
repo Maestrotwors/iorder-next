@@ -4,7 +4,7 @@ import {
   CatalogProductsFilterComponent,
   CatalogProductsOrderUnitsComponent,
   CatalogProductsViewSelectComponent,
-} from '@iorder-next/frontend/feature/customer/catalog/products/header-products-info';
+} from '@io/frontend/feature/customer/catalog/products/header-products-info';
 
 @Component({
   selector: 'io-customer-widget-catalog-products-header',

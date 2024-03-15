@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { TokenService } from './token.service';
-import { RoleEnum } from '@iorder-next/backend/common';
+import { RoleEnum } from '@io/backend/common';
 import { RegisterDto } from '../dto/register.dto';
-import { AuthActionService } from '@iorder-next/backend/commands';
+import { AuthActionService } from '@io/backend/commands';
 
 @Injectable()
 export class RegistrationService {

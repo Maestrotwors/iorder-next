@@ -4,8 +4,8 @@ import { AuthService } from './services/auth.service';
 import { RegistrationService } from './services/registration.service';
 import { LoginDto, LoginResponseDto } from './dto/login.dto';
 import { ChangePasswordDto } from './dto/change-password.dto';
-import { UserContext } from '@iorder-next/backend/entities';
-import { HasRoles, RefreshTokenGuard, RoleEnum, User } from '@iorder-next/backend/common';
+import { UserContext } from '@io/backend/entities';
+import { HasRoles, RefreshTokenGuard, RoleEnum, User } from '@io/backend/common';
 import { RegisterDto, RegisterResponseDto } from './dto/register.dto';
 import { RefreshTokenDto, RefreshTokenResponseDto } from './dto/refresh-token.dto';
 

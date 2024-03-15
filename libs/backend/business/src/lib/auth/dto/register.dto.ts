@@ -1,4 +1,4 @@
-import { UserRegisterCommandRequestSchema, UserRegisterCommandResponseSchema } from '@iorder-next/contracts/api';
+import { UserRegisterCommandRequestSchema, UserRegisterCommandResponseSchema } from '@io/contracts/api';
 import { createZodDto } from 'nestjs-zod';
 
 export class RegisterDto extends createZodDto(UserRegisterCommandRequestSchema) {}

@@ -1,10 +1,10 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { CatalogProductsViewStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
-import { FrontendFeatureCustomerCatalogPaginationProductsComponent } from '@iorder-next/frontend/feature/customer/catalog/products/pagination';
+import { CatalogProductsViewStore } from '@io/frontend/core/customer/store/catalog/products';
+import { FrontendFeatureCustomerCatalogPaginationProductsComponent } from '@io/frontend/feature/customer/catalog/products/pagination';
 import {
   FrontendFeatureCustomerCatalogProductsListCardViewComponent,
   FrontendFeatureCustomerCatalogProductsListListViewComponent,
-} from '@iorder-next/frontend/feature/customer/catalog/products/products-list';
+} from '@io/frontend/feature/customer/catalog/products/products-list';
 
 @Component({
   selector: 'io-customer-widget-catalog-products-list',

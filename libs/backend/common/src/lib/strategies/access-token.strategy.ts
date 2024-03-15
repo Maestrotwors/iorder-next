@@ -1,4 +1,4 @@
-import { IJWTPayload, UserContext } from '@iorder-next/backend/entities';
+import { IJWTPayload, UserContext } from '@io/backend/entities';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { PassportStrategy } from '@nestjs/passport';

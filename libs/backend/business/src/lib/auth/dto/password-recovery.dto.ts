@@ -1,4 +1,4 @@
-import { PasswordRecoveryCommandRequestSchema, PasswordRecoveryCommandResponseSchema } from '@iorder-next/contracts/api';
+import { PasswordRecoveryCommandRequestSchema, PasswordRecoveryCommandResponseSchema } from '@io/contracts/api';
 import { createZodDto } from 'nestjs-zod';
 
 export class PasswordRecoveryDto extends createZodDto(PasswordRecoveryCommandRequestSchema) {}

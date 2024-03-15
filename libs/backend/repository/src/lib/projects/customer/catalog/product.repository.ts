@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from '@iorder-next/backend/common';
+import { PrismaService } from '@io/backend/common';
 import { Product } from '@prisma/client';
 import { GetProductRepositoryDto } from './dto/get-product.dto';
 

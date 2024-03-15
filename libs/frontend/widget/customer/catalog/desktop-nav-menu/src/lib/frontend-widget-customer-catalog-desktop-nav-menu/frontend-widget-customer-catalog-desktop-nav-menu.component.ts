@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FrontendFeatureCustomerCatalogCategoriesListComponent } from '@iorder-next/frontend/feature/customer/catalog/categories-list';
-import { FrontendFeatureCustomerCatalogRecommendedListComponent } from '@iorder-next/frontend/feature/customer/catalog/recommended-list';
-import { FrontendFeatureCustomerCatalogSubSupplierSelectionComponent } from '@iorder-next/frontend/feature/customer/catalog/sub-supplier-selection';
-import { FrontendFeatureCustomerCatalogSupplierListComponent } from '@iorder-next/frontend/feature/customer/catalog/supplier-list';
-import { FrontendSharedCustomerSupplierBigIconComponent } from '@iorder-next/frontend/core/customer/components/shared-customer/supplier-icon';
+import { FrontendFeatureCustomerCatalogCategoriesListComponent } from '@io/frontend/feature/customer/catalog/categories-list';
+import { FrontendFeatureCustomerCatalogRecommendedListComponent } from '@io/frontend/feature/customer/catalog/recommended-list';
+import { FrontendFeatureCustomerCatalogSubSupplierSelectionComponent } from '@io/frontend/feature/customer/catalog/sub-supplier-selection';
+import { FrontendFeatureCustomerCatalogSupplierListComponent } from '@io/frontend/feature/customer/catalog/supplier-list';
+import { FrontendSharedCustomerSupplierBigIconComponent } from '@io/frontend/core/customer/components/shared-customer/supplier-icon';
 
 @Component({
   selector: 'io-customer-widget-catalog-desktop-nav-menu',

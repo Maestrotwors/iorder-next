@@ -1,4 +1,4 @@
-import { UserEntity } from '@iorder-next/backend/entities';
+import { UserEntity } from '@io/backend/entities';
 import { GetUserSharedQuery } from './shared/get-user.shared';
 
 export class GetUserByRecoveryTokenQuery extends GetUserSharedQuery {

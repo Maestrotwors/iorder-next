@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FrontendSharedCustomerFooterMobileComponent } from '@iorder-next/frontend/core/customer/components/shared-customer/footer';
+import { FrontendSharedCustomerFooterMobileComponent } from '@io/frontend/core/customer/components/shared-customer/footer';
 import { RouterOutlet } from '@angular/router';
 
 @Component({

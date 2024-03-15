@@ -37,7 +37,7 @@
               },
               {
                 "sourceTag": "frontend-routing-core",
-                "onlyDependOnLibsWithTags": ["frontend-layer:page", "frontend-layer:core"]
+                "onlyDependOnLibsWithTags": ["frontend-layer:page", "frontend-layer:widget", "frontend-layer:feature", "frontend-layer:core"]
               },
               {
                 "sourceTag": "frontend-layer:page",

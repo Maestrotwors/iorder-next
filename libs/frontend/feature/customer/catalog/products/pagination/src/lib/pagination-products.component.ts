@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
-import { CatalogProductsStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
+import { CatalogProductsStore } from '@io/frontend/core/customer/store/catalog/products';
 import { PaginatorModule, PaginatorState } from 'primeng/paginator';
 
 @Component({

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FrontendWidgetCustomerCatalogProductsHeaderComponent } from '@iorder-next/frontend/widget/customer/catalog/products-header';
-import { FrontendWidgetCustomerCatalogProductsListComponent } from '@iorder-next/frontend/widget/customer/catalog/products-list';
+import { FrontendWidgetCustomerCatalogProductsHeaderComponent } from '@io/frontend/widget/customer/catalog/products-header';
+import { FrontendWidgetCustomerCatalogProductsListComponent } from '@io/frontend/widget/customer/catalog/products-list';
 
 @Component({
   selector: 'io-customer-page-products',

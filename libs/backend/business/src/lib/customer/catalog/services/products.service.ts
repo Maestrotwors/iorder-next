@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { GetCatalogProductsQueryDto, GetCatalogProductsResponseDto } from '../dto/get-products.dto';
-import { GetCatalogProductsQuery } from '@iorder-next/backend/commands';
+import { GetCatalogProductsQuery } from '@io/backend/commands';
 
 @Injectable()
 export class CatalogProductsService {

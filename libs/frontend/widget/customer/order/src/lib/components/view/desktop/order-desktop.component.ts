@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FrontendSharedCustomerFooterDesktopComponent } from '@iorder-next/frontend/core/customer/components/shared-customer/footer';
+import { FrontendSharedCustomerFooterDesktopComponent } from '@io/frontend/core/customer/components/shared-customer/footer';
 import {
   FrontendCustomerHeaderComponent,
   FrontendCustomerSubHeaderComponent,
-} from '@iorder-next/frontend/core/customer/components/shared-customer/header';
-import { OrderFooterComponent, OrderHeaderComponent, OrderTableComponent } from '@iorder-next/frontend/feature/customer/order/order-info';
-import { FrontendFeatureCustomerOrderSubSuppliersNavigationComponent } from '@iorder-next/frontend/feature/customer/order/suppliers-navigation';
+} from '@io/frontend/core/customer/components/shared-customer/header';
+import { OrderFooterComponent, OrderHeaderComponent, OrderTableComponent } from '@io/frontend/feature/customer/order/order-info';
+import { FrontendFeatureCustomerOrderSubSuppliersNavigationComponent } from '@io/frontend/feature/customer/order/suppliers-navigation';
 
 @Component({
   selector: 'io-customer-widget-order-desktop',

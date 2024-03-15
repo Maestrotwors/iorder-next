@@ -1,4 +1,4 @@
-import { CatalogProductsRepository } from '@iorder-next/backend/repository';
+import { CatalogProductsRepository } from '@io/backend/repository';
 import { Injectable } from '@nestjs/common';
 import { ActionBase } from '../../../core/action.base';
 import { Product } from '@prisma/client';

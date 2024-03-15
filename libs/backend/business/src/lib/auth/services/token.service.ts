@@ -3,8 +3,8 @@ import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { RefreshTokenDto } from '../dto/refresh-token.dto';
 import { LoginDto } from '../dto/login.dto';
-import { IJWTPayload, TokenResponseDto } from '@iorder-next/backend/entities';
-import { AuthActionService } from '@iorder-next/backend/commands';
+import { IJWTPayload, TokenResponseDto } from '@io/backend/entities';
+import { AuthActionService } from '@io/backend/commands';
 
 @Injectable()
 export class TokenService {

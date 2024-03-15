@@ -1,6 +1,6 @@
 import { ActionBase } from '../../core/action.base';
-import { UserRepository } from '@iorder-next/backend/repository';
-import { UserEntity } from '@iorder-next/backend/entities';
+import { UserRepository } from '@io/backend/repository';
+import { UserEntity } from '@io/backend/entities';
 
 export class CreateNewUserCommand extends ActionBase {
   protected readonly userRepository: UserRepository = new UserRepository(this.prismaService);

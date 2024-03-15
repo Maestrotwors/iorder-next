@@ -2,10 +2,10 @@ import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/cor
 import { CommonModule } from '@angular/common';
 import { FrontendPageCustomerCatalogDesktopComponent } from './view/desktop/frontend-page-customer-catalog-desktop.component';
 import { FrontendPageCustomerCatalogMobileComponent } from './view/mobile/frontend-page-customer-catalog-mobile.component';
-import { CatalogProductsStore, CatalogProductsViewStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
-import { IfDesktopDirective, IfNotDesktopDirective } from '@iorder-next/frontend/core/shared/directives/break-point';
-import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/store/catalog/categories';
-import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/catalog/product';
+import { CatalogProductsStore, CatalogProductsViewStore } from '@io/frontend/core/customer/store/catalog/products';
+import { IfDesktopDirective, IfNotDesktopDirective } from '@io/frontend/core/shared/directives/break-point';
+import { CatalogCategoriesStore } from '@io/frontend/core/customer/store/catalog/categories';
+import { CatalogProductStore } from '@io/frontend/core/customer/store/catalog/product';
 
 @Component({
   selector: 'io-customer-page-catalog',

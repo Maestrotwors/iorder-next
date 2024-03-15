@@ -1,5 +1,5 @@
-import { AuthModule, CatalogModule } from '@iorder-next/backend/business';
-import { validateConfig } from '@iorder-next/backend/common';
+import { AuthModule, CatalogModule } from '@io/backend/business';
+import { validateConfig } from '@io/backend/common';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 

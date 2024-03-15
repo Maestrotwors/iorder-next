@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FrontendCustomerHeaderComponent } from '@iorder-next/frontend/core/customer/components/shared-customer/header';
+import { FrontendCustomerHeaderComponent } from '@io/frontend/core/customer/components/shared-customer/header';
 
 @Component({
   selector: 'io-customer-page-supplier-select',

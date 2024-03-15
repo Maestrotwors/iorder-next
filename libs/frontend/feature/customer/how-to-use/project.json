@@ -2,7 +2,7 @@
   "name": "frontend-feature-customer-how-to-use",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/feature/customer/how-to-use/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:feature", "scope:app-customer"],
   "projectType": "library",
   "targets": {

@@ -2,7 +2,7 @@
   "name": "frontend-feature-customer-order-suppliers-navigation",
   "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/feature/customer/order/suppliers-navigation/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:feature", "scope:app-customer"],
   "projectType": "library",
   "targets": {

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { CustomerRoutePath } from '@iorder-next/frontend/core/shared/routing-paths';
+import { CustomerRoutePath } from '@io/frontend/core/shared/routing-paths';
 
 @Component({
   selector: 'io-customer-shared-footer-desktop',

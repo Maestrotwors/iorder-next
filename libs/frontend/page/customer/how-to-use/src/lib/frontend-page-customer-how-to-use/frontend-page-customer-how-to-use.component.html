@@ -1,1 +1,15 @@
-<p>frontend-page-customer-how-to-use works!</p>
+<ng-container *ifDesktop>
+  @defer (on immediate) {
+    <io-customer-header></io-customer-header>
+    <io-customer-sub-header></io-customer-sub-header>
+    <div class="content">1</div>
+    @defer (on immediate) {
+      <io-customer-shared-footer-desktop></io-customer-shared-footer-desktop>
+    }
+  }
+</ng-container>
+<ng-container *ifNotDesktop>
+  @defer (on immediate) {
+    mobile
+  }
+</ng-container>

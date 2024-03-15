@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component, OnInit, inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CatalogProductStore } from '@iorder-next/frontend/core/customer/store/catalog/product';
+import { CatalogProductStore } from '@io/frontend/core/customer/store/catalog/product';
 import {
   FrontendWidgetCustomerCatalogProductDesktopComponent,
   FrontendWidgetCustomerCatalogProductMobileComponent,
-} from '@iorder-next/frontend/widget/customer/catalog/product';
-import { IfMobileDirective, IfNotMobileDirective } from '@iorder-next/frontend/core/shared/directives/break-point';
+} from '@io/frontend/widget/customer/catalog/product';
+import { IfMobileDirective, IfNotMobileDirective } from '@io/frontend/core/shared/directives/break-point';
 
 @Component({
   selector: 'io-customer-page-product',

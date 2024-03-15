@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UiMenuItemsComponent, UiMenuTriggerForDirective, UiSelectComponent } from '@iorder-next/frontend/ui/select';
+import { UiMenuItemsComponent, UiMenuTriggerForDirective, UiSelectComponent } from '@io/frontend/ui/select';
 
 @Component({
   selector: 'ui-page-select',

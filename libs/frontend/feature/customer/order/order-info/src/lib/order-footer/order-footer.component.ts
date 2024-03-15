@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UiButtonComponent } from '@iorder-next/frontend/ui/button';
+import { UiButtonComponent } from '@io/frontend/ui/button';
 
 @Component({
   selector: 'io-order-footer',

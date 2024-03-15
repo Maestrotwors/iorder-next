@@ -1,9 +1,9 @@
 import { HttpResponse } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable, finalize, tap } from 'rxjs';
-import { GetCatalogProductsCommandRequestQuery, GetCatalogProductsCommandResponse } from '@iorder-next/contracts/api';
-import { LoaderStore } from '@iorder-next/frontend/core/shared/components/loader';
-import { CoreApiService } from '@iorder-next/frontend/core/shared/services/api-core';
+import { GetCatalogProductsCommandRequestQuery, GetCatalogProductsCommandResponse } from '@io/contracts/api';
+import { LoaderStore } from '@io/frontend/core/shared/components/loader';
+import { CoreApiService } from '@io/frontend/core/shared/services/api-core';
 
 @Injectable({ providedIn: 'root' })
 export class CustomerProductsService {

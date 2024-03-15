@@ -1,4 +1,4 @@
-import { SetNewPasswordCommandRequestSchema, SetNewPasswordCommandResponseSchema } from '@iorder-next/contracts/api';
+import { SetNewPasswordCommandRequestSchema, SetNewPasswordCommandResponseSchema } from '@io/contracts/api';
 import { createZodDto } from 'nestjs-zod';
 
 export class SetNewPasswordDto extends createZodDto(SetNewPasswordCommandRequestSchema) {}

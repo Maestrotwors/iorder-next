@@ -1,4 +1,4 @@
-import { PrismaService } from '@iorder-next/backend/common';
+import { PrismaService } from '@io/backend/common';
 import { Logger } from '@nestjs/common';
 
 export abstract class ActionBase {

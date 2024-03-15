@@ -1,7 +1,7 @@
-import { SetNewPasswordResponse, SetNewPasswordResponseEnum } from '@iorder-next/contracts/api';
+import { SetNewPasswordResponse, SetNewPasswordResponseEnum } from '@io/contracts/api';
 import { ActionBase } from '../../core/action.base';
-import { UserRepository } from '@iorder-next/backend/repository';
-import { UserEntity } from '@iorder-next/backend/entities';
+import { UserRepository } from '@io/backend/repository';
+import { UserEntity } from '@io/backend/entities';
 
 export class SetNewPasswordCommand extends ActionBase {
   protected readonly userRepository: UserRepository = new UserRepository(this.prismaService);

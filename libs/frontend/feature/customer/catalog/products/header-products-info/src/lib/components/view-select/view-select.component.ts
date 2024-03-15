@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CatalogProductsViewStore, CatalogProductsViewType } from '@iorder-next/frontend/core/customer/store/catalog/products';
+import { CatalogProductsViewStore, CatalogProductsViewType } from '@io/frontend/core/customer/store/catalog/products';
 import { SelectButtonModule } from 'primeng/selectbutton';
 @Component({
   selector: 'io-catalog-products-view-select',

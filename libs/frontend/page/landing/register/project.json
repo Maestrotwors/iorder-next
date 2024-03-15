@@ -2,7 +2,7 @@
   "name": "frontend-page-landing-register",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/page/landing/register/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:page", "scope:app-landing"],
   "projectType": "library",
   "targets": {

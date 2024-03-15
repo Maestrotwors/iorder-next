@@ -2,7 +2,7 @@
   "name": "frontend-feature-customer-refund",
   "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/feature/customer/refund/src",
-  "prefix": "iorder-next",
+  "prefix": "io",
   "tags": ["frontend-layer:feature", "scope:app-customer"],
   "projectType": "library",
   "targets": {

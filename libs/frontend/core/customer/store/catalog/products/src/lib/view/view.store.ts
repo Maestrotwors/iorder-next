@@ -1,5 +1,5 @@
 import { inject } from '@angular/core';
-import { RepositoryCoreService } from '@iorder-next/frontend/core/shared/services/repository-core';
+import { RepositoryCoreService } from '@io/frontend/core/shared/services/repository-core';
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
 
 export type CatalogProductsViewType = 'list' | 'card';

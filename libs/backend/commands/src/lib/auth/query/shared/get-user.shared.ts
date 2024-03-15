@@ -1,5 +1,5 @@
-import { UserEntity } from '@iorder-next/backend/entities';
-import { UserRepository } from '@iorder-next/backend/repository';
+import { UserEntity } from '@io/backend/entities';
+import { UserRepository } from '@io/backend/repository';
 import { ActionBase } from '../../../core/action.base';
 import { User } from '@prisma/client';
 

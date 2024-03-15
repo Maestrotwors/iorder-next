@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ImgLoaderDirective } from '@iorder-next/frontend/core/shared/directives/image-loader';
-import { Product } from '@iorder-next/frontend/core/customer/store/catalog/product';
+import { ImgLoaderDirective } from '@io/frontend/core/shared/directives/image-loader';
+import { Product } from '@io/frontend/core/customer/store/catalog/product';
 
 @Component({
   selector: 'io-card-product-item',

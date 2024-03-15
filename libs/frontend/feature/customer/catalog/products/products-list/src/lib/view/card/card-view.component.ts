@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardProductItemComponent } from './components/product-item/product-item.component';
-import { CatalogProductsStore } from '@iorder-next/frontend/core/customer/store/catalog/products';
-import { FadeInAnimation } from '@iorder-next/frontend/core/shared/animations';
-import { CatalogProductStore, Product } from '@iorder-next/frontend/core/customer/store/catalog/product';
+import { CatalogProductsStore } from '@io/frontend/core/customer/store/catalog/products';
+import { FadeInAnimation } from '@io/frontend/core/shared/animations';
+import { CatalogProductStore, Product } from '@io/frontend/core/customer/store/catalog/product';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @Component({

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UiAccordionComponent } from '@iorder-next/frontend/ui/accordion';
+import { UiAccordionComponent } from '@io/frontend/ui/accordion';
 
 @Component({
   selector: 'ui-page-collapsible',

@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { PassportStrategy } from '@nestjs/passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { Request } from 'express';
-import { IJWTPayload } from '@iorder-next/backend/entities';
+import { IJWTPayload } from '@io/backend/entities';
 
 @Injectable()
 export class RefreshTokenStrategy extends PassportStrategy(Strategy, 'refreshTokenStrategy') {

@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FrontendSharedCustomerFooterDesktopComponent } from '@iorder-next/frontend/core/customer/components/shared-customer/footer';
+import { FrontendSharedCustomerFooterDesktopComponent } from '@io/frontend/core/customer/components/shared-customer/footer';
 import {
   FrontendCustomerHeaderComponent,
   FrontendCustomerSubHeaderComponent,
-} from '@iorder-next/frontend/core/customer/components/shared-customer/header';
-import { ButtonsContainerComponent, ContactFormComponent, ContactsComponent } from '@iorder-next/frontend/feature/customer/contact-us';
+} from '@io/frontend/core/customer/components/shared-customer/header';
+import { ButtonsContainerComponent, ContactFormComponent, ContactsComponent } from '@io/frontend/feature/customer/contact-us';
 
 @Component({
   selector: 'io-customer-widget-contact-us-desktop',

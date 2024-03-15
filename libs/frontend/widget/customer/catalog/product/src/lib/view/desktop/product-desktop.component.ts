@@ -7,7 +7,7 @@ import {
   FrontendFeatureCustomerCatalogProductOrderComponent,
   FrontendFeatureCustomerCatalogProductPhotosViewComponent,
   FrontendFeatureCustomerCatalogProductTitleComponent,
-} from '@iorder-next/frontend/feature/customer/catalog/product';
+} from '@io/frontend/feature/customer/catalog/product';
 
 @Component({
   standalone: true,

@@ -6,7 +6,7 @@ import { tapResponse } from '@ngrx/operators';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CatalogCategoriesService } from './categories.service';
 import { ActivatedRoute } from '@angular/router';
-import { GetCatalogCategoriesCommandResponse } from '@iorder-next/contracts/api';
+import { GetCatalogCategoriesCommandResponse } from '@io/contracts/api';
 
 export type Categories = Required<GetCatalogCategoriesCommandResponse>;
 

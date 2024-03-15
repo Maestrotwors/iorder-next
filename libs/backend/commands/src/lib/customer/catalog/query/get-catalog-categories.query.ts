@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ActionBase } from '../../../core/action.base';
-import { CatalogCategoriesRepository } from '@iorder-next/backend/repository';
+import { CatalogCategoriesRepository } from '@io/backend/repository';
 import { Category } from '@prisma/client';
 
 interface Dto {

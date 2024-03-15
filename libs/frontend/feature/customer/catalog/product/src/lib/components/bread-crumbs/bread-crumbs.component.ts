@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ProductFeatureShared } from '../../shared/product-feature.shared';
-import { FadeInAnimation } from '@iorder-next/frontend/core/shared/animations';
+import { FadeInAnimation } from '@io/frontend/core/shared/animations';
 
 @Component({
   standalone: true,

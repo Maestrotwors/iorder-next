@@ -1,1 +1,10 @@
-<p>frontend-page-customer-refund works!</p>
+<ng-container *ifDesktop>
+  @defer (on immediate) {
+    <io-customer-widget-desktop-default-page-container> fff </io-customer-widget-desktop-default-page-container>
+  }
+</ng-container>
+<ng-container *ifNotDesktop>
+  @defer (on immediate) {
+    <io-customer-widget-mobile-default-page-container> mobile </io-customer-widget-mobile-default-page-container>
+  }
+</ng-container>

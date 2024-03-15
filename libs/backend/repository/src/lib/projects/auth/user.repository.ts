@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { User } from '@prisma/client';
-import { UserEntity } from '@iorder-next/backend/entities';
-import { PrismaService } from '@iorder-next/backend/common';
+import { UserEntity } from '@io/backend/entities';
+import { PrismaService } from '@io/backend/common';
 
 @Injectable()
 export class UserRepository {

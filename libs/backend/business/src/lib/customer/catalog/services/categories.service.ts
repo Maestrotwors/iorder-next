@@ -1,4 +1,4 @@
-import { GetCatalogCategoriesQuery } from '@iorder-next/backend/commands';
+import { GetCatalogCategoriesQuery } from '@io/backend/commands';
 import { Injectable } from '@nestjs/common';
 import { GetCatalogCategoriesQueryDto, GetCatalogCategoriesResponseDto } from '../dto/get-categories.dto';
 

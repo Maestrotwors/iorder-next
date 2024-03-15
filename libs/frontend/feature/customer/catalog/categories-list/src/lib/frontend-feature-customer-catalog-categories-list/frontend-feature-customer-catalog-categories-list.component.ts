@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { CatalogCategoriesStore } from '@iorder-next/frontend/core/customer/store/catalog/categories';
+import { CatalogCategoriesStore } from '@io/frontend/core/customer/store/catalog/categories';
 
 @Component({
   selector: 'io-customer-feature-catalog-categories-list',

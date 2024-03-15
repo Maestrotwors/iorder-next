@@ -1,6 +1,6 @@
 import { Directive, TemplateRef, ViewContainerRef, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { BreakPointService } from '@iorder-next/frontend/core/shared/services/break-point';
+import { BreakPointService } from '@io/frontend/core/shared/services/break-point';
 
 @Directive({
   selector: '[ifNotDesktop]',
