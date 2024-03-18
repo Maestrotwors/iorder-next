@@ -1,4 +1,15 @@
-<io-customer-header></io-customer-header>
+<io-customer-header>
+  <div menu>
+    <button [menuTrigger]="menuTemplate">menu <lucide-icon name="square-user-round"></lucide-icon></button>
+    <ng-template #menuTemplate>
+      <menu>
+        <button class="example-menu-item" cdkMenuItem>Каталог</button>
+        <button class="example-menu-item" cdkMenuItem>Змінити постачальника</button>
+        <button class="example-menu-item" cdkMenuItem>Вихід</button>
+      </menu>
+    </ng-template>
+  </div>
+</io-customer-header>
 <io-customer-sub-header></io-customer-sub-header>
 <div class="container">
   <io-customer-feature-order-sub-suppliers-navigation></io-customer-feature-order-sub-suppliers-navigation>

@@ -68,6 +68,11 @@
       "@io/frontend/feature/customer/order/suppliers-navigation": [
         "libs/frontend/feature/customer/order/suppliers-navigation/src/index.ts"
       ],
+      "@io/frontend/feature/customer/profile/navigation": ["libs/frontend/feature/customer/profile/navigation/src/index.ts"],
+      "@io/frontend/feature/customer/profile/orders": ["libs/frontend/feature/customer/profile/orders/src/index.ts"],
+      "@io/frontend/feature/customer/profile/profile-main": ["libs/frontend/feature/customer/profile/profile-main/src/index.ts"],
+      "@io/frontend/feature/customer/profile/settings": ["libs/frontend/feature/customer/profile/settings/src/index.ts"],
+      "@io/frontend/feature/customer/profile/templates": ["libs/frontend/feature/customer/profile/templates/src/index.ts"],
       "@io/frontend/feature/customer/refund": ["libs/frontend/feature/customer/refund/src/index.ts"],
       "@io/frontend/feature/customer/rules": ["libs/frontend/feature/customer/rules/src/index.ts"],
       "@io/frontend/feature/customer/supplier-select": ["libs/frontend/feature/customer/supplier-select/src/index.ts"],
@@ -80,7 +85,10 @@
       "@io/frontend/page/customer/order": ["libs/frontend/page/customer/order/src/index.ts"],
       "@io/frontend/page/customer/product": ["libs/frontend/page/customer/product/src/index.ts"],
       "@io/frontend/page/customer/products": ["libs/frontend/page/customer/products/src/index.ts"],
-      "@io/frontend/page/customer/profile": ["libs/frontend/page/customer/profile/src/index.ts"],
+      "@io/frontend/page/customer/profile/main": ["libs/frontend/page/customer/profile/main/src/index.ts"],
+      "@io/frontend/page/customer/profile/orders": ["libs/frontend/page/customer/profile/orders/src/index.ts"],
+      "@io/frontend/page/customer/profile/settings": ["libs/frontend/page/customer/profile/settings/src/index.ts"],
+      "@io/frontend/page/customer/profile/templates": ["libs/frontend/page/customer/profile/templates/src/index.ts"],
       "@io/frontend/page/customer/refund": ["libs/frontend/page/customer/refund/src/index.ts"],
       "@io/frontend/page/customer/rules": ["libs/frontend/page/customer/rules/src/index.ts"],
       "@io/frontend/page/customer/selected-customer-point": ["libs/frontend/page/customer/selected-customer-point/src/index.ts"],
@@ -103,6 +111,7 @@
       "@io/frontend/ui/tag": ["libs/frontend/ui/tag/src/index.ts"],
       "@io/frontend/ui/toast": ["libs/frontend/ui/toast/src/index.ts"],
       "@io/frontend/ui/tooltip": ["libs/frontend/ui/tooltip/src/index.ts"],
+      "@io/frontend/ui/menu": ["libs/frontend/ui/menu/src/index.ts"],
       "@io/frontend/widget/customer/catalog/desktop-nav-menu": ["libs/frontend/widget/customer/catalog/desktop-nav-menu/src/index.ts"],
       "@io/frontend/widget/customer/catalog/product": ["libs/frontend/widget/customer/catalog/product/src/index.ts"],
       "@io/frontend/widget/customer/catalog/products-header": ["libs/frontend/widget/customer/catalog/products-header/src/index.ts"],
@@ -110,9 +119,9 @@
       "@io/frontend/widget/customer/contact-us": ["libs/frontend/widget/customer/contact-us/src/index.ts"],
       "@io/frontend/widget/customer/default-page-container": ["libs/frontend/widget/customer/default-page-container/src/index.ts"],
       "@io/frontend/widget/customer/order": ["libs/frontend/widget/customer/order/src/index.ts"],
+      "@io/frontend/widget/customer/profile": ["libs/frontend/widget/customer/profile/src/index.ts"],
       "@io/frontend/widget/customer/supplier-select": ["libs/frontend/widget/customer/supplier-select/src/index.ts"],
       "@io/plugins/nx-plugin": ["libs/plugins/nx-plugin/src/index.ts"],
-      "undefined/menu": ["libs/frontend/ui/menu/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

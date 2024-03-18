@@ -7,4 +7,11 @@ export enum CustomerRoutePath {
   Delivery = 'delivery',
   Rules = 'rules',
   HowToUse = 'how-to-use',
+  Profile = 'profile',
+}
+
+export enum ProfileRoutePath {
+  Templates = 'templates',
+  Orders = 'orders',
+  Settings = 'settings',
 }

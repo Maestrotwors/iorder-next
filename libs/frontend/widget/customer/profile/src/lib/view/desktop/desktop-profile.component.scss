@@ -1,0 +1,26 @@
+:host {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  padding: 0 var(--standard-h-padding);
+
+  .content {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin-left: var(--standard-h-padding);
+    padding-top: var(--standard-v-padding);
+  }
+
+  io-feature-profile-navigation {
+    border-right: var(--standard-border);
+    border-left: var(--standard-border);
+    padding: var(--standard-v-padding) var(--standard-h-padding);
+  }
+}

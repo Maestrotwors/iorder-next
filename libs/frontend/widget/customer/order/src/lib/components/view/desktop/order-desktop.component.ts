@@ -8,6 +8,8 @@ import {
 } from '@io/frontend/core/customer/components/shared-customer/header';
 import { OrderFooterComponent, OrderHeaderComponent, OrderTableComponent } from '@io/frontend/feature/customer/order/order-info';
 import { FrontendFeatureCustomerOrderSubSuppliersNavigationComponent } from '@io/frontend/feature/customer/order/suppliers-navigation';
+import { MenuContentComponent, MenuTriggerDirective } from '@io/frontend/ui/menu';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'io-customer-widget-order-desktop',
@@ -22,6 +24,9 @@ import { FrontendFeatureCustomerOrderSubSuppliersNavigationComponent } from '@io
     OrderFooterComponent,
     OrderTableComponent,
     CommonModule,
+    MenuTriggerDirective,
+    MenuContentComponent,
+    LucideAngularModule,
   ],
   templateUrl: './order-desktop.component.html',
   styleUrl: './order-desktop.component.scss',

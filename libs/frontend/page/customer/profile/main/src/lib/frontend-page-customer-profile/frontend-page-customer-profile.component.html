@@ -1,0 +1,10 @@
+<ng-container *ifDesktop>
+  @defer (on immediate) {
+    <io-widget-desktop-profile></io-widget-desktop-profile>
+  }
+</ng-container>
+<ng-container *ifNotDesktop>
+  @defer (on immediate) {
+    <io-widget-mobile-profile></io-widget-mobile-profile>
+  }
+</ng-container>

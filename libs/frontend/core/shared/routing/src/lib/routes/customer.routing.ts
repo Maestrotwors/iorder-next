@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { checkCustomerPositionGuard } from '../guards/customer/check-customer-position.guard';
 import { checkCatalogPageGuard } from '../guards/customer/check-catalog-page.guard';
-import { CustomerRoutePath } from '@io/frontend/core/shared/routing-paths';
+import { CustomerRoutePath, ProfileRoutePath } from '@io/frontend/core/shared/routing-paths';
 
 export const routes: Routes = [
   {
@@ -35,6 +35,31 @@ export const routes: Routes = [
       {
         path: CustomerRoutePath.Delivery,
         loadComponent: () => import('@io/frontend/page/customer/delivery').then(c => c.FrontendPageCustomerDeliveryComponent),
+      },
+      {
+        path: CustomerRoutePath.Profile,
+        loadComponent: () => import('@io/frontend/page/customer/profile/main').then(c => c.FrontendPageCustomerProfileComponent),
+        children: [
+          {
+            path: ProfileRoutePath.Templates,
+            pathMatch: 'full',
+            loadComponent: () =>
+              import('@io/frontend/page/customer/profile/templates').then(c => c.FrontendPageCustomerProfileTemplatesComponent),
+          },
+          {
+            path: ProfileRoutePath.Orders,
+            pathMatch: 'full',
+            loadComponent: () =>
+              import('@io/frontend/page/customer/profile/orders').then(c => c.FrontendPageCustomerProfileOrdersComponent),
+          },
+          {
+            path: ProfileRoutePath.Settings,
+            pathMatch: 'full',
+            loadComponent: () =>
+              import('@io/frontend/page/customer/profile/settings').then(c => c.FrontendPageCustomerProfileSettingsComponent),
+          },
+          { path: '**', redirectTo: ProfileRoutePath.Settings },
+        ],
       },
       {
         path: '',
