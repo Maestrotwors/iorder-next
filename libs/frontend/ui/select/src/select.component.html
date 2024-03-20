@@ -1,8 +1,24 @@
 <ng-content></ng-content>
 
-<button ui-button (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">Open menu</button>
+<div>
+  <input (focus)="isOpen.set(true)" (blur)="isOpen.set(false)" />
+</div>
+@if (isOpen()) {
+  <div class="list-container">
+    @for (item of list(); track $index) {
+      <div class="list-item">{{ item }}</div>
+    }
+  </div>
+}
+
+<!--
+<select ui-button (click)="isOpen = !isOpen" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">Open menu</select>
 <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen">
-  <div>test</div>
+  <div>
+    @for (item of list(); track $index) {
+      <div>{{ item }}</div>
+    }
+  </div>
 </ng-template>
 
-<ng-content select="[ui-select-menu-items]"></ng-content>
+<ng-content select="[ui-select-menu-items]"></ng-content>-->

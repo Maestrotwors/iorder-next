@@ -41,7 +41,7 @@
               },
               {
                 "sourceTag": "frontend-layer:page",
-                "onlyDependOnLibsWithTags": ["frontend-layer:widget", "frontend-layer:feature", "frontend-layer:core"]
+                "onlyDependOnLibsWithTags": ["frontend-layer:widget", "frontend-layer:feature", "frontend-layer:core", "frontend-layer:ui"]
               },
               {
                 "sourceTag": "frontend-layer:widget",

@@ -1,7 +1,7 @@
-<ng-container *ifDesktop>
-  @defer (on immediate) {
-    <io-customer-page-catalog-desktop></io-customer-page-catalog-desktop>
-  }
+<ng-container>
+  <io-customer-page-catalog-desktop>
+    <router-outlet></router-outlet>
+  </io-customer-page-catalog-desktop>
 </ng-container>
 <ng-container *ifNotDesktop>
   @defer (on immediate) {

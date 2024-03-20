@@ -6,6 +6,7 @@ import { CatalogProductsStore, CatalogProductsViewStore } from '@io/frontend/cor
 import { IfDesktopDirective, IfNotDesktopDirective } from '@io/frontend/core/shared/directives/break-point';
 import { CatalogCategoriesStore } from '@io/frontend/core/customer/store/catalog/categories';
 import { CatalogProductStore } from '@io/frontend/core/customer/store/catalog/product';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'io-customer-page-catalog',
@@ -16,6 +17,7 @@ import { CatalogProductStore } from '@io/frontend/core/customer/store/catalog/pr
     IfNotDesktopDirective,
     IfDesktopDirective,
     CommonModule,
+    RouterModule,
   ],
   templateUrl: './frontend-page-customer-catalog.component.html',
   styleUrl: './frontend-page-customer-catalog.component.scss',

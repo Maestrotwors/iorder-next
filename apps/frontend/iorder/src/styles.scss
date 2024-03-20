@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'primeicons/primeicons.css';
+@import '@angular/cdk/overlay-prebuilt.css';
 
 :root {
   --standard-h-padding: 1.3rem;

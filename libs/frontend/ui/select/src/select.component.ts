@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OverlayModule } from '@angular/cdk/overlay';
 
@@ -11,5 +11,6 @@ import { OverlayModule } from '@angular/cdk/overlay';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UiSelectComponent {
-  isOpen = false;
+  list = input<string[]>(['test1', 'test2', 'test3']);
+  isOpen = signal(false);
 }

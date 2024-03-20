@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { FrontendSharedCustomerFooterDesktopComponent } from '@io/frontend/core/customer/components/shared-customer/footer';
 import { FrontendCustomerHeaderComponent } from '@io/frontend/core/customer/components/shared-customer/header';
+import { UiSelectComponent } from '@io/frontend/ui/select';
 import { FrontendWidgetCustomerCatalogDesktopNavMenuComponent } from '@io/frontend/widget/customer/catalog/desktop-nav-menu';
 
 @Component({
@@ -10,8 +11,9 @@ import { FrontendWidgetCustomerCatalogDesktopNavMenuComponent } from '@io/fronte
   imports: [
     FrontendSharedCustomerFooterDesktopComponent,
     FrontendWidgetCustomerCatalogDesktopNavMenuComponent,
-    RouterOutlet,
+    RouterModule,
     FrontendCustomerHeaderComponent,
+    UiSelectComponent,
   ],
   templateUrl: './frontend-page-customer-catalog-desktop.component.html',
   styleUrl: './frontend-page-customer-catalog-desktop.component.scss',

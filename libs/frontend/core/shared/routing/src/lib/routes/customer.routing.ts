@@ -62,36 +62,28 @@ export const routes: Routes = [
         ],
       },
       {
-        path: '',
-        loadComponent: () =>
-          import('@io/frontend/page/customer/selected-customer-point').then(c => c.FrontendPageCustomerSelectedCustomerPointComponent),
-        canActivate: [checkCustomerPositionGuard],
+        path: CustomerRoutePath.Catalog,
+        loadComponent: () => import('@io/frontend/page/customer/catalog').then(c => c.FrontendPageCustomerCatalogComponent),
         children: [
           {
-            path: CustomerRoutePath.Catalog,
-            loadComponent: () => import('@io/frontend/page/customer/catalog').then(c => c.FrontendPageCustomerCatalogComponent),
-            children: [
-              {
-                path: ':categoryId',
-                loadComponent: () => import('@io/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
-                canActivate: [checkCatalogPageGuard],
-              },
-              {
-                path: 'product/:productId',
-                loadComponent: () => import('@io/frontend/page/customer/product').then(c => c.FrontendPageCustomerProductComponent),
-              },
-              {
-                path: '',
-                loadComponent: () => import('@io/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
-                canActivate: [checkCatalogPageGuard],
-              },
-            ],
+            path: ':categoryId',
+            loadComponent: () => import('@io/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
+            canActivate: [checkCatalogPageGuard],
           },
           {
-            path: CustomerRoutePath.Order,
-            loadComponent: () => import('@io/frontend/page/customer/order').then(c => c.FrontendPageCustomerOrderComponent),
+            path: 'product/:productId',
+            loadComponent: () => import('@io/frontend/page/customer/product').then(c => c.FrontendPageCustomerProductComponent),
+          },
+          {
+            path: '',
+            loadComponent: () => import('@io/frontend/page/customer/products').then(c => c.FrontendPageCustomerProductsComponent),
+            canActivate: [checkCatalogPageGuard],
           },
         ],
+      },
+      {
+        path: CustomerRoutePath.Order,
+        loadComponent: () => import('@io/frontend/page/customer/order').then(c => c.FrontendPageCustomerOrderComponent),
       },
     ],
   },
